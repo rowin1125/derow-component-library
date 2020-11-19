@@ -1,0 +1,47 @@
+{
+  "name": "derow-component-library",
+  "version": "0.0.1",
+  "description": "A component library for Derow",
+  "module": "es/index.js",
+  "scripts": {
+    "test": "jest",
+    "tdd": "jest --watchAll",
+    "lint": "eslint --ext=js --ext=jsx src/",
+    "build": "NODE_ENV=production rollup -c",
+    "storybook": "start-storybook -p 6006",
+    "storybook:build": "build-storybook -o public"
+  },
+  "author": "Rowin Mol",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.11.4",
+    "@babel/preset-env": "^7.11.0",
+    "@babel/preset-react": "^7.10.4",
+    "@rollup/plugin-babel": "^5.2.0",
+    "@rollup/plugin-node-resolve": "^9.0.0",
+    "@storybook/addon-actions": "^6.0.20",
+    "@storybook/addon-essentials": "^6.0.20",
+    "@storybook/addon-links": "^6.0.20",
+    "@storybook/react": "6.0.20",
+    "@testing-library/jest-dom": "^5.11.5",
+    "@testing-library/react": "^10.4.9",
+    "@youngcapital/eslint-config-yc-base": "^2.0.0",
+    "@youngcapital/eslint-config-yc-react": "^2.0.0",
+    "babel-loader": "^8.1.0",
+    "babel-plugin-require-context-hook": "^1.0.0",
+    "eslint": "^6.8.0",
+    "jest": "^26.4.2",
+    "prettier": "^1.13.0",
+    "rollup": "^2.26.8",
+    "rollup-plugin-generate-package-json": "^3.2.0"
+  },
+  "peerDependencies": {
+    "react": "16.x",
+    "react-dom": "16.x"
+  },
+  "dependencies": {
+    "@babel/plugin-transform-runtime": "^7.11.0",
+    "classnames": "^2.2.6",
+    "prop-types": "^15.7.2"
+  }
+}
