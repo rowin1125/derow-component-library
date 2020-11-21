@@ -34,7 +34,7 @@ const Button = ({
           variant,
           fixedWidth ? 'w-full lg:w-64' : '',
           'lg:mx-0',
-          className
+          className,
         )}
         {...rest}
       >
@@ -54,7 +54,7 @@ const Button = ({
         variant,
         fixedWidth ? 'w-full lg:w-64' : 'lg:w-auto',
         'lg:mx-0',
-        className
+        className,
       )}
       {...rest}
     >
@@ -71,6 +71,6 @@ Button.propTypes = {
   disabled: PropTypes.bool,
   element: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
   fixedWidth: PropTypes.bool,
-  variant: PropTypes.oneOf(['primary', 'secondary', 'tertairy'])
+  variant: PropTypes.oneOf(['primary', 'secondary', 'tertairy']),
 };
 export default Button;

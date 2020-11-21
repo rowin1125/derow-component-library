@@ -1,0 +1,13 @@
+/* eslint-disable no-console */
+import { render } from '@testing-library/react';
+import React from 'react';
+import {{ pascalCase componentName }} from './{{ pascalCase componentName }}';
+
+describe('{{ pascalCase componentName }}', () => {
+  test('renders without crashing', () => {
+    const { getByTestId } = render(<{{ pascalCase componentName }} data-testid='test-{{ pascalCase componentName }}'>hi</{{ pascalCase componentName }}>);
+    expect(getByTestId('test-{{ pascalCase componentName }}')).toBeTruthy();
+    expect(getByTestId('test-{{ pascalCase componentName }}')).toHaveTextContent('hi');
+    expect(getByTestId('test-{{ pascalCase componentName }}')).toHaveClass('{{ pascalCase componentName }}');
+  });
+})

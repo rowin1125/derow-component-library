@@ -1,5 +1,5 @@
 {
-  "name": "derow-component-library",
+  "name": "derow-react-library",
   "version": "0.0.1",
   "description": "A component library for Derow",
   "module": "es/index.js",
@@ -7,14 +7,21 @@
     "test": "jest",
     "tdd": "jest --watchAll",
     "lint": "eslint --ext=js --ext=jsx src/",
-    "build": "NODE_ENV=production rollup -c",
+    "add-package-details": "node scripts/build/package-support",
+    "build": "NODE_ENV=production rollup -c && yarn add-package-details",
+    "release": "standard-version",
+    "publish": "npm publish dist",
     "storybook": "start-storybook -p 6006",
-    "storybook:build": "build-storybook -o public"
+    "storybook:build": "build-storybook -o public",
+    "b:tailwind": "postcss src/css/base.scss -o src/css/tailwind.css",
+    "b:storybook": "build-storybook -o storybook-static",
+    "s:static": "npx http-server storybook-static"
   },
   "author": "Rowin Mol",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.11.4",
+    "@babel/plugin-transform-runtime": "^7.12.1",
     "@babel/preset-env": "^7.11.0",
     "@babel/preset-react": "^7.10.4",
     "@rollup/plugin-babel": "^5.2.0",
@@ -40,7 +47,6 @@
     "react-dom": "16.x"
   },
   "dependencies": {
-    "@babel/plugin-transform-runtime": "^7.11.0",
     "classnames": "^2.2.6",
     "prop-types": "^15.7.2"
   }

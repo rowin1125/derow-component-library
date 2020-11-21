@@ -1,0 +1,29 @@
+{
+  "name": "example",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "yarn watch:css && parcel index.html",
+    "build": "parcel build index.html",
+    "watch:css": "postcss tailwind.css -o main.css"
+  },
+  "dependencies": {
+    "derow-react-library": "^0.0.1",
+    "react-app-polyfill": "^1.0.0"
+  },
+  "alias": {
+    "react": "../node_modules/react",
+    "react-dom": "../node_modules/react-dom/profiling",
+    "scheduler/tracing": "../node_modules/scheduler/tracing-profiling"
+  },
+  "devDependencies": {
+    "@types/react": "^16.9.11",
+    "@types/react-dom": "^16.8.4",
+    "autoprefixer": "9.8.6",
+    "parcel": "^1.12.3",
+    "postcss-cli": "^8.1.0",
+    "tailwindcss": "^1.9.3",
+    "typescript": "^3.4.5"
+  }
+}
