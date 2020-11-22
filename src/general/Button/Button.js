@@ -13,10 +13,9 @@ const Button = ({
   link: Link,
   ...rest
 }) => {
-  const generalClasses =
-    'w-full h-12 shadow-xl inline-flex justify-center items-center rounded-full font-bold text-xl tracking-wider px-4 py-2 cursor-pointer lg:mr-2';
-  const transitionClasses =
-    'transform ease-in duration-100 transition-all hover:-translate-y-1 hover:shadow-2xl';
+  const generalClasses = `w-full h-12 shadow-xl inline-flex justify-center items-center rounded-full
+    font-bold text-xl tracking-wider px-4 py-2 cursor-pointer lg:mr-2`;
+  const transitionClasses = 'transform ease-in duration-100 transition-all hover:-translate-y-1 hover:shadow-2xl';
   const isPrimary = variant === 'primary';
   const isSecondary = variant === 'secondary';
   const isTertairy = variant === 'tertairy';
@@ -35,7 +34,7 @@ const Button = ({
           variant,
           fixedWidth ? 'w-full lg:w-64' : '',
           'lg:mx-0',
-          className
+          className,
         )}
         {...rest}
       >
@@ -55,7 +54,7 @@ const Button = ({
         variant,
         fixedWidth ? 'w-full lg:w-64' : 'lg:w-auto',
         'lg:mx-0',
-        className
+        className,
       )}
       {...rest}
     >
@@ -64,14 +63,14 @@ const Button = ({
   );
 };
 Button.propTypes = {
-  children: PropTypes.node.isRequired,
-  link: PropTypes.any,
   as: PropTypes.any,
+  children: PropTypes.node.isRequired,
   className: PropTypes.string,
-  href: PropTypes.string,
   disabled: PropTypes.bool,
   element: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
   fixedWidth: PropTypes.bool,
-  variant: PropTypes.oneOf(['primary', 'secondary', 'tertairy'])
+  href: PropTypes.string,
+  link: PropTypes.any,
+  variant: PropTypes.oneOf(['primary', 'secondary', 'tertairy']),
 };
 export default Button;
