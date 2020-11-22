@@ -1,14 +1,13 @@
 import React from 'react';
-import { Story, Meta } from '@storybook/react/types-6-0';
-import {{ pascalCase componentName }}, { I{{ pascalCase componentName }} } from './{{ pascalCase componentName }}';
+import {{ pascalCase componentName }} from './{{ pascalCase componentName }}';
 
 export default {
   title: '{{ storyFolder }}',
   component: {{ pascalCase componentName }},
   argTypes: {},
-} as Meta;
+}
 
-const template: Story<I{{ pascalCase componentName }}> = (args) => <{{ pascalCase componentName }} {...args} />;
+const template = (args) => <{{ pascalCase componentName }} {...args} />;
 
 export const FirstExample = template.bind({});
 FirstExample.args = {

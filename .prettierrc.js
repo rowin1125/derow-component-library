@@ -1,1 +1,0 @@
-node_modules/@youngcapital/eslint-config-yc-base/.prettierrc.js

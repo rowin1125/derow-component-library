@@ -5,11 +5,15 @@ const prettier = require('prettier');
 const componentGenerator = require('./component/index.js');
 const prettierConfigFile = require('../../prettier.config');
 
-module.exports = (plop) => {
+module.exports = plop => {
   plop.setGenerator('component', componentGenerator);
   plop.setActionType('prettify', (answers, config, plop) => {
-    const folderPath = `${path.join(__dirname, `../../src/`, plop.getHelper('pascalCase')(answers.componentName))}`;
-    fs.readdirSync(folderPath).forEach((file) => {
+    const folderPath = `${path.join(
+      __dirname,
+      `../../src/${answers.typeOfComponent}`,
+      plop.getHelper('pascalCase')(answers.componentName),
+    )}`;
+    fs.readdirSync(folderPath).forEach(file => {
       const fileName = path.join(folderPath, file);
       let parser = 'babel';
       switch (path.extname(fileName)) {

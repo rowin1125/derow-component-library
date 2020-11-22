@@ -1,47 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="jest tests" tests="18" failures="0" time="3.58">
-  <testsuite name="Container" errors="0" failures="0" skipped="0" timestamp="2020-10-17T12:19:52" time="2.158" tests="3">
-    <testcase classname="Container renders without crashing" name="Container renders without crashing" time="0.031">
-    </testcase>
-    <testcase classname="Container should have class mx-auto when prop marginX is passed" name="Container should have class mx-auto when prop marginX is passed" time="0.002">
-    </testcase>
-    <testcase classname="Container should change html element when using &quot;as&quot; prop" name="Container should change html element when using &quot;as&quot; prop" time="0.002">
-    </testcase>
-  </testsuite>
-  <testsuite name="Col" errors="0" failures="0" skipped="0" timestamp="2020-10-17T12:19:52" time="2.172" tests="4">
-    <testcase classname="Col renders without crashing" name="Col renders without crashing" time="0.032">
-    </testcase>
-    <testcase classname="Col renders correct classes for responsive Cols" name="Col renders correct classes for responsive Cols" time="0.003">
-    </testcase>
-    <testcase classname="Col should allow all flex bools to add the correct classes" name="Col should allow all flex bools to add the correct classes" time="0.005">
-    </testcase>
-    <testcase classname="Col should change html element when using &quot;as&quot; prop" name="Col should change html element when using &quot;as&quot; prop" time="0.006">
-    </testcase>
-  </testsuite>
-  <testsuite name="Row" errors="0" failures="0" skipped="0" timestamp="2020-10-17T12:19:52" time="2.175" tests="4">
-    <testcase classname="Row renders in default mode with full width" name="Row renders in default mode with full width" time="0.03">
-    </testcase>
-    <testcase classname="Row can accept children in the component" name="Row can accept children in the component" time="0.006">
-    </testcase>
-    <testcase classname="Row work with all flex values for positioning" name="Row work with all flex values for positioning" time="0.007">
-    </testcase>
-    <testcase classname="Row should change html element when using &quot;as&quot; prop" name="Row should change html element when using &quot;as&quot; prop" time="0.005">
-    </testcase>
-  </testsuite>
-  <testsuite name="Card" errors="0" failures="0" skipped="0" timestamp="2020-10-17T12:19:52" time="2.19" tests="7">
-    <testcase classname="Card renders without crashing" name="Card renders without crashing" time="0.036">
-    </testcase>
-    <testcase classname="Card can accept chidlren and display them" name="Card can accept chidlren and display them" time="0.012">
-    </testcase>
-    <testcase classname="Card accept card primary" name="Card accept card primary" time="0.003">
-    </testcase>
-    <testcase classname="Card accept card secondary" name="Card accept card secondary" time="0.002">
-    </testcase>
-    <testcase classname="Card is by default transparent" name="Card is by default transparent" time="0.002">
-    </testcase>
-    <testcase classname="Card should display a img" name="Card should display a img" time="0.003">
-    </testcase>
-    <testcase classname="Card should img and a title" name="Card should img and a title" time="0.004">
+<testsuites name="jest tests" tests="1" failures="0" errors="0" time="2.278">
+  <testsuite name="Button" errors="0" failures="0" skipped="0" timestamp="2020-11-22T10:34:14" time="1.308" tests="1">
+    <testcase classname="Button renders without crashing" name="Button renders without crashing" time="0.022">
     </testcase>
   </testsuite>
 </testsuites>

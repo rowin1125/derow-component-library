@@ -8,7 +8,7 @@ const Button = ({
   variant = 'primary',
   fixedWidth,
   as: Element = 'a',
-  href = '/',
+  href,
   disabled = false,
   link: Link,
   ...rest
@@ -26,6 +26,7 @@ const Button = ({
       <Element
         disabled={disabled}
         className={classNames(
+          'Button',
           generalClasses,
           transitionClasses,
           { 'bg-brand text-white hover:bg-brand-hover': isPrimary },
@@ -34,7 +35,7 @@ const Button = ({
           variant,
           fixedWidth ? 'w-full lg:w-64' : '',
           'lg:mx-0',
-          className,
+          className
         )}
         {...rest}
       >
@@ -54,7 +55,7 @@ const Button = ({
         variant,
         fixedWidth ? 'w-full lg:w-64' : 'lg:w-auto',
         'lg:mx-0',
-        className,
+        className
       )}
       {...rest}
     >
@@ -67,10 +68,10 @@ Button.propTypes = {
   link: PropTypes.any,
   as: PropTypes.any,
   className: PropTypes.string,
-  href: PropTypes.string.isRequired,
+  href: PropTypes.string,
   disabled: PropTypes.bool,
   element: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
   fixedWidth: PropTypes.bool,
-  variant: PropTypes.oneOf(['primary', 'secondary', 'tertairy']),
+  variant: PropTypes.oneOf(['primary', 'secondary', 'tertairy'])
 };
 export default Button;

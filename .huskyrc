@@ -1,0 +1,8 @@
+{
+  "hooks": {
+    "post-merge": "yarn install --no-package-lock",
+    "post-rebase": "yarn install",
+    "pre-commit": "yarn lint && yarn test",
+    "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+  }
+}
