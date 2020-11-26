@@ -8,6 +8,6 @@ describe('{{ pascalCase componentName }}', () => {
     const { getByTestId } = render(<{{ pascalCase componentName }} data-testid='test-{{ pascalCase componentName }}'>hi</{{ pascalCase componentName }}>);
     expect(getByTestId('test-{{ pascalCase componentName }}')).toBeTruthy();
     expect(getByTestId('test-{{ pascalCase componentName }}')).toHaveTextContent('hi');
-    expect(getByTestId('test-{{ pascalCase componentName }}')).toHaveClass('{{ pascalCase componentName }}');
+    expect(getByTestId('test-{{ pascalCase componentName }}').classList.contains('{{ pascalCase componentName }}')).toBe(true);
   });
 })

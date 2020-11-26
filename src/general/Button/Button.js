@@ -7,14 +7,14 @@ const Button = ({
   children,
   variant = 'primary',
   fixedWidth,
-  as: Element = 'a',
+  as: Element = 'button',
   href,
   disabled = false,
   link: Link,
   ...rest
 }) => {
-  const generalClasses = `w-full h-12 shadow-xl inline-flex justify-center items-center rounded-full
-    font-bold text-xl tracking-wider px-4 py-2 cursor-pointer lg:mr-2`;
+  const generalClasses = `w-full h-12 shadow-xl inline-flex justify-center items-center
+    rounded-full font-bold text-xl tracking-wider px-4 py-2 cursor-pointer lg:mr-2`;
   const transitionClasses = 'transform ease-in duration-100 transition-all hover:-translate-y-1 hover:shadow-2xl';
   const isPrimary = variant === 'primary';
   const isSecondary = variant === 'secondary';
@@ -23,17 +23,17 @@ const Button = ({
   return Link ? (
     <Link href={href} passHref>
       <Element
+        type={Element === 'button' ? 'button' : null}
         disabled={disabled}
         className={classNames(
-          'Button',
           generalClasses,
           transitionClasses,
           { 'bg-brand text-white hover:bg-brand-hover': isPrimary },
-          { 'bg-body-color text-brand hover:bg-body-color': isSecondary },
-          { 'bg-black text-white hover:bg-gray-900': isTertairy },
+          { 'bg-secondary text-brand hover:bg-secondary': isSecondary },
+          { 'bg-gray-100 text-white hover:bg-gray-200': isTertairy },
           variant,
           fixedWidth ? 'w-full lg:w-64' : '',
-          'lg:mx-0',
+          'lg:mx-0 Button',
           className,
         )}
         {...rest}
@@ -43,14 +43,15 @@ const Button = ({
     </Link>
   ) : (
     <Element
+      type={Element === 'button' ? 'button' : null}
       href={href}
       disabled={disabled}
       className={classNames(
         generalClasses,
         transitionClasses,
         { 'bg-brand text-white hover:bg-brand-hover': isPrimary },
-        { 'bg-body-color text-brand hover:bg-body-color': isSecondary },
-        { 'bg-black text-white hover:bg-gray-900': isTertairy },
+        { 'bg-secondary text-gray-100 hover:bg-secondary': isSecondary },
+        { 'bg-gray-100 text-brand hover:bg-gray-200': isTertairy },
         variant,
         fixedWidth ? 'w-full lg:w-64' : 'lg:w-auto',
         'lg:mx-0',
