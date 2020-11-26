@@ -1,6 +1,6 @@
 {
   "name": "derow-react-library",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A component library for Derow",
   "module": "es/index.js",
   "scripts": {
@@ -60,9 +60,7 @@
     "rollup": "^2.26.8",
     "rollup-plugin-generate-package-json": "^3.2.0",
     "standard-version": "^9.0.0",
-    "styled-components": "^5.2.1",
-    "tailwindcss": "^2.0.1-compat",
-    "twin.macro": "^1.12.1"
+    "tailwindcss": "^2.0.1-compat"
   },
   "peerDependencies": {
     "react": "16.x",
@@ -72,6 +70,8 @@
     "classnames": "^2.2.6",
     "postcss-import": "^13.0.0",
     "postcss-loader": "^4.1.0",
-    "prop-types": "^15.7.2"
+    "prop-types": "^15.7.2",
+    "styled-components": "^5.2.1",
+    "twin.macro": "^1.12.1"
   }
 }
