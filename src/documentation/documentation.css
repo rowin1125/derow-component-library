@@ -1,0 +1,67 @@
+.documentation-light,
+.documentation-light a {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.documentation-light a:hover {
+  color: gray;
+}
+ul {
+  list-style-type: disc;
+  list-style-position: inside;
+}
+
+code {
+  background-color: #2670d0;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 5px;
+}
+
+.sbdocs-wrapper .sbdocs code,
+.sbdocs-wrapper .os-content code {
+  background-color: #2670d0;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 5px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: bold;
+  color: #2670d0;
+}
+
+h1 {
+  font-size: 2rem;
+}
+h2 {
+  font-size: 1.75rem;
+}
+h3 {
+  font-size: 1.5rem;
+}
+
+blockquote,
+dl,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+figure,
+p,
+pre {
+  margin: 20px 0 !important;
+}
+
+a {
+  text-decoration: underline;
+}
