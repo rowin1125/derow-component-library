@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.3](https://github.com/rowin1125/derow-component-library/compare/v0.0.2...v0.0.3) (2020-11-26)
+
+
+### Bug Fixes
+
+* remove huge css files which is only needed locally ([5404181](https://github.com/rowin1125/derow-component-library/commit/5404181332b77b7fe1031426f4981cfadefbea82))
+
 ### 0.0.2 (2020-11-26)
 
 
