@@ -6,5 +6,6 @@ node_modules/
 .DS_Store
 example/node_modules
 example/.cache
+example/main.css
 storybook-static
 **/junit.xml
