@@ -56,6 +56,11 @@ module.exports = {
         type: 'prettify',
         path: path.join(baseName, '/{{pascalCase name}}'),
       },
+      {
+        type: 'append',
+        path: `${basePath}/{{typeOfComponent}}/index.js`,
+        templateFile: './component/typeIndex.js.hbs',
+      },
     ];
 
     return actions;
