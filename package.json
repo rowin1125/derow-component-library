@@ -4,6 +4,7 @@
   "description": "A component library for Derow",
   "module": "es/index.js",
   "scripts": {
+    "dev": "(yarn tdd) & yarn storybook",
     "test": "jest",
     "tdd": "jest --watchAll",
     "lint": "eslint --ext=js --ext=jsx src/ --fix",
@@ -14,7 +15,7 @@
     "publish": "npm publish dist",
     "storybook": "start-storybook -p 6006",
     "storybook:build": "build-storybook -o public",
-    "b:tailwind": "postcss src/css/base.scss -o src/css/tailwind.css",
+    "b:tailwind": "postcss src/css/base.css -o src/css/tailwind.css",
     "b:storybook": "build-storybook -o storybook-static",
     "s:static": "npx http-server storybook-static"
   },
@@ -43,7 +44,7 @@
     "@testing-library/react-hooks": "^3.4.2",
     "@youngcapital/eslint-config-yc-base": "^2.0.0",
     "@youngcapital/eslint-config-yc-react": "^2.0.0",
-    "autoprefixer": "^10.0.2",
+    "autoprefixer": "^9",
     "babel-loader": "^8.1.0",
     "babel-plugin-require-context-hook": "^1.0.0",
     "eslint": "^6.8.0",
@@ -52,11 +53,15 @@
     "jest-junit": "^12.0.0",
     "jest-transform-css": "^2.1.0",
     "plop": "^2.7.4",
+    "postcss": "^7",
     "postcss-cli": "^8.3.0",
     "prettier": "^1.13.0",
     "rollup": "^2.26.8",
     "rollup-plugin-generate-package-json": "^3.2.0",
-    "tailwindcss": "^2.0.1"
+    "standard-version": "^9.0.0",
+    "styled-components": "^5.2.1",
+    "tailwindcss": "^2.0.1-compat",
+    "twin.macro": "^1.12.1"
   },
   "peerDependencies": {
     "react": "16.x",
@@ -64,6 +69,8 @@
   },
   "dependencies": {
     "classnames": "^2.2.6",
+    "postcss-import": "^13.0.0",
+    "postcss-loader": "^4.1.0",
     "prop-types": "^15.7.2"
   }
 }
