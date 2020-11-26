@@ -10,23 +10,16 @@ export default {
     {
       dir: 'dist/',
       format: 'es',
-      preserveModules: true
-    }
+      preserveModules: true,
+    },
   ],
-  external: [
-    ...Object.keys(packageJson.dependencies),
-    ...Object.keys(packageJson.peerDependencies),
-    /@babel\/runtime/
-  ],
+  external: [...Object.keys(packageJson.dependencies), ...Object.keys(packageJson.peerDependencies), /@babel\/runtime/],
   plugins: [
     babel({
       exclude: /node_modules/,
       babelHelpers: 'runtime',
       plugins: [['@babel/plugin-transform-runtime']],
-      presets: [
-        ['@babel/preset-env', { modules: false }],
-        ['@babel/preset-react']
-      ]
+      presets: [['@babel/preset-env', { modules: false }], ['@babel/preset-react']],
     }),
     resolve(),
     generatePackageJson({
@@ -39,8 +32,8 @@ export default {
         main: 'index.umd.js',
         module: 'index.es.js',
         peerDependencies: pkg.peerDependencies,
-        publishConfig: pkg.publishConfig
-      })
-    })
-  ]
+        publishConfig: pkg.publishConfig,
+      }),
+    }),
+  ],
 };

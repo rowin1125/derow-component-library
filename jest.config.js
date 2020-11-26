@@ -6,22 +6,21 @@ module.exports = {
   moduleNameMapper: {
     '\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$':
       '<rootDir>/../scripts/test/file.mock.js',
-    '\\.(css|less|scss)$': '<rootDir>/../scripts/test/style.mock.js'
+    '\\.(css|less|scss)$': '<rootDir>/../scripts/test/style.mock.js',
   },
   transform: {
     '.+\\.js$': 'babel-jest',
     '.+\\.(css|styl|less|sass|scss)$': 'jest-transform-css',
-    '.+\\.(bmp|gif|jpg|jpeg|png|psd|svg|webp)$':
-      '<rootDir>/../scripts/test/media-file.mock.js'
+    '.+\\.(bmp|gif|jpg|jpeg|png|psd|svg|webp)$': '<rootDir>/../scripts/test/media-file.mock.js',
   },
   reporters: [
     'default',
     [
       'jest-junit',
       {
-        outputDirectory: '<rootDir>/../scripts/test'
-      }
-    ]
+        outputDirectory: '<rootDir>/../scripts/test',
+      },
+    ],
   ],
-  verbose: true
+  verbose: true,
 };
