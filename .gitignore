@@ -9,3 +9,6 @@ example/.cache
 example/main.css
 storybook-static
 **/junit.xml
+
+# Tailwind css
+src/css/tailwind.css
