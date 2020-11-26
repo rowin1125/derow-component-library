@@ -1,7 +1,4 @@
 module.exports = {
-  purge: {
-    enabled: false,
-  },
   theme: {
     container: {
       center: true,
@@ -17,9 +14,10 @@ module.exports = {
         body: ['Raleway'],
       },
       colors: {
-        baseDark: '#06479B',
-        baseNormal: '#2670d0',
-        baseLess: '#5a96e2',
+        'brand-dark': '#06479B',
+        brand: '#2670d0',
+        secondary: '#06479B',
+        accent: '#5a96e2',
         'accent-1': '#FAFAFA',
         'accent-2': '#EAEAEA',
         'accent-7': '#333',

@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "yarn watch:css && parcel index.html",
+    "dev": "yarn watch:css && parcel index.html",
     "build": "parcel build index.html",
     "watch:css": "postcss tailwind.css -o main.css"
   },
