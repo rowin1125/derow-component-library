@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.5](https://github.com/rowin1125/derow-react-library/compare/v0.0.4...v0.0.5) (2020-11-30)
+
+
+### Features
+
+* transform build to common js ([514bb82](https://github.com/rowin1125/derow-react-library/commit/514bb82ba5a8c00735b176924342960bd4886c46))
+
 ### [0.0.4](https://github.com/rowin1125/derow-react-library/compare/v0.0.3...v0.0.4) (2020-11-30)
 
 
