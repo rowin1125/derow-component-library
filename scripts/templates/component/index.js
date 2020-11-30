@@ -15,7 +15,7 @@ module.exports = {
       type: 'input',
       name: 'typeOfComponent',
       message: 'Which folder does this belong?',
-      default: 'general || slices',
+      default: 'MUST BE ONE OF: general || slices',
     },
     {
       type: 'input',

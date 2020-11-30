@@ -12,7 +12,7 @@
     "add-package-details": "node scripts/build/package-support",
     "build": "NODE_ENV=production rollup -c && yarn add-package-details",
     "release": "standard-version",
-    "publish": "npm publish dist",
+    "pub": "npm publish dist",
     "storybook": "start-storybook -p 6006",
     "storybook:build": "build-storybook -o public",
     "b:tailwind": "postcss src/css/base.css -o src/css/tailwind.css",

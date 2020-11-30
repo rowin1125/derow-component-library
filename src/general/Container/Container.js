@@ -5,7 +5,7 @@ import cn from 'classnames';
 const Container = React.forwardRef(({ className, children, center, as = 'div', ...rest }, ref) => {
   const Element = as;
   return (
-    <Element ref={ref} className={cn('Container', { 'mx-auto': center }, className)} {...rest}>
+    <Element ref={ref} className={cn('container', { 'mx-auto': center }, className)} {...rest}>
       {children}
     </Element>
   );

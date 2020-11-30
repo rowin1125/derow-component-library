@@ -18,7 +18,7 @@ export default {
     babel({
       exclude: /node_modules/,
       babelHelpers: 'runtime',
-      plugins: [['@babel/plugin-transform-runtime']],
+      plugins: [['@babel/plugin-transform-runtime'], 'babel-plugin-macros'],
       presets: [['@babel/preset-env', { modules: false }], ['@babel/preset-react']],
     }),
     resolve(),
