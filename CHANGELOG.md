@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.4](https://github.com/rowin1125/derow-react-library/compare/v0.0.3...v0.0.4) (2020-11-30)
+
+
+### Features
+
+* added babel config for twin macro ([85e4315](https://github.com/rowin1125/derow-react-library/commit/85e4315c4c721c65697be46843321f1a68c44e79))
+
+
+### Bug Fixes
+
+* delete static tailwind  cssfile ([c0ceb71](https://github.com/rowin1125/derow-react-library/commit/c0ceb7158754b218c657663d23f237a27fe7600b))
+
 ### [0.0.3](https://github.com/rowin1125/derow-component-library/compare/v0.0.2...v0.0.3) (2020-11-26)
 
 
