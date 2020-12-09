@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Card, Container } from '../../dist/general';
+import { Container, Button, Card } from 'derow-react-library/general';
 
 export default function Home() {
   return (
