@@ -1,10 +1,7 @@
 module.exports = {
-  extends: ['@youngcapital/eslint-config-yc-base', '@youngcapital/eslint-config-yc-react'],
+  extends: 'react-app',
   rules: {
-    'react/jsx-props-no-spreading': 'off',
-    'import/prefer-default-export': 'off',
-    'react/sort-prop-types': 1,
-    'import/prefer-default-export': 'off',
-    'jsx-a11y/accessible-emoji': 'off',
+    'import/no-anonymous-default-export': 'off'
   },
+  plugins: ['jsx-a11y']
 };
