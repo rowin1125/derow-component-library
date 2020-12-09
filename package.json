@@ -4,7 +4,7 @@
   "description": "A component library for Derow",
   "module": "es/index.js",
   "scripts": {
-    "dev": "(yarn tdd) & yarn storybook",
+    "dev": "yarn storybook",
     "test": "jest",
     "tdd": "jest --watchAll",
     "lint": "eslint --ext=js --ext=jsx src/ --fix",
@@ -72,7 +72,8 @@
   },
   "peerDependencies": {
     "react": "16.x",
-    "react-dom": "16.x"
+    "react-dom": "16.x",
+    "react-icons": "^4.1.0"
   },
   "dependencies": {
     "classnames": "^2.2.6",

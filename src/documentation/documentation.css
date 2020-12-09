@@ -11,57 +11,57 @@ ul {
   list-style-position: inside;
 }
 
-code {
+.documentation-light code {
   background-color: #2670d0;
   color: white;
   padding: 4px 8px;
   border-radius: 5px;
 }
 
-.sbdocs-wrapper .sbdocs code,
-.sbdocs-wrapper .os-content code {
+.documentation-light .sbdocs-wrapper .sbdocs code,
+.documentation-light .sbdocs-wrapper .os-content code {
   background-color: #2670d0;
   color: white;
   padding: 4px 8px;
   border-radius: 5px;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+.documentation-light h1,
+.documentation-light h2,
+.documentation-light h3,
+.documentation-light h4,
+.documentation-light h5,
+.documentation-light h6 {
   font-weight: bold;
   color: #2670d0;
 }
 
-h1 {
+.documentation-light h1 {
   font-size: 2rem;
 }
-h2 {
+.documentation-light h2 {
   font-size: 1.75rem;
 }
-h3 {
+.documentation-light h3 {
   font-size: 1.5rem;
 }
 
-blockquote,
-dl,
-dd,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-hr,
-figure,
-p,
-pre {
+.documentation-light blockquote,
+.documentation-light dl,
+.documentation-light dd,
+.documentation-light h1,
+.documentation-light h2,
+.documentation-light h3,
+.documentation-light h4,
+.documentation-light h5,
+.documentation-light h6,
+.documentation-light hr,
+.documentation-light figure,
+.documentation-light p,
+.documentation-light pre {
   margin: 20px 0 !important;
 }
 
-a {
+.documentation-light a {
   text-decoration: underline;
 }
