@@ -12,6 +12,7 @@ export default {
       dir: 'dist/',
       format: 'cjs',
       preserveModules: true,
+      exports: 'named',
     },
   ],
   external: [...Object.keys(packageJson.dependencies), ...Object.keys(packageJson.peerDependencies), /@babel\/runtime/],
