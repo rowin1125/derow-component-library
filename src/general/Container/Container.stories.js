@@ -11,11 +11,18 @@ export default {
         type: 'inline-radio',
         options: ['a', 'div'],
       },
+      table: {
+        defaultValue: { summary: 'div' },
+        type: {
+          summary: 'html element used',
+          detail: 'Specify which html element the container must use',
+        },
+      },
     },
   },
 };
 
-const template = args => (
+const template = (args) => (
   <Container {...args}>
     <Card variant='secondary'>
       <h2>RESIZE ME, I WORK, BELIEVE ME 🙂 </h2>

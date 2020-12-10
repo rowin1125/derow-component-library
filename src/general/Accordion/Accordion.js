@@ -12,7 +12,7 @@ const SyledAccordion = styled.div`
 `;
 
 const Accordion = ({
-  index = 0,
+  index = 1,
   heading,
   content,
   accordionCounter,
@@ -57,7 +57,7 @@ const Accordion = ({
             className='bg-brand p-2 rounded-full text-gray-100 w-6 h-6 lg:w-10 lg:h-10 flex justify-center items-center text-sm lg:text-xl'
             {...accordionCounterProps}
           >
-            {Icon ? <Icon {...accordionCounterIconProps} /> : index + 1}
+            {Icon ? <Icon {...accordionCounterIconProps} /> : index}
           </span>
           <h4
             className='my-0 ml-6 font-semibold text-lg text-brand text-left w-full'
@@ -94,7 +94,7 @@ const Accordion = ({
 };
 
 Accordion.propTypes = {
-  index: PropTypes.any,
+  index: PropTypes.number,
   accordionCounter: PropTypes.any,
   accordionButtonProps: PropTypes.object,
   accordionTextContainerProps: PropTypes.object,

@@ -9,13 +9,13 @@ const Button = ({
   fixedWidth,
   as: Element = 'button',
   href,
-  disabled = false,
   link: Link,
   ...rest
 }) => {
   const generalClasses = `w-full h-12 shadow-xl inline-flex justify-center items-center
     rounded-full font-bold text-xl tracking-wider px-4 py-2 cursor-pointer lg:mr-2`;
-  const transitionClasses = 'transform ease-in duration-100 transition-all hover:-translate-y-1 hover:shadow-2xl';
+  const transitionClasses =
+    'transform ease-in duration-100 transition-all hover:-translate-y-1 hover:shadow-2xl';
   const isPrimary = variant === 'primary';
   const isSecondary = variant === 'secondary';
   const isTertairy = variant === 'tertairy';
@@ -24,7 +24,6 @@ const Button = ({
     <Link href={href} passHref>
       <Element
         type={Element === 'button' ? 'button' : null}
-        disabled={disabled}
         className={classNames(
           generalClasses,
           transitionClasses,
@@ -45,7 +44,6 @@ const Button = ({
     <Element
       type={Element === 'button' ? 'button' : null}
       href={href}
-      disabled={disabled}
       className={classNames(
         generalClasses,
         transitionClasses,
@@ -67,7 +65,6 @@ Button.propTypes = {
   as: PropTypes.any,
   children: PropTypes.node.isRequired,
   className: PropTypes.string,
-  disabled: PropTypes.bool,
   element: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
   fixedWidth: PropTypes.bool,
   href: PropTypes.string,

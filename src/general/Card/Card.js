@@ -27,7 +27,7 @@ const Card = ({
   opacity,
   textCenter,
   title,
-  variant = 'transparent',
+  variant = 'primary',
   ...rest
 }) => {
   const Element = as;
@@ -44,7 +44,9 @@ const Card = ({
           'Card',
           noGutter ? 'mx-0 lg:mx-5' : 'mx-5',
           !hasImage && 'p-5 lg:p-10',
-          { 'shadow-2xl lg:shadow-3xl mb-5 lg:mb-10 bg-body-color text-gray-900': isPrimary },
+          {
+            'shadow-2xl lg:shadow-3xl mb-5 lg:mb-10 bg-body-color text-gray-900': isPrimary,
+          },
           { 'bg-brand text-white shadow-xl lg:shadow-3xl': isSecondary },
           { 'bg-transparent': isTransparent },
           { [opacityClass]: opacity },
@@ -60,7 +62,9 @@ const Card = ({
         {image && (
           <div
             style={{ backgroundImage: `url('${image}')` }}
-            className={cn('w-full h-40 relative rounded-t-lg bg-cover bg-center')}
+            className={cn(
+              'w-full h-40 relative rounded-t-lg bg-cover bg-center',
+            )}
             {...imageWrapperProps}
           >
             {title && (

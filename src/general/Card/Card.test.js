@@ -22,24 +22,31 @@ describe('Card', () => {
   });
 
   test('accept card primary', () => {
-    const { getByTestId } = render(<Card data-testid='test-Card' variant='primary' />);
+    const { getByTestId } = render(
+      <Card data-testid='test-Card' variant='primary' />,
+    );
     expect(getByTestId('test-Card').classList.contains('primary')).toBe(true);
   });
   test('accept card secondary', () => {
-    const { getByTestId } = render(<Card data-testid='test-Card' variant='secondary' />);
+    const { getByTestId } = render(
+      <Card data-testid='test-Card' variant='secondary' />,
+    );
     expect(getByTestId('test-Card')).toHaveClass('secondary');
   });
 
-  test('is by default transparent', () => {
+  test('is by default primary', () => {
     const { getByTestId } = render(<Card data-testid='test-Card'>hi</Card>);
-    expect(getByTestId('test-Card')).toHaveClass('transparent');
+    expect(getByTestId('test-Card')).toHaveClass('primary');
   });
 
   test('should display a img', () => {
     const { getByTestId } = render(
       <Card
         data-testid='test-Card'
-        imageWrapperProps={{ 'data-testid': 'card-image', className: 'card-image' }}
+        imageWrapperProps={{
+          'data-testid': 'card-image',
+          className: 'card-image',
+        }}
         image='https://aparthotelsberwang.at/wp-content/uploads/2016/02/meer-berwang-uitzicht-bergen-tirol-oostenrijk-zugspitz-arena-zomervakantie-600x400.jpg'
       >
         hi
@@ -52,7 +59,10 @@ describe('Card', () => {
     const { getByTestId } = render(
       <Card
         data-testid='test-Card'
-        cardTitleWrapperProps={{ 'data-testid': 'title-here', className: 'title-here' }}
+        cardTitleWrapperProps={{
+          'data-testid': 'title-here',
+          className: 'title-here',
+        }}
         title='Rowin here'
         image='https://aparthotelsberwang.at/wp-content/uploads/2016/02/meer-berwang-uitzicht-bergen-tirol-oostenrijk-zugspitz-arena-zomervakantie-600x400.jpg'
       >
