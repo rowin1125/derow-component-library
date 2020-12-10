@@ -10,4 +10,10 @@ describe('{{ pascalCase componentName }}', () => {
     expect(getByTestId('test-{{ pascalCase componentName }}')).toHaveTextContent('hi');
     expect(getByTestId('test-{{ pascalCase componentName }}').classList.contains('{{ pascalCase componentName }}')).toBe(true);
   });
+
+  test('should change html element when using "as" prop', () => {
+    const { container } = render(<{{ pascalCase componentName }} as='a'>Joee</{{ pascalCase componentName }}>);
+    const element = container.querySelector('a');
+    expect(element).toBeTruthy();
+  });
 })
