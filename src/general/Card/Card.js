@@ -8,38 +8,42 @@ const VARIANT_MAP = {
   transparent: 'transparent',
 };
 
-const Card = ({
-  as = 'div',
-  author,
-  cardAuthorWrapperProps,
-  cardBodyClass,
-  cardBodyWrapperProps,
-  cardTitleWrapperProps,
-  cardWrapperProps,
-  centerX,
-  centerY,
-  children,
-  className,
-  hover,
-  image,
-  imageWrapperProps,
-  noGutter,
-  opacity,
-  textCenter,
-  title,
-  variant = 'primary',
-  ...rest
-}) => {
-  const Element = as;
-  const isPrimary = variant === 'primary';
-  const isSecondary = variant === 'secondary';
-  const isTransparent = variant === 'transparent';
+const Card = React.forwardRef(
+  (
+    {
+      as = 'div',
+      author,
+      cardAuthorWrapperProps,
+      cardBodyClass,
+      cardBodyWrapperProps,
+      cardTitleWrapperProps,
+      cardWrapperProps,
+      centerX,
+      centerY,
+      children,
+      className,
+      hover,
+      image,
+      imageWrapperProps,
+      noGutter,
+      opacity,
+      textCenter,
+      title,
+      variant = 'primary',
+      ...rest
+    },
+    ref,
+  ) => {
+    const Element = as;
+    const isPrimary = variant === 'primary';
+    const isSecondary = variant === 'secondary';
+    const isTransparent = variant === 'transparent';
 
-  const hasImage = !!image || !!image;
-  const opacityClass = `opacity-${opacity}`;
-  return (
-    <>
+    const hasImage = !!image || !!image;
+    const opacityClass = `opacity-${opacity}`;
+    return (
       <Element
+        ref={ref}
         className={cn(
           'Card',
           noGutter ? 'mx-0 lg:mx-5' : 'mx-5',
@@ -107,9 +111,9 @@ const Card = ({
           {children}
         </div>
       </Element>
-    </>
-  );
-};
+    );
+  },
+);
 
 Card.propTypes = {
   as: PropTypes.any,

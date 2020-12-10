@@ -4,15 +4,37 @@ import styled from 'styled-components';
 import tw from 'twin.macro';
 import classNames from 'classnames';
 
-const ButtonLink = ({ children, variant = 'primary', className, href, link: Link, ...props }) => {
-  const generalClasses = 'relative font-semibold';
-  const isPrimary = variant === 'primary';
-  const isSecondary = variant === 'secondary';
-  const isTertairy = variant === 'tertairy';
+const ButtonLink = React.forwardRef(
+  (
+    { children, variant = 'primary', className, href, link: Link, ...props },
+    ref,
+  ) => {
+    const generalClasses = 'relative font-semibold';
+    const isPrimary = variant === 'primary';
+    const isSecondary = variant === 'secondary';
+    const isTertairy = variant === 'tertairy';
 
-  return Link ? (
-    <Link href={href} passHref>
+    return Link ? (
+      <Link href={href} passHref>
+        <ButtonLinkElement
+          ref={ref}
+          className={classNames(
+            generalClasses,
+            { 'text-brand': isPrimary },
+            { 'text-secondary  ': isSecondary },
+            { 'text-white': isTertairy },
+            variant,
+            className,
+          )}
+          {...props}
+        >
+          {children}
+        </ButtonLinkElement>
+      </Link>
+    ) : (
       <ButtonLinkElement
+        ref={ref}
+        href={href}
         className={classNames(
           generalClasses,
           { 'text-brand': isPrimary },
@@ -25,31 +47,16 @@ const ButtonLink = ({ children, variant = 'primary', className, href, link: Link
       >
         {children}
       </ButtonLinkElement>
-    </Link>
-  ) : (
-    <ButtonLinkElement
-      href={href}
-      className={classNames(
-        generalClasses,
-        { 'text-brand': isPrimary },
-        { 'text-secondary  ': isSecondary },
-        { 'text-white': isTertairy },
-        variant,
-        className,
-      )}
-      {...props}
-    >
-      {children}
-    </ButtonLinkElement>
-  );
-};
+    );
+  },
+);
 
 export const ButtonLinkElement = styled.a`
   &.primary {
     &:after {
       ${tw`bg-brand`}
-      width: ${props => (props.noHover ? '100%' : '0%')};
-      left: ${props => (props.noHover ? '0' : '')};
+      width: ${(props) => (props.noHover ? '100%' : '0%')};
+      left: ${(props) => (props.noHover ? '0' : '')};
     }
     &:hover {
       &:after {
@@ -63,8 +70,8 @@ export const ButtonLinkElement = styled.a`
   &.secondary {
     &:after {
       ${tw`bg-secondary`}
-      width: ${props => (props.noHover ? '100%' : '0%')};
-      left: ${props => (props.noHover ? '0' : '')};
+      width: ${(props) => (props.noHover ? '100%' : '0%')};
+      left: ${(props) => (props.noHover ? '0' : '')};
     }
     &:hover {
       &:after {
@@ -77,8 +84,8 @@ export const ButtonLinkElement = styled.a`
   &.tertairy {
     &:after {
       ${tw`bg-gray-200`}
-      width: ${props => (props.noHover ? '100%' : '0%')};
-      left: ${props => (props.noHover ? '0' : '')};
+      width: ${(props) => (props.noHover ? '100%' : '0%')};
+      left: ${(props) => (props.noHover ? '0' : '')};
     }
     &:hover {
       &:after {
