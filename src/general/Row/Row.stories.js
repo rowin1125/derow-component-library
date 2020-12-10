@@ -1,4 +1,5 @@
 import React from 'react';
+import Col from '../Col/Col';
 import Row from './Row';
 
 export default {
@@ -103,14 +104,69 @@ export default {
   },
 };
 
-const template = (args) => <Row {...args} />;
+const template = (args) => <Row className='bg-brand text-white ' {...args} />;
 
-export const FirstExample = template.bind({});
-FirstExample.args = {
-  children: 'hallo',
+export const WidthCustomWidth = template.bind({});
+WidthCustomWidth.args = {
+  children: 'Width a 50% width',
+  width: 'w-1/2',
 };
 
 export const SecondExample = template.bind({});
 SecondExample.args = {
   children: 'Byeeeee',
+};
+
+export const ContentHorizontalCenter = template.bind({});
+ContentHorizontalCenter.args = {
+  children: 'With horizontal centered content',
+  className: 'lg:h-16 bg-brand text-white',
+  centerX: true,
+};
+
+export const ContentVerticalCenter = template.bind({});
+ContentVerticalCenter.args = {
+  children: 'With vertical centered content',
+  className: 'lg:h-16 bg-brand text-white',
+  centerY: true,
+};
+
+export const CompletlyCentered = template.bind({});
+CompletlyCentered.args = {
+  children: 'Completely centered content',
+  className: 'lg:h-16 bg-brand text-white',
+  centerY: true,
+  centerX: true,
+};
+
+export const ReversedRow = template.bind({});
+ReversedRow.args = {
+  children: 'Completely centered content',
+  className: 'lg:h-16 bg-brand text-white',
+  centerY: true,
+  reverse: true,
+};
+
+export const WithWrappingCol = template.bind({});
+WithWrappingCol.args = {
+  children: (
+    <>
+      <Col centerX xs={6} className='bg-red-100'>
+        width of 50%
+      </Col>
+      <Col centerX xs={6} className='bg-red-200'>
+        width of 50%
+      </Col>
+      <Col centerX xs={6} className='bg-red-300'>
+        width of 50%
+      </Col>
+      <Col centerX xs={6} className='bg-red-400'>
+        width of 50%
+      </Col>
+      <Col centerX xs={6} className='bg-red-500'>
+        width of 50%
+      </Col>
+    </>
+  ),
+  wrap: true,
 };
