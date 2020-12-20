@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.10](https://github.com/rowin1125/derow-react-library/compare/v0.0.9...v0.0.10) (2020-12-20)
+
+
+### Features
+
+* add accordion component ([72f92a5](https://github.com/rowin1125/derow-react-library/commit/72f92a503847fd03203cf7dbad92926f8d6d95c4))
+* added col component ([3f21048](https://github.com/rowin1125/derow-react-library/commit/3f210485605249fd3e6fdb2470bf24287cf23c48))
+* added forward ref to all components ([e6a1c91](https://github.com/rowin1125/derow-react-library/commit/e6a1c91af5fc6d1f1dba700c09b73ca54e1710b9))
+* added row component ([3cf6cc3](https://github.com/rowin1125/derow-react-library/commit/3cf6cc32e559797d944624bd290528d5cd0c169f))
+* removed react-icon dep ([9250bea](https://github.com/rowin1125/derow-react-library/commit/9250bea5a3475724a80deb0a44d168616361e108))
+* updated eslint deps ([7c5ba91](https://github.com/rowin1125/derow-react-library/commit/7c5ba919cad5515ca9d12b8e9b57e124970a5d56))
+
+
+### Bug Fixes
+
+* library dep for example ([a278c76](https://github.com/rowin1125/derow-react-library/commit/a278c7694fb00edeae9a6407c88b33c2bb2a908e))
+
 ### [0.0.9](https://github.com/rowin1125/derow-react-library/compare/v0.0.8...v0.0.9) (2020-12-09)
 
 ### [0.0.8](https://github.com/rowin1125/derow-react-library/compare/v0.0.6...v0.0.8) (2020-12-09)
