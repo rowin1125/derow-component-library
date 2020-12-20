@@ -72,13 +72,10 @@
   },
   "peerDependencies": {
     "react": "16.x",
-    "react-dom": "16.x",
-    "react-icons": "^4.1.0"
+    "react-dom": "16.x"
   },
   "dependencies": {
     "classnames": "^2.2.6",
-    "postcss-import": "^13.0.0",
-    "postcss-loader": "^4.1.0",
     "prop-types": "^15.7.2",
     "styled-components": "^5.2.1",
     "twin.macro": "^2.0.6"

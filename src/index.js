@@ -1,4 +1,4 @@
 import * as General from './general';
-import * as Slices from './slices';
+// import * as Slices from './slices';
 
-export { General, Slices };
+export { General };

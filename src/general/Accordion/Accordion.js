@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react';
 import PropTypes from 'prop-types';
 import cn from 'classnames';
-import { FaChevronDown } from 'react-icons/fa';
+import QuestionMark from '../../backup/QuestionMark';
 import styled from 'styled-components';
 
 const SyledAccordion = styled.div`
@@ -71,7 +71,7 @@ const Accordion = React.forwardRef(
               {heading}
             </h4>
           </div>
-          <FaChevronDown
+          <QuestionMark
             className={cn(
               'text-3xl lg:mr-10 transform transition-all duration-300 ease-in-out text-brand w-8 h-8',
               open ? 'rotate-180' : 'rotate-0',

@@ -96,13 +96,13 @@ const Card = React.forwardRef(
         )}
         <div
           className={cn(
-            'w-full h-full flex',
+            'w-full h-full flex flex-col',
             {
               'p-5 lg:p-10': !!image || !!title,
             },
             textCenter && 'text-center',
             centerX && 'items-center',
-            centerY && 'justify-center flex-row',
+            centerY && 'justify-center',
             cardBodyClass,
             VARIANT_MAP[variant] === 'transparent' && !noGutter && 'px-5',
           )}

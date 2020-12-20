@@ -2,7 +2,7 @@
 import { render } from '@testing-library/react';
 import React from 'react';
 import Accordion from './Accordion';
-import { FaQuestion } from 'react-icons/fa';
+import QuestionMark from '../../backup/QuestionMark';
 
 describe('Accordion', () => {
   test('renders without crashing', () => {
@@ -48,7 +48,7 @@ describe('Accordion', () => {
   test('renders an Icon as accordionCounter', () => {
     const content = 'LALALALA';
     const heading = 'Heading here';
-    const Icon = FaQuestion;
+    const Icon = QuestionMark;
     const { getByTestId } = render(
       <Accordion
         accordionCounterIconProps={{ 'data-testid': 'test-Accordion' }}

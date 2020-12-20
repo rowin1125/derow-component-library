@@ -1,6 +1,6 @@
 import React from 'react';
 import Accordion from './Accordion';
-import { FaAddressBook } from 'react-icons/fa';
+import QuestionMark from '../../backup/QuestionMark';
 
 export default {
   title: 'elements/Accordion',
@@ -118,7 +118,7 @@ export default {
   },
 };
 
-const template = (args) => <Accordion {...args} />;
+const template = args => <Accordion {...args} />;
 
 export const RegularExample = template.bind({});
 RegularExample.args = {
@@ -130,7 +130,7 @@ RegularExample.args = {
 export const WithCustomIcon = template.bind({});
 WithCustomIcon.args = {
   heading: 'lalala',
-  accordionCounter: FaAddressBook,
+  accordionCounter: QuestionMark,
   content:
     'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio maiores odio magni quod exercitationem dolor quas nostrum reprehenderit? Maxime reprehenderit aspernatur consequuntur laboriosam provident amet minus ea temporibus, suscipit dolores?',
 };
