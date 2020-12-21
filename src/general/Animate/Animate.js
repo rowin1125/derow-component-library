@@ -57,7 +57,6 @@ const Animate = ({ origin, children, duration = 1, className, ...rest }) => {
 };
 
 Animate.propTypes = {
-  animate: PropTypes.bool,
   duration: PropTypes.number,
   origin: PropTypes.string.isRequired,
   className: PropTypes.string,

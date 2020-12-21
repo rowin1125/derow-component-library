@@ -11,6 +11,7 @@ export default {
         type: 'select',
         options: ['bottom', 'top', 'left'],
       },
+      defaultValue: { summary: 'Required ✅' },
       table: {
         type: {
           summary: 'Animate from',
