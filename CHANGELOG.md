@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.11](https://github.com/rowin1125/derow-react-library/compare/v0.0.10...v0.0.11) (2020-12-21)
+
+
+### Features
+
+* add animate component ([4dab584](https://github.com/rowin1125/derow-react-library/commit/4dab58474d7bf612a649ae7744f2610dfa10ec8d))
+* add horizontalcard slice ([1699544](https://github.com/rowin1125/derow-react-library/commit/1699544b93d52199afda1010cf10cad420f0c72e))
+
+
+### Bug Fixes
+
+* error with gsap import in tests and build ([73ef0eb](https://github.com/rowin1125/derow-react-library/commit/73ef0eb84124860586f80ba463d1e2ff8c496540))
+
 ### [0.0.10](https://github.com/rowin1125/derow-react-library/compare/v0.0.9...v0.0.10) (2020-12-20)
 
 
