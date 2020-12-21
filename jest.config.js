@@ -8,10 +8,12 @@ module.exports = {
       '<rootDir>/../scripts/test/file.mock.js',
     '\\.(css|less|scss)$': '<rootDir>/../scripts/test/style.mock.js',
   },
+  transformIgnorePatterns: ['/node_modules/(?!gsap)'],
   transform: {
     '.+\\.js$': 'babel-jest',
     '.+\\.(css|styl|less|sass|scss)$': 'jest-transform-css',
-    '.+\\.(bmp|gif|jpg|jpeg|png|psd|svg|webp)$': '<rootDir>/../scripts/test/media-file.mock.js',
+    '.+\\.(bmp|gif|jpg|jpeg|png|psd|svg|webp)$':
+      '<rootDir>/../scripts/test/media-file.mock.js',
   },
   reporters: [
     'default',

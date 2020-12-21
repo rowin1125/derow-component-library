@@ -1,8 +1,7 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 /* eslint-disable no-return-assign */
 import React, { useEffect, useRef } from 'react';
-import { Power3, gsap } from 'gsap/dist/gsap';
-import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+import { ScrollTrigger, Power3, gsap } from 'gsap/all';
 import PropTypes from 'prop-types';
 import cn from 'classnames';
 

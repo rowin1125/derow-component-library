@@ -25,7 +25,7 @@ describe('HorizontalCard', () => {
     ).toBe(true);
   });
 
-  test('should have the content from prismic', () => {
+  test('should have the content from prismic', async () => {
     const { findByText } = render(
       <HorizontalCard
         className='HorizontalCard'
@@ -35,10 +35,12 @@ describe('HorizontalCard', () => {
         content={data}
       />,
     );
-    expect(findByText('Website laten maken, hoe werkt dat?')).toBeTruthy();
-    expect(findByText('heading intro here')).toBeTruthy();
     expect(
-      findByText(
+      await findByText('Website laten maken, hoe werkt dat?'),
+    ).toBeTruthy();
+    expect(await findByText('heading intro here')).toBeTruthy();
+    expect(
+      await findByText(
         'Hoe wij dit doen? Dit doen we uiteraard door onze unieke kwaliteiten zoals hierboven beschreven terug te laten komen in de website. Is dat alles...? Nee, wij gaat een stapje verder door naar alle details te kijken en proberen samen met jou het maximale te bereiken.',
       ),
     ).toBeTruthy();

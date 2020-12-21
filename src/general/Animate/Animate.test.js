@@ -6,7 +6,9 @@ import Animate from './Animate';
 describe('Animate', () => {
   test('renders without crashing', () => {
     const { getByTestId } = render(
-      <Animate data-testid='test-Animate'>hi</Animate>,
+      <Animate data-testid='test-Animate' origin='bottom'>
+        hi
+      </Animate>,
     );
     expect(getByTestId('test-Animate')).toBeTruthy();
     expect(getByTestId('test-Animate')).toHaveTextContent('hi');
