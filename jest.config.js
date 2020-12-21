@@ -8,7 +8,8 @@ module.exports = {
       '<rootDir>/../scripts/test/file.mock.js',
     '\\.(css|less|scss)$': '<rootDir>/../scripts/test/style.mock.js',
   },
-  transformIgnorePatterns: ['/node_modules/(?!gsap)'],
+  // If I ever want to ingore a node_module file
+  // transformIgnorePatterns: ['/node_modules/(?!gsap)'],
   transform: {
     '.+\\.js$': 'babel-jest',
     '.+\\.(css|styl|less|sass|scss)$': 'jest-transform-css',

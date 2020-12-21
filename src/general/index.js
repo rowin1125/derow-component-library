@@ -6,4 +6,3 @@ export { default as Container } from './Container';
 export { default as Accordion } from './Accordion';
 export { default as Row } from './Row';
 export { default as Col } from './Col';
-export { default as Animate } from './Animate';
