@@ -15,7 +15,7 @@ describe('HorizontalCard', () => {
         linkResolver={linkResolver}
         htmlSerializer={htmlSerializer}
         data-testid='test-HorizontalCard'
-        content={data}
+        content={data[0]}
       />,
     );
     expect(getByTestId('test-HorizontalCard')).toBeTruthy();
@@ -32,7 +32,7 @@ describe('HorizontalCard', () => {
         linkResolver={linkResolver}
         htmlSerializer={htmlSerializer}
         data-testid='test-HorizontalCard'
-        content={data}
+        content={data[0]}
       />,
     );
     expect(
