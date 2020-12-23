@@ -46,10 +46,10 @@ const Card = React.forwardRef(
         ref={ref}
         className={cn(
           'Card',
-          noGutter ? 'mx-0 lg:mx-5' : 'mx-5',
-          !hasImage && 'p-5 lg:p-10',
+          !hasImage && !isTransparent && 'p-5 lg:p-10',
+
           {
-            'shadow-2xl lg:shadow-3xl mb-5 lg:mb-10 bg-body-color text-gray-900': isPrimary,
+            'shadow-2xl lg:shadow-3xl mb-5 lg:mb-10 bg-body-color text-brand': isPrimary,
           },
           { 'bg-brand text-white shadow-xl lg:shadow-3xl': isSecondary },
           { 'bg-transparent': isTransparent },

@@ -23,6 +23,9 @@ const Button = React.forwardRef(
     const isPrimary = variant === 'primary';
     const isSecondary = variant === 'secondary';
     const isTertairy = variant === 'tertairy';
+    if (Link) {
+      Element = 'a';
+    }
 
     return Link ? (
       <Link href={href} passHref>
@@ -34,9 +37,9 @@ const Button = React.forwardRef(
             transitionClasses,
             { 'bg-brand text-white hover:bg-brand-hover': isPrimary },
             { 'bg-secondary text-brand hover:bg-secondary': isSecondary },
-            { 'bg-gray-100 text-white hover:bg-gray-200': isTertairy },
+            { 'bg-gray-100 text-gray-900 hover:bg-gray-200': isTertairy },
             variant,
-            fixedWidth ? 'w-full lg:w-64' : '',
+            fixedWidth ? 'lg:w-64' : '',
             'lg:mx-0 Button',
             className,
           )}
@@ -57,7 +60,7 @@ const Button = React.forwardRef(
           { 'bg-secondary text-gray-100 hover:bg-secondary': isSecondary },
           { 'bg-gray-100 text-brand hover:bg-gray-200': isTertairy },
           variant,
-          fixedWidth ? 'w-full lg:w-64' : 'lg:w-auto',
+          fixedWidth ? 'lg:w-64' : '',
           'lg:mx-0',
           className,
         )}

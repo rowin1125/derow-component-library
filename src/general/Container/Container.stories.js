@@ -3,7 +3,7 @@ import Container from './Container';
 import Card from '../Card';
 
 export default {
-  title: 'elements/Container',
+  title: 'layout/Container',
   component: Container,
   argTypes: {
     as: {
@@ -22,7 +22,7 @@ export default {
   },
 };
 
-const template = (args) => (
+const template = args => (
   <Container {...args}>
     <Card variant='secondary'>
       <h2>RESIZE ME, I WORK, BELIEVE ME 🙂 </h2>
