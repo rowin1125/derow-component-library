@@ -1,3 +1,112 @@
 @tailwind base;
+
+html {
+  @apply text-gray-900 leading-tight;
+}
+
+h1,
+h2,
+h3,
+h4,
+h6 {
+  font-family: 'Montserrat', sans-serif;
+
+  @apply mb-2;
+}
+
+h1,
+h2,
+h3,
+h4,
+h6 + p,
+a,
+span {
+  @apply mb-2;
+}
+
+strong {
+  @apply font-semibold;
+}
+
+p,
+a,
+span,
+ul,
+li,
+button {
+  font-family: 'Raleway', sans-serif;
+  @apply mt-2 leading-normal tracking-wider font-light;
+}
+
+ul {
+  @apply list-disc text-left my-4 list-inside;
+}
+
+p,
+li,
+span,
+button {
+  @apply text-xl;
+}
+
+p,
+a,
+span,
+button + a,
+span,
+button {
+  @apply mt-4;
+}
+
+h1,
+h2 {
+  @apply text-center;
+}
+
+@media screen and (min-width: 1024px) {
+  p,
+  a,
+  span,
+  button + p,
+  a,
+  span,
+  button {
+    @apply mt-2;
+  }
+
+  h1,
+  h2 {
+    @apply text-left;
+  }
+}
+
+p,
+a,
+span:first-of-type {
+  @apply mt-0 mb-0;
+}
+
+h1 {
+  @apply text-4xl font-bold;
+}
+h2 {
+  @apply text-3xl font-bold;
+}
+h3 {
+  @apply text-xl font-bold;
+}
+
+p + p {
+  @apply mt-4;
+}
+
+@media screen and (min-width: 1024px) {
+  button,
+  a + a,
+  button {
+    @apply ml-1 mr-2;
+  }
+}
+
 @tailwind components;
 @tailwind utilities;

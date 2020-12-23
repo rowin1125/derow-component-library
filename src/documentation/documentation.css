@@ -46,6 +46,16 @@ ul {
   font-size: 1.5rem;
 }
 
+.documentation-light p,
+.documentation-light ul,
+.documentation-light li {
+  color: black;
+}
+
+.documentation-light li a {
+  color: black;
+}
+
 .documentation-light blockquote,
 .documentation-light dl,
 .documentation-light dd,

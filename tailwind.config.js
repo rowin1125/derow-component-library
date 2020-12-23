@@ -18,6 +18,7 @@ module.exports = {
         brand: '#2670d0',
         secondary: '#06479B',
         accent: '#5a96e2',
+        'body-color': '#f9fcf5',
         'accent-1': '#FAFAFA',
         'accent-2': '#EAEAEA',
         'accent-7': '#333',
