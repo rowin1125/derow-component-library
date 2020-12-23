@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.14](https://github.com/rowin1125/derow-react-library/compare/v0.0.13...v0.0.14) (2020-12-23)
+
+
+### Features
+
+* added bgoverflow component ([564d1ea](https://github.com/rowin1125/derow-react-library/commit/564d1ea448b530e8ef8e4c654a0c5174b6b9b6b0))
+* added horizontal component ([737f1d4](https://github.com/rowin1125/derow-react-library/commit/737f1d44c2129f43858acc48e93e14c93de34a3d))
+
+
+### Bug Fixes
+
+* added general storybook styling ([510e48c](https://github.com/rowin1125/derow-react-library/commit/510e48c8ad2d809b3bb76c25aea0774f9b5ed082))
+* adjusted card, button and container ui classes ([993c92f](https://github.com/rowin1125/derow-react-library/commit/993c92f1fa10ddf397dfd61a7e9a862aad81cf5b))
+
 ### [0.0.13](https://github.com/rowin1125/derow-react-library/compare/v0.0.12...v0.0.13) (2020-12-21)
 
 
