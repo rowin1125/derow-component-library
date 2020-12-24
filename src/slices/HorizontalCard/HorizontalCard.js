@@ -21,7 +21,7 @@ const HorizontalCard = ({
     className={cn({ 'bg-brand': content.primary.bg_brand })}
     type={content.primary.overflow}
   >
-    <div className={cn('lg:my-10 ', className)} {...rest}>
+    <div className={cn('lg:py-10 ', className)} {...rest}>
       {content.primary.title && (
         <Container className='mb-10'>
           <Row>
@@ -44,6 +44,7 @@ const HorizontalCard = ({
           <Element key={card.title + i.toString()}>
             {card.variant === 'transparent' ? (
               <OutsideCard
+                content={content}
                 htmlSerializer={htmlSerializer}
                 linkResolver={linkResolver}
                 link={link}
@@ -51,6 +52,7 @@ const HorizontalCard = ({
               />
             ) : (
               <InsideCard
+                content={content}
                 htmlSerializer={htmlSerializer}
                 linkResolver={linkResolver}
                 link={link}

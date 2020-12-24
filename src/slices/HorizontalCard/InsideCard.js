@@ -8,9 +8,9 @@ import Col from '../../general/Col';
 import Card from '../../general/Card';
 import Button from '../../general/Button';
 
-const InsideCard = ({ card, htmlSerializer, linkResolver, link }) => {
+const InsideCard = ({ card, htmlSerializer, linkResolver, link, content }) => {
   return (
-    <Card variant={card.variant}>
+    <Card variant={card.variant} content={content}>
       <Row>
         <Col
           column
@@ -59,6 +59,7 @@ const InsideCard = ({ card, htmlSerializer, linkResolver, link }) => {
 
 InsideCard.propTypes = {
   card: PropTypes.object.isRequired,
+  content: PropTypes.object,
   htmlSerializer: PropTypes.func.isRequired,
   link: PropTypes.any,
   linkResolver: PropTypes.func.isRequired,

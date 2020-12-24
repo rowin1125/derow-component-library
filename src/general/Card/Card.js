@@ -30,6 +30,7 @@ const Card = React.forwardRef(
       textCenter,
       title,
       variant = 'primary',
+      content,
       ...rest
     },
     ref,
@@ -41,6 +42,7 @@ const Card = React.forwardRef(
 
     const hasImage = !!image || !!image;
     const opacityClass = `opacity-${opacity}`;
+    const bgBrand = content && content.primary.bg_brand;
     return (
       <Element
         ref={ref}
@@ -52,11 +54,12 @@ const Card = React.forwardRef(
             'shadow-2xl lg:shadow-3xl mb-5 lg:mb-10 bg-body-color text-brand': isPrimary,
           },
           { 'bg-brand text-white shadow-xl lg:shadow-3xl': isSecondary },
-          { 'bg-transparent': isTransparent },
           { [opacityClass]: opacity },
           VARIANT_MAP[variant],
           'flex flex-col w-full',
           hover && 'transform hover:scale-105 ease-in-out duration-200',
+          isTransparent &&
+            `bg-transparent ${bgBrand ? 'text-white' : 'text-brand'}`,
           { 'rounded-t-lg': !!image },
           className,
         )}
@@ -126,6 +129,7 @@ Card.propTypes = {
   centerX: PropTypes.bool,
   centerY: PropTypes.bool,
   children: PropTypes.node,
+  content: PropTypes.object,
   className: PropTypes.string,
   hover: PropTypes.bool,
   image: PropTypes.any,

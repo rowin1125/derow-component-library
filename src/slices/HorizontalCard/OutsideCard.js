@@ -8,7 +8,7 @@ import Col from '../../general/Col';
 import Card from '../../general/Card';
 import Button from '../../general/Button';
 
-const OutsideCard = ({ card, htmlSerializer, linkResolver, link }) => {
+const OutsideCard = ({ card, htmlSerializer, linkResolver, link, content }) => {
   return (
     <Row>
       <Col
@@ -17,7 +17,7 @@ const OutsideCard = ({ card, htmlSerializer, linkResolver, link }) => {
         centerY
         className={cn('text-current mb-10 lg:mb-0')}
       >
-        <Card variant={card.variant}>
+        <Card variant={card.variant} content={content}>
           <h2 className={cn({ 'text-center': card.title_center })}>
             {card.title}
           </h2>
@@ -68,6 +68,7 @@ const OutsideCard = ({ card, htmlSerializer, linkResolver, link }) => {
 
 OutsideCard.propTypes = {
   card: PropTypes.object.isRequired,
+  content: PropTypes.object,
   htmlSerializer: PropTypes.func.isRequired,
   link: PropTypes.any,
   linkResolver: PropTypes.func.isRequired,

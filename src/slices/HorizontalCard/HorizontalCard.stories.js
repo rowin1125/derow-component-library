@@ -80,3 +80,9 @@ WithOverflow.args = {
   content: data[4],
   className: 'text-brand',
 };
+
+export const TransparentWithBg = template.bind({});
+TransparentWithBg.args = {
+  content: data[5],
+  className: 'text-brand',
+};
