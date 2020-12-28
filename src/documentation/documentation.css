@@ -34,6 +34,15 @@ ul {
 .documentation-light h6 {
   font-weight: bold;
   color: #2670d0;
+  border-bottom: 1px solid #2670d0;
+  margin-top: 32px;
+}
+
+.changelog.documentation-light h3 {
+  font-weight: bold;
+  color: #2670d0;
+  border-bottom: 0px solid #2670d0;
+  margin-top: 32px;
 }
 
 .documentation-light h1 {
@@ -69,7 +78,7 @@ ul {
 .documentation-light figure,
 .documentation-light p,
 .documentation-light pre {
-  margin: 20px 0 !important;
+  margin: 20px 0;
 }
 
 .documentation-light a {

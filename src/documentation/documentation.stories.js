@@ -19,22 +19,37 @@ export default {
 
 function versionizeReadMe(readMeContent) {
   const readMeLines = readMeContent.split('\n');
-  return [`${readMeLines[0]} (v${packageJson.version})`, ...readMeLines.slice(1)].join('\n');
+  return [
+    `${readMeLines[0]} (v${packageJson.version})`,
+    ...readMeLines.slice(1),
+  ].join('\n');
 }
 
 export function LibraryDeveloper() {
-  return <div className='documentation-light' dangerouslySetInnerHTML={{ __html: marked(versionizeReadMe(readMe)) }} />;
+  return (
+    <div
+      className='documentation-light'
+      dangerouslySetInnerHTML={{ __html: marked(versionizeReadMe(readMe)) }}
+    />
+  );
 }
 
 export function PackageDeveloper() {
   return (
     <div
       className='documentation-light'
-      dangerouslySetInnerHTML={{ __html: marked(versionizeReadMe(developerReadMe)) }}
+      dangerouslySetInnerHTML={{
+        __html: marked(versionizeReadMe(developerReadMe)),
+      }}
     />
   );
 }
 
 export function ChangeLog() {
-  return <div className='documentation-light' dangerouslySetInnerHTML={{ __html: marked(changeLog) }} />;
+  return (
+    <div
+      className='documentation-light changelog'
+      dangerouslySetInnerHTML={{ __html: marked(changeLog) }}
+    />
+  );
 }
