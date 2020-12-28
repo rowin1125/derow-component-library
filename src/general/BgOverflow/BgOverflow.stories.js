@@ -68,7 +68,7 @@ OverFlowReverse.args = {
 
 export const NoOverflow = template.bind({});
 NoOverflow.args = {
-  type: '',
+  type: 'none',
   children: (
     <Row centerX centerY className='py-32'>
       <Col xs={6}>
