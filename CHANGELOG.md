@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.18](https://github.com/rowin1125/derow-react-library/compare/v0.0.17...v0.0.18) (2020-12-30)
+
+
+### Bug Fixes
+
+* graphql overlapping queries for icon in uspcard ([4405645](https://github.com/rowin1125/derow-react-library/commit/4405645f4d4034619eeda5f496fdef7f35b6c7af))
+
 ### [0.0.17](https://github.com/rowin1125/derow-react-library/compare/v0.0.16...v0.0.17) (2020-12-30)
 
 
