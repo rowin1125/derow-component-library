@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.17](https://github.com/rowin1125/derow-react-library/compare/v0.0.16...v0.0.17) (2020-12-30)
+
+
+### Features
+
+* added centertext slices component ([a89bfba](https://github.com/rowin1125/derow-react-library/commit/a89bfbadf62ca128f139a5b8b86ca34312a793d4))
+* added uspcards ([97c7036](https://github.com/rowin1125/derow-react-library/commit/97c70366c726ddf6739ff411f894dedd6be080e5))
+
+
+### Bug Fixes
+
+* added react-icons as dev dep ([3c22b26](https://github.com/rowin1125/derow-react-library/commit/3c22b265e1b6ab3b293b1c26615e4f394ce6a9fe))
+* spread classnames instead of overwriting ([74e254d](https://github.com/rowin1125/derow-react-library/commit/74e254d275091f64cf94641645cd5054b96cc9f5))
+
 ### [0.0.16](https://github.com/rowin1125/derow-react-library/compare/v0.0.15...v0.0.16) (2020-12-24)
 
 ### [0.0.15](https://github.com/rowin1125/derow-react-library/compare/v0.0.14...v0.0.15) (2020-12-24)
