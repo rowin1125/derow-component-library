@@ -6,7 +6,6 @@ import {
   FaBookOpen,
   FaCartPlus,
   FaIdBadge,
-  FaPoll,
   FaRocket,
   FaServer,
   FaQuestion,
@@ -19,6 +18,10 @@ import {
   FaGithub,
   FaPinterestP,
 } from 'react-icons/fa';
+import { IoIosStats, IoIosCube } from 'react-icons/io';
+import { MdHearing, MdNetworkCheck } from 'react-icons/md';
+import { FiEdit3 } from 'react-icons/fi';
+
 import { BsFillChatSquareDotsFill } from 'react-icons/bs';
 import { AiOutlineFileSearch } from 'react-icons/ai';
 import { VscFileSubmodule } from 'react-icons/vsc';
@@ -27,6 +30,18 @@ import { CgData } from 'react-icons/cg';
 export const iconGenerator = icon => {
   let newIcon;
   switch (icon) {
+    case 'cube':
+      newIcon = IoIosCube;
+      break;
+    case 'speedtest':
+      newIcon = MdNetworkCheck;
+      break;
+    case 'hearing':
+      newIcon = MdHearing;
+      break;
+    case 'edit':
+      newIcon = FiEdit3;
+      break;
     case 'telefoon':
       newIcon = FaPhone;
       break;
@@ -52,7 +67,7 @@ export const iconGenerator = icon => {
       newIcon = FaIdBadge;
       break;
     case 'stats':
-      newIcon = FaPoll;
+      newIcon = IoIosStats;
       break;
     case 'raket':
       newIcon = FaRocket;
