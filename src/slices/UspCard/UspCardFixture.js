@@ -7,7 +7,7 @@ export const content = {
   fields: [
     {
       title: 'Meer conversie',
-      icon: 'stats',
+      usp_icon: 'stats',
       link: {
         _meta: {
           type: 'post',
@@ -17,7 +17,7 @@ export const content = {
     },
     {
       title: 'Goed webdesign',
-      icon: 'edit',
+      usp_icon: 'edit',
       link: {
         _meta: {
           type: 'post',
@@ -27,7 +27,7 @@ export const content = {
     },
     {
       title: 'Naamsbekendheid',
-      icon: 'hearing',
+      usp_icon: 'hearing',
       link: {
         _meta: {
           type: 'post',
@@ -37,7 +37,7 @@ export const content = {
     },
     {
       title: 'Geoptimaliseerd',
-      icon: 'speedtest',
+      usp_icon: 'speedtest',
       link: {
         _meta: {
           type: 'post',
@@ -47,7 +47,7 @@ export const content = {
     },
     {
       title: 'Portfolio',
-      icon: 'cube',
+      usp_icon: 'cube',
       link: {
         _meta: {
           type: 'post',

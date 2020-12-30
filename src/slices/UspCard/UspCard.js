@@ -7,6 +7,7 @@ import Card from '../../general/Card';
 import Col from '../../general/Col';
 import BgOverflow from '../../general/BgOverflow';
 import LinkSvg from '../../backup/LinkSvg';
+import Container from '../../general/Container';
 
 const UspCard = ({
   content,
@@ -35,38 +36,40 @@ const UspCard = ({
       type={content.primary?.overflow}
       {...rest}
     >
-      <Row wrap centerX {...rowProps}>
-        {content.fields?.map(usp => {
-          const Icon = iconGenerator(usp.icon);
-          return (
-            <Col key={usp.title} xs={12} lg={4} centerX centerY {...colProps}>
-              <LinkElement
-                href={Link ? linkResolver(usp.link._meta) : undefined}
-                className='mx-4 w-full h-full relative'
-                {...linkProps}
-              >
-                <Card
-                  centerX
-                  centerY
-                  variant='primary'
-                  className='w-full'
-                  hover={Link ? true : false}
-                  {...cardProps}
+      <Container>
+        <Row wrap centerX {...rowProps}>
+          {content.fields?.map(usp => {
+            const Icon = iconGenerator(usp.usp_icon);
+            return (
+              <Col key={usp.title} xs={12} lg={4} centerX centerY {...colProps}>
+                <LinkElement
+                  href={Link ? linkResolver(usp.link._meta) : undefined}
+                  className='mx-4 w-full h-full relative'
+                  {...linkProps}
                 >
-                  {Link && (
-                    <UserCustomerLinkSvg
-                      className='h-4 w-4 fill-current absolute top-0 right-0 m-2'
-                      {...linkIconProps}
-                    />
-                  )}
-                  <Icon className='text-6xl' {...iconProps} />
-                  <h3>{usp.title}</h3>
-                </Card>
-              </LinkElement>
-            </Col>
-          );
-        })}
-      </Row>
+                  <Card
+                    centerX
+                    centerY
+                    variant='primary'
+                    className='w-full'
+                    hover={Link ? true : false}
+                    {...cardProps}
+                  >
+                    {Link && (
+                      <UserCustomerLinkSvg
+                        className='h-4 w-4 fill-current absolute top-0 right-0 m-2'
+                        {...linkIconProps}
+                      />
+                    )}
+                    <Icon className='text-6xl' {...iconProps} />
+                    <h3>{usp.title}</h3>
+                  </Card>
+                </LinkElement>
+              </Col>
+            );
+          })}
+        </Row>
+      </Container>
     </BgOverflow>
   );
 };
