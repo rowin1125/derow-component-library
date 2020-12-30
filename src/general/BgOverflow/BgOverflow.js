@@ -12,17 +12,22 @@ export const WorkFlowWrapper = styled.div`
     'background: linear-gradient(180deg, #ffffff 11.74%, #2670d0)'}
 `;
 
-const BgOverflow = ({ children, type = '', ...rest }) => {
+const BgOverflow = ({ children, type = '', className, ...rest }) => {
   return (
-    <WorkFlowWrapper type={type} className={cn('BgOverflow', type)} {...rest}>
+    <WorkFlowWrapper
+      type={type}
+      className={cn('BgOverflow', type, className)}
+      {...rest}
+    >
       {children}
     </WorkFlowWrapper>
   );
 };
 
 BgOverflow.propTypes = {
-  type: PropTypes.oneOf(['to_brand', 'from_brand', 'none']),
   children: PropTypes.node,
+  className: PropTypes.string,
+  type: PropTypes.oneOf(['to_brand', 'from_brand', 'none']),
 };
 
 export default BgOverflow;
