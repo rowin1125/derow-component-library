@@ -51,7 +51,7 @@ const Card = React.forwardRef(
           !hasImage && !isTransparent && 'p-5 lg:p-10',
 
           {
-            'shadow-2xl lg:shadow-3xl mb-5 lg:mb-10 bg-body-color text-brand': isPrimary,
+            'shadow-2xl lg:shadow-3xl mb-5 lg:mb-10 bg-white text-brand': isPrimary,
           },
           { 'bg-brand text-white shadow-xl lg:shadow-3xl': isSecondary },
           { [opacityClass]: opacity },
