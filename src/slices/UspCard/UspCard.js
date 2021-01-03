@@ -58,7 +58,7 @@ const UspCard = ({
                 {...colProps}
               >
                 <LinkElement
-                  link={Link}
+                  link={shouldBeALink ? Link : undefined}
                   href={
                     shouldBeALink ? linkResolver(usp.link._meta) : undefined
                   }
