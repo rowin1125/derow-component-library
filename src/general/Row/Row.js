@@ -22,7 +22,7 @@ const Row = React.forwardRef(
       <Element
         ref={ref}
         className={classNames(
-          'Row relative flex flex-col lg:flex-row h-full',
+          'Row relative flex flex-col lg:flex-row ',
           { 'justify-center': centerX },
           { 'items-center': centerY },
           { 'flex-row-reverse lg:flex-row-reverse': reverse },
