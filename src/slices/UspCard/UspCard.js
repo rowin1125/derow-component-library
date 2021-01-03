@@ -9,6 +9,7 @@ import Col from '../../general/Col';
 import BgOverflow from '../../general/BgOverflow';
 import LinkSvg from '../../backup/LinkSvg';
 import Container from '../../general/Container';
+import LinkHandler from './LinkHandler';
 
 const UspCard = ({
   content,
@@ -44,7 +45,8 @@ const UspCard = ({
           {content.fields?.map(usp => {
             const Icon = iconGenerator(usp.usp_icon);
             const shouldBeALink = !!usp.link;
-            const LinkElement = shouldBeALink ? Link : 'div';
+
+            const LinkElement = shouldBeALink ? LinkHandler : 'div';
             return (
               <Col
                 key={usp.usp_icon}
@@ -56,6 +58,7 @@ const UspCard = ({
                 {...colProps}
               >
                 <LinkElement
+                  link={Link}
                   href={
                     shouldBeALink ? linkResolver(usp.link._meta) : undefined
                   }
@@ -97,7 +100,7 @@ UspCard.propTypes = {
   content: PropTypes.object.isRequired,
   linkResolver: PropTypes.func.isRequired,
   htmlSerializer: PropTypes.func.isRequired,
-  link: PropTypes.oneOfType([PropTypes.node, PropTypes.oneOf(['a'])]),
+  link: PropTypes.any,
   linkIcon: PropTypes.node,
   iconGenerator: PropTypes.func,
   containerProps: PropTypes.object,
