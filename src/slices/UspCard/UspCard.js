@@ -1,6 +1,7 @@
 import React from 'react';
 import cn from 'classnames';
 import PropTypes from 'prop-types';
+import { RichText } from 'prismic-reactjs';
 
 import Row from '../../general/Row';
 import Card from '../../general/Card';
@@ -11,10 +12,11 @@ import Container from '../../general/Container';
 
 const UspCard = ({
   content,
+  className,
   htmlSerializer,
   linkResolver,
   containerProps,
-  link: Link,
+  link: Link = 'a',
   iconGenerator,
   linkIcon,
   cardProps,
@@ -26,12 +28,13 @@ const UspCard = ({
   ...rest
 }) => {
   const UserCustomerLinkSvg = linkIcon || LinkSvg;
-  const LinkElement = Link || 'div';
+
   return (
     <BgOverflow
       className={cn(
         { 'bg-brand': content.primary?.bg_brand },
-        'py-10 lg:py-20',
+        'py-10 lg:py-20 usp-card w-full',
+        className,
       )}
       type={content.primary?.overflow}
       {...rest}
@@ -40,10 +43,22 @@ const UspCard = ({
         <Row wrap centerX {...rowProps}>
           {content.fields?.map(usp => {
             const Icon = iconGenerator(usp.usp_icon);
+            const shouldBeALink = !!usp.link;
+            const LinkElement = shouldBeALink ? Link : 'div';
             return (
-              <Col key={usp.title} xs={12} lg={4} centerX centerY {...colProps}>
+              <Col
+                key={usp.usp_icon}
+                xs={12}
+                lg={4}
+                centerX
+                centerY
+                className='mb-5 lg:mb-10'
+                {...colProps}
+              >
                 <LinkElement
-                  href={Link ? linkResolver(usp.link._meta) : undefined}
+                  href={
+                    shouldBeALink ? linkResolver(usp.link._meta) : undefined
+                  }
                   className='mx-4 w-full h-full relative'
                   {...linkProps}
                 >
@@ -51,18 +66,21 @@ const UspCard = ({
                     centerX
                     centerY
                     variant='primary'
-                    className='w-full'
-                    hover={Link ? true : false}
+                    className='w-full h-full'
+                    hover={shouldBeALink ? true : false}
                     {...cardProps}
                   >
-                    {Link && (
+                    {shouldBeALink && (
                       <UserCustomerLinkSvg
                         className='h-4 w-4 fill-current absolute top-0 right-0 m-2'
                         {...linkIconProps}
                       />
                     )}
-                    <Icon className='text-6xl' {...iconProps} />
-                    <h3>{usp.title}</h3>
+                    <Icon className='text-6xl mb-2' {...iconProps} />
+                    <RichText
+                      htmlSerializer={htmlSerializer}
+                      render={usp.usp_text}
+                    />
                   </Card>
                 </LinkElement>
               </Col>
@@ -75,6 +93,7 @@ const UspCard = ({
 };
 
 UspCard.propTypes = {
+  className: PropTypes.string,
   content: PropTypes.object.isRequired,
   linkResolver: PropTypes.func.isRequired,
   htmlSerializer: PropTypes.func.isRequired,

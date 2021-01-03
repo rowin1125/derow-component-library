@@ -1,7 +1,13 @@
 import React from 'react';
 
 import UspCard from './UspCard';
-import { content, contentBg, contentOverflow } from './UspCardFixture';
+import {
+  content,
+  contentBg,
+  contentOverflow,
+  contentWithExtraText,
+  contentSimple,
+} from './UspCardFixture';
 import { iconGenerator } from '../../utils/iconGenerator';
 import { linkResolver } from '../../utils/linkResolver';
 import { htmlSerializer } from '../../utils/htmlSerializer';
@@ -25,7 +31,7 @@ const contentOne = { ...content };
 
 export const BasicExample = template.bind({});
 BasicExample.args = {
-  content: contentOne,
+  content: contentSimple,
 };
 
 export const AsALink = template.bind({});
@@ -44,4 +50,10 @@ export const WithAnOverflow = template.bind({});
 WithAnOverflow.args = {
   content: contentOverflow,
   link: 'a',
+};
+
+export const WithExtraText = template.bind({});
+WithExtraText.args = {
+  link: 'a',
+  content: contentWithExtraText,
 };

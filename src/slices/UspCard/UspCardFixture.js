@@ -6,7 +6,13 @@ export const content = {
   },
   fields: [
     {
-      title: 'Meer conversie',
+      usp_text: [
+        {
+          type: 'heading3',
+          text: 'Meer conversie',
+          spans: [],
+        },
+      ],
       usp_icon: 'stats',
       link: {
         _meta: {
@@ -16,7 +22,13 @@ export const content = {
       },
     },
     {
-      title: 'Goed webdesign',
+      usp_text: [
+        {
+          type: 'heading3',
+          text: 'Goed webdesign',
+          spans: [],
+        },
+      ],
       usp_icon: 'edit',
       link: {
         _meta: {
@@ -26,7 +38,13 @@ export const content = {
       },
     },
     {
-      title: 'Naamsbekendheid',
+      usp_text: [
+        {
+          type: 'heading3',
+          text: 'Naamsbekendheid',
+          spans: [],
+        },
+      ],
       usp_icon: 'hearing',
       link: {
         _meta: {
@@ -36,7 +54,13 @@ export const content = {
       },
     },
     {
-      title: 'Geoptimaliseerd',
+      usp_text: [
+        {
+          type: 'heading3',
+          text: 'Geoptimaliseerd',
+          spans: [],
+        },
+      ],
       usp_icon: 'speedtest',
       link: {
         _meta: {
@@ -46,7 +70,13 @@ export const content = {
       },
     },
     {
-      title: 'Portfolio',
+      usp_text: [
+        {
+          type: 'heading3',
+          text: 'Portfolio',
+          spans: [],
+        },
+      ],
       usp_icon: 'cube',
       link: {
         _meta: {
@@ -63,3 +93,136 @@ contentBg.primary.bg_brand = true;
 
 export const contentOverflow = JSON.parse(JSON.stringify(content));
 contentOverflow.primary.overflow = 'to_brand';
+
+export const contentSimple = {
+  type: 'usp_card',
+  primary: {
+    bg_brand: false,
+    overflow: 'none',
+  },
+  fields: [
+    {
+      usp_text: [
+        {
+          type: 'heading3',
+          text: 'Meer conversie',
+          spans: [],
+        },
+      ],
+      usp_icon: 'stats',
+    },
+    {
+      usp_text: [
+        {
+          type: 'heading3',
+          text: 'Goed webdesign',
+          spans: [],
+        },
+      ],
+      usp_icon: 'edit',
+    },
+    {
+      usp_text: [
+        {
+          type: 'heading3',
+          text: 'Naamsbekendheid',
+          spans: [],
+        },
+      ],
+      usp_icon: 'hearing',
+    },
+    {
+      usp_text: [
+        {
+          type: 'heading3',
+          text: 'Geoptimaliseerd',
+          spans: [],
+        },
+      ],
+      usp_icon: 'speedtest',
+    },
+    {
+      usp_text: [
+        {
+          type: 'heading3',
+          text: 'Portfolio',
+          spans: [],
+        },
+      ],
+      usp_icon: 'cube',
+    },
+  ],
+};
+
+export const contentWithExtraText = {
+  type: 'usp_card',
+  primary: {
+    bg_brand: false,
+    overflow: 'none',
+  },
+  fields: [
+    {
+      usp_text: [
+        {
+          type: 'heading2',
+          text: '20+',
+          spans: [],
+        },
+        {
+          type: 'heading3',
+          text: 'Bedrijven',
+          spans: [],
+        },
+        {
+          type: 'heading3',
+          text: 'geholpen',
+          spans: [],
+        },
+      ],
+      usp_icon: 'lightbulb',
+      link: null,
+    },
+    {
+      usp_text: [
+        {
+          type: 'heading2',
+          text: '20+',
+          spans: [],
+        },
+        {
+          type: 'heading3',
+          text: 'Applicaties ',
+          spans: [],
+        },
+        {
+          type: 'heading3',
+          text: 'gebouwd',
+          spans: [],
+        },
+      ],
+      usp_icon: 'stack',
+      link: null,
+    },
+    {
+      usp_text: [
+        {
+          type: 'heading2',
+          text: '94% ',
+          spans: [],
+        },
+        {
+          type: 'heading3',
+          text: 'Tevreden',
+          spans: [],
+        },
+        {
+          type: 'heading3',
+          text: 'klanten',
+          spans: [],
+        },
+      ],
+      usp_icon: 'review',
+      link: null,
+    },
+  ],
+};
