@@ -3,6 +3,7 @@ export const content = {
   primary: {
     bg_brand: false,
     overflow: 'none',
+    center_text_small: false,
     center_title: 'Waarom zou je een website laten maken door Derow?',
     center_text: [
       {
@@ -61,3 +62,10 @@ export const content = {
     ],
   },
 };
+
+export const contentBg = JSON.parse(JSON.stringify(content));
+contentBg.primary.bg_brand = true;
+
+export const contentSmall = JSON.parse(JSON.stringify(content));
+contentSmall.primary.center_text_small = true;
+contentSmall.primary.bg_brand = true;
