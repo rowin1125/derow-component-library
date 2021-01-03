@@ -17,9 +17,10 @@ import {
   FaLinkedinIn,
   FaGithub,
   FaPinterestP,
+  FaRegLightbulb,
 } from 'react-icons/fa';
-import { IoIosStats, IoIosCube } from 'react-icons/io';
-import { MdHearing, MdNetworkCheck } from 'react-icons/md';
+import { IoIosStats, IoIosCube, IoIosApps } from 'react-icons/io';
+import { MdHearing, MdNetworkCheck, MdRateReview } from 'react-icons/md';
 import { FiEdit3 } from 'react-icons/fi';
 
 import { BsFillChatSquareDotsFill } from 'react-icons/bs';
@@ -30,6 +31,15 @@ import { CgData } from 'react-icons/cg';
 export const iconGenerator = icon => {
   let newIcon;
   switch (icon) {
+    case 'lightbulb':
+      newIcon = FaRegLightbulb;
+      break;
+    case 'stack':
+      newIcon = IoIosApps;
+      break;
+    case 'review':
+      newIcon = MdRateReview;
+      break;
     case 'cube':
       newIcon = IoIosCube;
       break;

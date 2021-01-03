@@ -46,7 +46,7 @@ export const htmlSerializer = (type, element, content, children, index) => {
       );
     case Elements.heading3:
       return (
-        <h3 key={element.text} className='text-baseNormal text-xl mt-10'>
+        <h3 key={element.text} className='text-baseNormal text-xl my-4'>
           {children}
         </h3>
       );
@@ -54,7 +54,7 @@ export const htmlSerializer = (type, element, content, children, index) => {
       return (
         <h4
           key={element.text}
-          className='text-baseNormal text-lg font-semibold mt-10'
+          className='text-baseNormal text-lg font-semibold my-4'
         >
           {children}
         </h4>
