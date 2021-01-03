@@ -37,83 +37,87 @@ const Testimonials = ({ className, content, htmlSerializer, ...rest }) => {
     <BgOverflow
       className={cn(
         { 'bg-brand': content.primary?.bg_brand },
-        'py-10 lg:py-20 w-full',
+        'py-10 lg:py-20 w-full testimonial',
         className,
       )}
       type={content.primary?.overflow}
       {...rest}
     >
-      <AnimatePresence initial={false} custom={direction}>
-        <Container>
-          {content.primary.title && (
-            <Row className='lg:mb-10' centerX>
-              <Col xs={12} centerX>
-                <h2
-                  className={cn(
-                    containsAOverflowFromBrand || containsABg
-                      ? 'text-white'
-                      : 'text-brand',
-                  )}
-                >
-                  {content.primary.title}
-                </h2>
-              </Col>
-            </Row>
-          )}
-          <div className={cn('mx-auto px-8 mb-20')}>
-            <div className='relative'>
-              <div className='overflow-hidden shadow-3xl bg-gray-100'>
-                <motion.div
-                  className='relative rounded-lg block md:flex items-center'
-                  style={{ minHeight: '21rem' }}
-                  key={page}
-                  custom={direction}
-                  variants={variants}
-                  initial='enter'
-                  animate='center'
-                  exit='exit'
-                  transition={{
-                    x: { type: 'spring', stiffness: 300, damping: 80 },
-                    opacity: { duration: 0.2 },
-                  }}
-                  drag='x'
-                  dragConstraints={{ left: 0, right: 0 }}
-                  dragElastic={1}
-                  onDragEnd={(e, { offset, velocity }) => {
-                    const swipe = swipePower(offset.x, velocity.x);
+      <Row>
+        <Col xs={12} lg={content.primary.slim ? 10 : 12}>
+          <AnimatePresence initial={false} custom={direction}>
+            <Container>
+              {content.primary.title && (
+                <Row className='lg:mb-10' centerX>
+                  <Col xs={12} centerX>
+                    <h2
+                      className={cn(
+                        containsAOverflowFromBrand || containsABg
+                          ? 'text-white'
+                          : 'text-brand',
+                      )}
+                    >
+                      {content.primary.title}
+                    </h2>
+                  </Col>
+                </Row>
+              )}
+              <div className={cn('mx-auto px-8 mb-20')}>
+                <div className='relative'>
+                  <div className='overflow-hidden shadow-3xl bg-gray-100'>
+                    <motion.div
+                      className='relative rounded-lg block md:flex items-center'
+                      style={{ minHeight: '21rem' }}
+                      key={page}
+                      custom={direction}
+                      variants={variants}
+                      initial='enter'
+                      animate='center'
+                      exit='exit'
+                      transition={{
+                        x: { type: 'spring', stiffness: 300, damping: 80 },
+                        opacity: { duration: 0.2 },
+                      }}
+                      drag='x'
+                      dragConstraints={{ left: 0, right: 0 }}
+                      dragElastic={1}
+                      onDragEnd={(e, { offset, velocity }) => {
+                        const swipe = swipePower(offset.x, velocity.x);
 
-                    if (swipe < -swipeConfidenceThreshold) {
-                      paginate(1, setPage, page);
-                      setInvterval(interval);
-                    } else if (swipe > swipeConfidenceThreshold) {
-                      paginate(-1, setPage, page);
-                      setInvterval(interval);
-                    }
-                  }}
-                >
-                  <TestimonialBody
-                    htmlSerializer={htmlSerializer}
-                    content={content}
-                    currentIndex={testimonialsIndex}
+                        if (swipe < -swipeConfidenceThreshold) {
+                          paginate(1, setPage, page);
+                          setInvterval(interval);
+                        } else if (swipe > swipeConfidenceThreshold) {
+                          paginate(-1, setPage, page);
+                          setInvterval(interval);
+                        }
+                      }}
+                    >
+                      <TestimonialBody
+                        htmlSerializer={htmlSerializer}
+                        content={content}
+                        currentIndex={testimonialsIndex}
+                      />
+                    </motion.div>
+                  </div>
+                  <TestimonialButton
+                    paginate={paginate}
+                    setPage={setPage}
+                    page={page}
+                    direction={-1}
                   />
-                </motion.div>
+                  <TestimonialButton
+                    paginate={paginate}
+                    setPage={setPage}
+                    page={page}
+                    direction={1}
+                  />
+                </div>
               </div>
-              <TestimonialButton
-                paginate={paginate}
-                setPage={setPage}
-                page={page}
-                direction={-1}
-              />
-              <TestimonialButton
-                paginate={paginate}
-                setPage={setPage}
-                page={page}
-                direction={1}
-              />
-            </div>
-          </div>
-        </Container>
-      </AnimatePresence>
+            </Container>
+          </AnimatePresence>
+        </Col>
+      </Row>
     </BgOverflow>
   );
 };
