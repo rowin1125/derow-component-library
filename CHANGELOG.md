@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.21](https://github.com/rowin1125/derow-react-library/compare/v0.0.20...v0.0.21) (2021-01-03)
+
+
+### Features
+
+* testimonial - added testimonial slice ([5150cad](https://github.com/rowin1125/derow-react-library/commit/5150cadc7ca49276fd4cf7b3ec4812bb1a41c562))
+
+
+### Bug Fixes
+
+* row - h-full class breaks testimonials and is not req ([1fcb51a](https://github.com/rowin1125/derow-react-library/commit/1fcb51af0e50f5d9c704f74c4237d0be2dc06e98))
+* uspcard - failing prop on div element when not a link ([ce2970a](https://github.com/rowin1125/derow-react-library/commit/ce2970a1f27780a6d31a51ec8a8a7cc51bc54071))
+
 ### [0.0.20](https://github.com/rowin1125/derow-react-library/compare/v0.0.19...v0.0.20) (2021-01-03)
 
 
