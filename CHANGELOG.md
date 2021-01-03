@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.19](https://github.com/rowin1125/derow-react-library/compare/v0.0.18...v0.0.19) (2021-01-03)
+
+
+### Features
+
+* added size to centertext slice component ([14965a3](https://github.com/rowin1125/derow-react-library/commit/14965a3a786c1c40bed924d8c55814b54e842567))
+* helpers - updated helpers with more support options ([98bd5e3](https://github.com/rowin1125/derow-react-library/commit/98bd5e3c8baaf7ab950f9a8f886aac9dceab9fc4))
+* uspcard  - more dynamic with more data input ([1b6992e](https://github.com/rowin1125/derow-react-library/commit/1b6992e7d50d344b1c1b29f11ee5d37655482b77))
+
+
+### Bug Fixes
+
+* bg-color of card to real white ([3a2c648](https://github.com/rowin1125/derow-react-library/commit/3a2c648b519e97d3748f2c73d197440f0caabcad))
+* wrong post-cli version dep for tailwind build ([6f7fbbf](https://github.com/rowin1125/derow-react-library/commit/6f7fbbf9dab9b5209e8fc1e07ba153af79a9b30a))
+
 ### [0.0.18](https://github.com/rowin1125/derow-react-library/compare/v0.0.17...v0.0.18) (2020-12-30)
 
 
