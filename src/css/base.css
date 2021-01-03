@@ -108,5 +108,11 @@ p + p {
   }
 }
 
+.usp-card h3,
+.usp-card h4,
+.usp-card p {
+  @apply my-0;
+}
+
 @tailwind components;
 @tailwind utilities;
