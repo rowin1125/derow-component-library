@@ -37,7 +37,7 @@ const Button = React.forwardRef(
             transitionClasses,
             { 'bg-brand text-white hover:bg-brand-hover': isPrimary },
             { 'bg-secondary text-brand hover:bg-secondary': isSecondary },
-            { 'bg-gray-100 text-gray-900 hover:bg-gray-200': isTertairy },
+            { 'bg-gray-100 text-brand hover:bg-gray-200': isTertairy },
             variant,
             fixedWidth ? 'lg:w-64' : '',
             'lg:mx-0 Button',
