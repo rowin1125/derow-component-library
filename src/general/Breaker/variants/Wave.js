@@ -5,6 +5,7 @@ import cn from 'classnames';
 const Wave = ({ className, ...rest }) => {
   return (
     <svg
+      id='breaker-wave'
       className={cn('w-full h-12 lg:h-16 fill-current relative', className)}
       viewBox='0 0 1695 57'
       xmlns='http://www.w3.org/2000/svg'
