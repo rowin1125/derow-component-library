@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.24](https://github.com/rowin1125/derow-react-library/compare/v0.0.23...v0.0.24) (2021-01-04)
+
+
+### Features
+
+* breaker - added different variant of breakers ([33edd23](https://github.com/rowin1125/derow-react-library/commit/33edd23e89681f39d7bdc2e449c5ed1bf0ff7ad5))
+* breaker - added new breaker component ([90015f7](https://github.com/rowin1125/derow-react-library/commit/90015f7fd357fefb427cfec581b41b85763b308f))
+* stickycarousel - added new stickycarousel slice component ([b2fe02b](https://github.com/rowin1125/derow-react-library/commit/b2fe02b952eafe2dc6fe109170c2e4cfaeff6498))
+
+
+### Bug Fixes
+
+* button - tertairy variant should have brand text color ([59e24e3](https://github.com/rowin1125/derow-react-library/commit/59e24e30a22806845a9e54704315a1776d5cdfba))
+* failing build with gsap dep ([1a7ea9e](https://github.com/rowin1125/derow-react-library/commit/1a7ea9e13c137975cb41035c18be5160a70d7e44))
+
 ### [0.0.23](https://github.com/rowin1125/derow-react-library/compare/v0.0.22...v0.0.23) (2021-01-04)
 
 
