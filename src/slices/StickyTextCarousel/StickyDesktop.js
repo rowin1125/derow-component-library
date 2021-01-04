@@ -18,20 +18,20 @@ const StickyDesktop = ({ content, htmlSerializer, bgBrand }) => {
             <h2 className='text-center'>{content.primary.sticky_title}</h2>
           )}
           <Row className='relative h-full '>
-            <Col xs={4} column>
+            <Col xs={5} column>
               <div
                 className={cn(
                   'sticky',
-                  bgBrand ? 'text-secondary' : 'text-blue-100',
+                  bgBrand ? 'text-blue-400' : 'text-blue-100',
                 )}
-                style={{ top: '150px' }}
+                style={{ top: '50px' }}
               >
                 {content.fields.map((pitch, index) => (
                   <div
                     key={pitch.item_title + index}
-                    className={`my-10 text-container-${index} transform transition-all ease-in-out duration-500`}
+                    className={`my-20 text-container-${index} transform transition-all ease-in-out duration-500`}
                   >
-                    <h4 className='font-bold text-2xl'>{pitch.item_title}</h4>
+                    <h3 className='font-bold text-2xl'>{pitch.item_title}</h3>
                     <RichText
                       render={pitch.item_content}
                       htmlSerializer={htmlSerializer}
@@ -40,11 +40,11 @@ const StickyDesktop = ({ content, htmlSerializer, bgBrand }) => {
                 ))}
               </div>
             </Col>
-            <Col xs={8} column>
+            <Col xs={7} column>
               {content.fields.map((pitch, index) => (
                 <div
                   key={pitch.sticky_image.url + index}
-                  className='relative h-screen-1/2 flex justify-center items-end image my-10'
+                  className='relative h-screen-1/2 flex justify-center items-end image px-10 py-20'
                 >
                   <img
                     className='w-auto h-full'
