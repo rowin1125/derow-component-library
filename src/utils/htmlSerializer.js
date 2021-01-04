@@ -24,12 +24,6 @@ export const htmlSerializer = (type, element, content, children, index) => {
   let result;
   let url;
   switch (type) {
-    case Elements.paragraph:
-      return (
-        <p key={element.text} className='text-brand my-4'>
-          {children}
-        </p>
-      );
     case Elements.heading1:
       return (
         <h1

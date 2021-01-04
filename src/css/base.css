@@ -114,5 +114,9 @@ p + p {
   @apply my-0;
 }
 
+.testimonial p {
+  @apply text-brand;
+}
+
 @tailwind components;
 @tailwind utilities;
