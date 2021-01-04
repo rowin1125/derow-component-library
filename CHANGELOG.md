@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.23](https://github.com/rowin1125/derow-react-library/compare/v0.0.22...v0.0.23) (2021-01-04)
+
+
+### Features
+
+* testimonials - added slim property ([f960617](https://github.com/rowin1125/derow-react-library/commit/f96061736848a3c95c7a45546869ba2b12a351cb))
+
 ### [0.0.22](https://github.com/rowin1125/derow-react-library/compare/v0.0.21...v0.0.22) (2021-01-03)
 
 
