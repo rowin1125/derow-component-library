@@ -21,11 +21,11 @@ const CenterText = ({
     type={content.primary?.overflow}
     {...rest}
   >
-    <Container {...containerProps}>
+    <Container className='py-10 lg:py-20' {...containerProps}>
       <Row centerX>
         <Col xs={12} lg={content.primary.center_text_small ? 10 : 12}>
           <Card variant='transparent' {...cardProps}>
-            <div className='my-20'>
+            <div className=''>
               {content.primary?.center_title && (
                 <h2
                   className={cn(
