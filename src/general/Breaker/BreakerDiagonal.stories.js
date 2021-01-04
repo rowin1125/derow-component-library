@@ -2,7 +2,7 @@ import React from 'react';
 import Breaker from './Breaker';
 
 export default {
-  title: 'layout/Breaker',
+  title: 'layout/Breaker/Diagonal',
   component: Breaker,
   argTypes: {},
 };
