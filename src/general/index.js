@@ -8,3 +8,4 @@ export { default as Row } from './Row';
 export { default as Col } from './Col';
 
 export { default as BgOverflow } from './BgOverflow';
+export { default as Breaker } from './Breaker';
