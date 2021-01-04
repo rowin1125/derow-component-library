@@ -11,15 +11,18 @@ import {
   contentWithDiagonalBreaker,
 } from './stickyTextCarouselFixture';
 
+const StickyTestComponent = ({ ...args }) => (
+  <StickyTextCarousel
+    htmlSerializer={htmlSerializer}
+    data-testid='test-StickyTextCarousel'
+    {...args}
+  />
+);
+
 describe('StickyTextCarousel', () => {
   test('renders without crashing', () => {
     const { getByTestId } = render(
-      <StickyTextCarousel
-        htmlSerializer={htmlSerializer}
-        data-testid='test-StickyTextCarousel'
-        className='StickyTextCarousel'
-        content={content}
-      />,
+      <StickyTestComponent className='StickyTextCarousel' content={content} />,
     );
     expect(
       getByTestId('test-StickyTextCarousel').classList.contains(
@@ -29,14 +32,7 @@ describe('StickyTextCarousel', () => {
   });
 
   test('doesnt render any breakers by default', () => {
-    const { container } = render(
-      <StickyTextCarousel
-        htmlSerializer={htmlSerializer}
-        data-testid='test-StickyTextCarousel'
-        className='StickyTextCarousel'
-        content={content}
-      />,
-    );
+    const { container } = render(<StickyTestComponent content={content} />);
     const diagonalSvg = container.querySelector('#breaker-diagonal');
     const waveSvg = container.querySelector('#breaker-wave');
 
@@ -46,12 +42,7 @@ describe('StickyTextCarousel', () => {
 
   test('shows wave breaker when prop is provided', () => {
     const { container } = render(
-      <StickyTextCarousel
-        htmlSerializer={htmlSerializer}
-        data-testid='test-StickyTextCarousel'
-        className='StickyTextCarousel'
-        content={contentWithWaveBreaker}
-      />,
+      <StickyTestComponent content={contentWithWaveBreaker} />,
     );
 
     const waveSvg = container.querySelector('#breaker-wave');
@@ -60,12 +51,7 @@ describe('StickyTextCarousel', () => {
 
   test('shows diagonal breaker when prop is provided', () => {
     const { container } = render(
-      <StickyTextCarousel
-        htmlSerializer={htmlSerializer}
-        data-testid='test-StickyTextCarousel'
-        className='StickyTextCarousel'
-        content={contentWithDiagonalBreaker}
-      />,
+      <StickyTestComponent content={contentWithDiagonalBreaker} />,
     );
 
     const diagonalSvg = container.querySelector('#breaker-diagonal');
@@ -73,14 +59,7 @@ describe('StickyTextCarousel', () => {
   });
 
   test('renders correct fields by the content prop', () => {
-    const { getAllByText } = render(
-      <StickyTextCarousel
-        htmlSerializer={htmlSerializer}
-        data-testid='test-StickyTextCarousel'
-        className='StickyTextCarousel'
-        content={content}
-      />,
-    );
+    const { getAllByText } = render(<StickyTestComponent content={content} />);
     const text = content.fields[1].item_title;
     const element = getAllByText(text);
     expect(element[0].innerHTML).toEqual(text);

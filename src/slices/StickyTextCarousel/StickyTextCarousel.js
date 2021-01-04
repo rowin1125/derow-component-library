@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
 import cn from 'classnames';
 import PropTypes from 'prop-types';
-import { gsap } from 'gsap/dist/gsap';
-import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 import Breaker from '../../general/Breaker';
 
