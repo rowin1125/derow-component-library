@@ -52,6 +52,10 @@ module.exports = {
         '2xl': '0 25px 50px -1px rgba(0, 0, 0, 0.2)',
         '3xl': '0 25px 60px -1px rgba(0,0,0,0.5)',
       },
+      height: {
+        'screen-1/2': '50vh',
+        'screen-3/4': '75vh',
+      },
       width: {
         '1/8': '12.5%',
         '3/8': '37.5%',
