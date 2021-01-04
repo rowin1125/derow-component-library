@@ -10,7 +10,7 @@
     "lint": "eslint --ext=js --ext=jsx src/ --fix",
     "generate": "node --experimental-modules node_modules/.bin/plop --plopfile scripts/templates/index.js",
     "add-package-details": "node scripts/build/package-support",
-    "build": "NODE_ENV=production rollup -c && yarn add-package-details",
+    "build": "rm -rf dist && NODE_ENV=production rollup -c && yarn add-package-details",
     "release": "standard-version",
     "pub": "npm publish dist",
     "storybook": "start-storybook -p 6006",

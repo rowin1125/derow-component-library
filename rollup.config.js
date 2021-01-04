@@ -15,13 +15,20 @@ export default {
       exports: 'named',
     },
   ],
-  external: [...Object.keys(packageJson.dependencies), ...Object.keys(packageJson.peerDependencies), /@babel\/runtime/],
+  external: [
+    ...Object.keys(packageJson.dependencies),
+    ...Object.keys(packageJson.peerDependencies),
+    /@babel\/runtime/,
+  ],
   plugins: [
     babel({
       exclude: /node_modules/,
       babelHelpers: 'runtime',
       plugins: [['@babel/plugin-transform-runtime'], 'babel-plugin-macros'],
-      presets: [['@babel/preset-env', { modules: false }], ['@babel/preset-react']],
+      presets: [
+        ['@babel/preset-env', { modules: false }],
+        ['@babel/preset-react'],
+      ],
     }),
     resolve(),
     commonjs(),
