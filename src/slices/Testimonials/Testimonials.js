@@ -43,7 +43,7 @@ const Testimonials = ({ className, content, htmlSerializer, ...rest }) => {
       type={content.primary?.overflow}
       {...rest}
     >
-      <Row>
+      <Row centerX>
         <Col xs={12} lg={content.primary.slim ? 10 : 12}>
           <AnimatePresence initial={false} custom={direction}>
             <Container>

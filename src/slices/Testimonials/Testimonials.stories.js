@@ -6,6 +6,7 @@ import {
   contentWithBg,
   contentWithOverflow,
   contentWithCustomInterval,
+  contentWithSlim,
 } from './testimonialFixture';
 import { htmlSerializer } from '../../utils/htmlSerializer';
 
@@ -42,4 +43,9 @@ WithOverflow.args = {
 export const WithCustomRotationInterval = template.bind({});
 WithCustomRotationInterval.args = {
   content: contentWithCustomInterval,
+};
+
+export const WithSlimProperty = template.bind({});
+WithSlimProperty.args = {
+  content: contentWithSlim,
 };

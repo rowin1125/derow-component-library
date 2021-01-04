@@ -12,6 +12,7 @@ export const content = {
     rotate_interval: '6',
     bg_brand: false,
     overflow: 'none',
+    slim: false,
   },
   fields: [
     {
@@ -123,3 +124,7 @@ contentWithOverflow.primary.title = 'Zo denken onze klanten over Derow';
 export const contentWithCustomInterval = JSON.parse(JSON.stringify(content));
 contentWithCustomInterval.primary.rotate_interval = '2';
 contentWithCustomInterval.primary.title = 'Interval is now 2 sec';
+
+export const contentWithSlim = JSON.parse(JSON.stringify(content));
+contentWithSlim.primary.slim = true;
+contentWithSlim.primary.title = 'This is now 10 columns instead of 12';
