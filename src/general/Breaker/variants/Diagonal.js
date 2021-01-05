@@ -9,7 +9,7 @@ const Diagonal = ({ className, ...rest }) => {
       className={cn('w-full fill-current relative', className)}
       viewBox='0 0 1440 107'
       xmlns='http://www.w3.org/2000/svg'
-      style={{ top: '2px' }}
+      style={{ top: '3px' }}
       {...rest}
     >
       <path d='M1440 0V107L0 106L1440 0Z' />
