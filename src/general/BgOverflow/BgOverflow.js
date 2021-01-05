@@ -12,7 +12,7 @@ export const WorkFlowWrapper = styled.div`
     'background: linear-gradient(180deg, #ffffff 11.74%, #2670d0)'}
 `;
 
-const BgOverflow = ({ children, type = '', className, ...rest }) => {
+const BgOverflow = ({ children, type = 'none', className, ...rest }) => {
   return (
     <WorkFlowWrapper
       type={type}
