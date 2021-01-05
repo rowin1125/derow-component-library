@@ -116,5 +116,11 @@ p + p {
   @apply text-brand;
 }
 
+.usp-divider h2,
+.usp-divider h3,
+.usp-divider h4 {
+  text-align: center !important;
+}
+
 @tailwind components;
 @tailwind utilities;
