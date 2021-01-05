@@ -1,8 +1,14 @@
 import React from 'react';
 
 import CenterText from './CenterText';
-import { content, contentBg, contentSmall } from './CenterTextFixture';
+import {
+  content,
+  contentBg,
+  contentSmall,
+  contentWithButtons,
+} from './CenterTextFixture';
 import { htmlSerializer } from '../../utils/htmlSerializer';
+import { linkResolver } from '../../utils/linkResolver';
 
 export default {
   title: 'slices/CenterText',
@@ -11,7 +17,11 @@ export default {
 };
 
 const template = args => (
-  <CenterText htmlSerializer={htmlSerializer} {...args} />
+  <CenterText
+    htmlSerializer={htmlSerializer}
+    linkResolver={linkResolver}
+    {...args}
+  />
 );
 
 export const SimpleExample = template.bind({});
@@ -27,4 +37,9 @@ WithBgBrand.args = {
 export const SmallExample = template.bind({});
 SmallExample.args = {
   content: contentSmall,
+};
+
+export const WithButtons = template.bind({});
+WithButtons.args = {
+  content: contentWithButtons,
 };

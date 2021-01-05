@@ -69,3 +69,27 @@ contentBg.primary.bg_brand = true;
 export const contentSmall = JSON.parse(JSON.stringify(content));
 contentSmall.primary.center_text_small = true;
 contentSmall.primary.bg_brand = true;
+
+export const contentWithButtons = JSON.parse(JSON.stringify(content));
+contentWithButtons.fields = [
+  {
+    center_button_text: 'Bel ons',
+    center_button_variant: 'primary',
+    center_button_link: {
+      _meta: {
+        type: 'landing_page',
+        uid: 'contact',
+      },
+    },
+  },
+  {
+    center_button_text: 'Onze producten',
+    center_button_variant: 'secondary',
+    center_button_link: {
+      _meta: {
+        type: 'landing_page',
+        uid: 'producten',
+      },
+    },
+  },
+];

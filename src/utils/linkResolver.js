@@ -9,6 +9,8 @@ export const linkResolver = doc => {
         return `/${doc.uid}`;
       case 'landing_page':
         return `/${doc.uid}`;
+      case 'product':
+        return `/producten/${doc.uid}`;
       case 'post':
         return `/blog/${doc.uid}`;
       case 'homepage':
