@@ -1,6 +1,15 @@
 import React from 'react';
 import HorizontalCard from './HorizontalCard';
-import data from './HorizontalCardFakeData.json';
+
+import {
+  content,
+  contentPrimaryVariant,
+  contentSecondaryVariant,
+  contentWithBg,
+  contentWithOverflow,
+  contentTransparentVariant,
+  contentWitLargeText,
+} from './horizontalCardFixture';
 
 import { linkResolver } from '../../utils/linkResolver';
 import { htmlSerializer } from '../../utils/htmlSerializer';
@@ -53,36 +62,42 @@ const template = args => (
 
 export const TransparentVariant = template.bind({});
 TransparentVariant.args = {
-  content: data[0],
+  content,
   className: 'text-brand',
 };
 
 export const PrimaryVariant = template.bind({});
 PrimaryVariant.args = {
-  content: data[1],
+  content: contentPrimaryVariant,
   className: 'text-brand',
 };
 
 export const SecondaryVariant = template.bind({});
 SecondaryVariant.args = {
-  content: data[2],
+  content: contentSecondaryVariant,
+  className: 'text-brand',
+};
+
+export const WithLargerContent = template.bind({});
+WithLargerContent.args = {
+  content: contentWitLargeText,
   className: 'text-brand',
 };
 
 export const WithBgColor = template.bind({});
 WithBgColor.args = {
-  content: data[3],
+  content: contentWithBg,
   className: 'text-brand',
 };
 
 export const WithOverflow = template.bind({});
 WithOverflow.args = {
-  content: data[4],
+  content: contentWithOverflow,
   className: 'text-brand',
 };
 
 export const TransparentWithBg = template.bind({});
 TransparentWithBg.args = {
-  content: data[5],
+  content: contentTransparentVariant,
   className: 'text-brand',
 };

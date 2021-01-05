@@ -13,7 +13,7 @@ const OutsideCard = ({ card, htmlSerializer, linkResolver, link, content }) => {
     <Row>
       <Col
         xs={12}
-        lg={card.round_image ? 8 : 6}
+        lg={card.round_image || card.large_text ? 8 : 6}
         centerY
         className={cn('text-current mb-10 lg:mb-0')}
       >
@@ -39,7 +39,7 @@ const OutsideCard = ({ card, htmlSerializer, linkResolver, link, content }) => {
       </Col>
       <Col
         xs={12}
-        lg={card.round_image ? 4 : 6}
+        lg={card.round_image || card.large_text ? 4 : 6}
         className={cn(
           'text-white mb-10 lg:mb-0',
           {

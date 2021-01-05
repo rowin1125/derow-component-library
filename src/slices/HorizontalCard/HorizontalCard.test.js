@@ -3,7 +3,7 @@ import { render } from '@testing-library/react';
 import React from 'react';
 import HorizontalCard from './HorizontalCard';
 
-import data from './HorizontalCardFakeData.json';
+import { content } from './horizontalCardFixture';
 import { linkResolver } from '../../utils/linkResolver';
 import { htmlSerializer } from '../../utils/htmlSerializer';
 
@@ -15,7 +15,7 @@ describe('HorizontalCard', () => {
         linkResolver={linkResolver}
         htmlSerializer={htmlSerializer}
         data-testid='test-HorizontalCard'
-        content={data[0]}
+        content={content}
       />,
     );
     expect(getByTestId('test-HorizontalCard')).toBeTruthy();
@@ -32,7 +32,7 @@ describe('HorizontalCard', () => {
         linkResolver={linkResolver}
         htmlSerializer={htmlSerializer}
         data-testid='test-HorizontalCard'
-        content={data[0]}
+        content={content}
       />,
     );
     expect(
