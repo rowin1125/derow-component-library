@@ -23,6 +23,7 @@ import { IoIosStats, IoIosCube, IoIosApps } from 'react-icons/io';
 import { MdHearing, MdNetworkCheck, MdRateReview } from 'react-icons/md';
 import { FiEdit3 } from 'react-icons/fi';
 import { GoPerson, GoFlame, GoGraph } from 'react-icons/go';
+import { GiLaurelCrown } from 'react-icons/gi';
 
 import { BsFillChatSquareDotsFill } from 'react-icons/bs';
 import { AiOutlineFileSearch } from 'react-icons/ai';
@@ -32,6 +33,9 @@ import { CgData } from 'react-icons/cg';
 export const iconGenerator = icon => {
   let newIcon;
   switch (icon) {
+    case 'crown':
+      newIcon = GiLaurelCrown;
+      break;
     case 'personal':
       newIcon = GoPerson;
       break;
