@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.28](https://github.com/rowin1125/derow-react-library/compare/v0.0.27...v0.0.28) (2021-01-07)
+
+
+### Features
+
+* luxepricetable - added best verkocht tag ([2f63518](https://github.com/rowin1125/derow-react-library/commit/2f635183aef8dcf8483b05a6c8944aece7014353))
+
+
+### Bug Fixes
+
+* horizontalcard - large content prop typo ([c19f4e7](https://github.com/rowin1125/derow-react-library/commit/c19f4e7f65bb91edd269e839b6b1fcf5b7cfe56e))
+* luxepricetable - added correct with and adjusted bg color ([201a95d](https://github.com/rowin1125/derow-react-library/commit/201a95d34a1a77120b77b30ec375dd5de4a5db05))
+* luxepricetable - adjusted margin top of outer container ([7ca142f](https://github.com/rowin1125/derow-react-library/commit/7ca142ff8a218b71b8f4fd7aedf80f16cee16d36))
+
 ### [0.0.27](https://github.com/rowin1125/derow-react-library/compare/v0.0.26...v0.0.27) (2021-01-07)
 
 
