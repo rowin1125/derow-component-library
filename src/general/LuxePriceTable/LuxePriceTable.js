@@ -15,41 +15,45 @@ const LuxePriceTable = ({
   showPrice,
   showInfo,
   ...rest
-}) => (
-  <Row
-    className={cn('z-0 my-20 lg:mt-32 lg:mb-20 text-gray-100', className)}
-    {...rest}
-  >
-    {content.map((table, index) => {
-      const multiple = content.length > 1;
-      const isMiddle = multiple && index === 1;
-      return (
-        <Col
-          xs={12}
-          lg={4}
-          key={index}
-          className={cn(
-            'my-5 lg:my-0',
-            isMiddle
-              ? 'order-first lg:order-none lg:-mt-20 lg:-ml-2 lg:-mr-2 z-10'
-              : 'lg:-mt-10',
-          )}
-        >
-          <TableColumn
-            htmlSerializer={htmlSerializer}
-            linkResolver={linkResolver}
-            iconGenerator={iconGenerator}
-            showPrice={showPrice}
-            multiple={multiple}
-            showInfo={showInfo}
-            table={table}
-            isMiddle={isMiddle}
-          />
-        </Col>
-      );
-    })}
-  </Row>
-);
+}) => {
+  const multiple = content.length > 1;
+  return (
+    <div className={cn(multiple ? 'w-full' : 'w-1/3')}>
+      <Row
+        className={cn('z-0 my-20 lg:mt-32 lg:mb-20 text-gray-100', className)}
+        {...rest}
+      >
+        {content.map((table, index) => {
+          const isMiddle = multiple && index === 1;
+          return (
+            <Col
+              xs={12}
+              lg={multiple ? 4 : 12}
+              key={index}
+              className={cn(
+                'my-5 lg:my-0',
+                isMiddle
+                  ? 'order-first lg:order-none lg:-mt-20 lg:-ml-2 lg:-mr-2 z-10'
+                  : 'lg:-mt-10',
+              )}
+            >
+              <TableColumn
+                htmlSerializer={htmlSerializer}
+                linkResolver={linkResolver}
+                iconGenerator={iconGenerator}
+                showPrice={showPrice}
+                multiple={multiple}
+                showInfo={showInfo}
+                table={table}
+                isMiddle={isMiddle}
+              />
+            </Col>
+          );
+        })}
+      </Row>
+    </div>
+  );
+};
 
 LuxePriceTable.propTypes = {
   className: PropTypes.string,

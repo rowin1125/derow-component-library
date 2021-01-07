@@ -29,7 +29,7 @@ const TableColumn = ({
         className={cn(
           'flex-1 flex flex-col rounded-lg shadow-2xl bg-gradient-to-b',
           isMiddle || !multiple
-            ? 'from-brand to-brand-dark'
+            ? 'from-brand to-secondary'
             : 'from-accent to-brand',
         )}
       >
