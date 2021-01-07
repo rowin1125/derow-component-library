@@ -17,7 +17,11 @@ const OutsideCard = ({ card, htmlSerializer, linkResolver, link, content }) => {
         centerY
         className={cn('text-current mb-10 lg:mb-0')}
       >
-        <Card variant={card.variant} content={content}>
+        <Card
+          variant={card.variant}
+          content={content}
+          className={cn(card.img_first && 'pl-4')}
+        >
           <h2 className={cn({ 'text-center': card.title_center })}>
             {card.title}
           </h2>
