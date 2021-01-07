@@ -2,6 +2,7 @@ export const content = {
   type: 'usp_devider',
   primary: {
     bg_brand: true,
+    image: null,
   },
   fields: [
     {
@@ -50,3 +51,9 @@ export const contentWithExtraText = JSON.parse(JSON.stringify(content));
 contentWithExtraText.fields[0].usp_content[1] = extraContent;
 contentWithExtraText.fields[1].usp_content[1] = extraContent;
 contentWithExtraText.fields[2].usp_content[1] = extraContent;
+
+export const contentWidthImageBg = JSON.parse(JSON.stringify(content));
+contentWidthImageBg.primary.usp_devider_image = {
+  url:
+    'https://images.prismic.io/derow/659b68f7-39f6-4b57-bc88-7f2a403eaaa3_pexels-negative-space-169573.jpg?auto=compress,format',
+};

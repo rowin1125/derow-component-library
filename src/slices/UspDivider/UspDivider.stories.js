@@ -5,6 +5,7 @@ import {
   content,
   contentWithoutBg,
   contentWithExtraText,
+  contentWidthImageBg,
 } from './uspDividerFixture';
 
 import { htmlSerializer } from '../../utils/htmlSerializer';
@@ -25,7 +26,7 @@ const template = args => (
 );
 
 const templateWithBg = args => (
-  <div className='bg-brand w-full'>
+  <div className='bg-brand w-full py-20'>
     <UspDivider
       htmlSerializer={htmlSerializer}
       iconGenerator={iconGenerator}
@@ -47,4 +48,9 @@ WidthBgBrandBackground.args = {
 export const WidthExtraContent = template.bind({});
 WidthExtraContent.args = {
   content: contentWithExtraText,
+};
+
+export const WithImageBg = template.bind({});
+WithImageBg.args = {
+  content: contentWidthImageBg,
 };

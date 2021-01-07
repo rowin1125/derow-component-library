@@ -8,15 +8,37 @@ import Row from '../../general/Row';
 
 import Col from '../../general/Col';
 import Card from '../../general/Card';
-import Breaker from '../../general/Breaker';
+import styled from 'styled-components';
+
+const UspDividerImageOverlay = styled.div`
+  ${props => (props.image ? `background-image: url('${props.image}')` : '')};
+  background-position: center;
+  background-size: cover;
+  filter: blur(3px);
+`;
 
 const UspDivider = ({ content, htmlSerializer, iconGenerator, ...rest }) => {
   const bgBrand = content.primary.bg_brand;
+  console.log('content', content);
   return (
-    <div className='w-full usp-divider' {...rest}>
-      <Breaker className={cn(bgBrand ? 'text-brand' : 'text-white')} />
-      <div className={cn('relative', bgBrand ? 'bg-brand' : 'bg-white')}>
-        <Container className='w-full h-full text-gray-100 py-6'>
+    <div className='w-full usp-divider mt-32' {...rest}>
+      <div
+        className={cn(
+          'relative transform -skew-x-3 -rotate-3 py-14 shadow-3xl',
+          bgBrand ? 'bg-brand' : 'bg-white',
+        )}
+      >
+        <UspDividerImageOverlay
+          className='inset-0 w-full h-full absolute'
+          image={content.primary?.usp_devider_image?.url}
+        />
+        <div
+          className={cn(
+            'opacity-20 z-10 absolute inset-0 w-full h-full',
+            bgBrand ? 'bg-brand' : 'bg-white',
+          )}
+        ></div>
+        <Container className='w-full h-full text-gray-100 py-6 rotate-3 skew-x-3 transform relative z-max mt-4'>
           <Row centerX>
             {content.fields.map(usp => {
               const Icon = iconGenerator(usp.usp_devider_icon);
@@ -60,11 +82,6 @@ const UspDivider = ({ content, htmlSerializer, iconGenerator, ...rest }) => {
           </Row>
         </Container>
       </div>
-      <Breaker
-        reverseX
-        reverseY
-        className={cn(bgBrand ? 'text-brand' : 'text-white')}
-      />
     </div>
   );
 };
