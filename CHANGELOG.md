@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.29](https://github.com/rowin1125/derow-react-library/compare/v0.0.28...v0.0.29) (2021-01-07)
+
+
+### Bug Fixes
+
+* luxepricetable - wrong width passed through ([554c22e](https://github.com/rowin1125/derow-react-library/commit/554c22eb721602f683a75c88b10f5a2470f6406f))
+
 ### [0.0.28](https://github.com/rowin1125/derow-react-library/compare/v0.0.27...v0.0.28) (2021-01-07)
 
 
