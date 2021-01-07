@@ -33,6 +33,15 @@ const TableColumn = ({
             : 'from-accent to-brand',
         )}
       >
+        {isMiddle && (
+          <div className='absolute inset-x-0 top-0'>
+            <div className='flex justify-center transform -translate-y-1/2'>
+              <span className='inline-flex rounded-full bg-gold px-6 py-1 text-sm leading-8 font-semibold tracking-wider uppercase text-gray-100'>
+                Best verkocht
+              </span>
+            </div>
+          </div>
+        )}
         <div className='flex flex-col justify-center items-center p-6'>
           <h2 className='mt-2 text-center text-3xl leading-9 font-semibold text-gray-100'>
             {table.title}
