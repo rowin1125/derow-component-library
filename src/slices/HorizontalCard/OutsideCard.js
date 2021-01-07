@@ -18,7 +18,7 @@ const OutsideCard = ({ card, htmlSerializer, linkResolver, link, content }) => {
         className={cn('text-current mb-10 lg:mb-0')}
       >
         <Card
-          variant={card.variant}
+          variant={card.variant || 'transparent'}
           content={content}
           className={cn(card.img_first && 'pl-4')}
         >
