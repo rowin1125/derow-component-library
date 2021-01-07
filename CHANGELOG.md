@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.27](https://github.com/rowin1125/derow-react-library/compare/v0.0.26...v0.0.27) (2021-01-07)
+
+
+### Features
+
+* centertext - add button option to centertext ([90a8687](https://github.com/rowin1125/derow-react-library/commit/90a868764383523a58329421fba2fa0de2f29f7a))
+* horizontalcard - added large text prop ([49c46ba](https://github.com/rowin1125/derow-react-library/commit/49c46bac71aff54cefb3514b1a48c6e85002d2d2))
+* luxepricetable - added pricetable component ([53d09b8](https://github.com/rowin1125/derow-react-library/commit/53d09b81fa5a8f9851062943ac061dea25e886e9))
+* uspdevider - added bgimage prop ([4775c88](https://github.com/rowin1125/derow-react-library/commit/4775c883b950dbc2acf943be4d1644ded1b70b0c))
+* uspdivider - added uspdivider component ([74dd83a](https://github.com/rowin1125/derow-react-library/commit/74dd83a3f27e5390e85b381c2f17ac6b7835ded2))
+
+
+### Bug Fixes
+
+* bgoverflow - add default value to type prop ([5c109c1](https://github.com/rowin1125/derow-react-library/commit/5c109c1e76352ec6b9d4f7fa3702b1cab9daa76a))
+* breaker - with large screens it was off by 1px ([6f4bbd1](https://github.com/rowin1125/derow-react-library/commit/6f4bbd1bdcb77fbb75d44bbe3eefdf9a9b812a42))
+
 ### [0.0.26](https://github.com/rowin1125/derow-react-library/compare/v0.0.25...v0.0.26) (2021-01-04)
 
 ### [0.0.25](https://github.com/rowin1125/derow-react-library/compare/v0.0.24...v0.0.25) (2021-01-04)
