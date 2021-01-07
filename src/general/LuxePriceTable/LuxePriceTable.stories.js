@@ -3,7 +3,9 @@ import React from 'react';
 import { htmlSerializer } from '../../utils/htmlSerializer';
 import { iconGenerator } from '../../utils/iconGenerator';
 import { linkResolver } from '../../utils/linkResolver';
+import Col from '../Col';
 import Container from '../Container';
+import Row from '../Row';
 
 import LuxePriceTable from './LuxePriceTable';
 import {
@@ -30,7 +32,22 @@ const template = args => (
   </Container>
 );
 
-export const SingleTable = template.bind({});
+const singleTableExample = args => (
+  <Container>
+    <Row>
+      <Col xs={12} lg={4}>
+        <LuxePriceTable
+          htmlSerializer={htmlSerializer}
+          iconGenerator={iconGenerator}
+          linkResolver={linkResolver}
+          {...args}
+        />
+      </Col>
+    </Row>
+  </Container>
+);
+
+export const SingleTable = singleTableExample.bind({});
 SingleTable.args = {
   content: [contentTwo],
   showPrice: true,
