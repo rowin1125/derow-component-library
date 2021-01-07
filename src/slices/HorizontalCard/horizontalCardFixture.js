@@ -61,7 +61,7 @@ contentSecondaryVariant.fields[0].img_first = true;
 contentSecondaryVariant.fields[0].button_variant = 'tertairy';
 
 export const contentWitLargeText = JSON.parse(JSON.stringify(content));
-contentWitLargeText.fields[0].large_text = true;
+contentWitLargeText.fields[0].text_large = true;
 
 export const contentWithBg = JSON.parse(JSON.stringify(content));
 contentWithBg.primary.bg_brand = true;
