@@ -22,7 +22,7 @@ const StickyTextCoursel = ({ content, htmlSerializer, ...rest }) => {
       {content.primary.show_wave && (
         <Breaker
           variant='wave'
-          className={cn(bgBrand ? 'text-brand' : 'text-white')}
+          className={cn(bgBrand ? 'text-brand' : 'text-gray-100')}
         />
       )}
       <StickyMobile
@@ -37,7 +37,7 @@ const StickyTextCoursel = ({ content, htmlSerializer, ...rest }) => {
       />
       {content.primary.show_diagonal && (
         <Breaker
-          className={cn(bgBrand ? 'text-brand' : 'text-white')}
+          className={cn(bgBrand ? 'text-brand' : 'text-gray-100')}
           reverseX
           reverseY
         />

@@ -104,7 +104,7 @@ export default {
   },
 };
 
-const template = (args) => <Row className='bg-brand text-white ' {...args} />;
+const template = args => <Row className='bg-brand text-gray-100 ' {...args} />;
 
 export const WidthCustomWidth = template.bind({});
 WidthCustomWidth.args = {
@@ -120,21 +120,21 @@ SecondExample.args = {
 export const ContentHorizontalCenter = template.bind({});
 ContentHorizontalCenter.args = {
   children: 'With horizontal centered content',
-  className: 'lg:h-16 bg-brand text-white',
+  className: 'lg:h-16 bg-brand text-gray-100',
   centerX: true,
 };
 
 export const ContentVerticalCenter = template.bind({});
 ContentVerticalCenter.args = {
   children: 'With vertical centered content',
-  className: 'lg:h-16 bg-brand text-white',
+  className: 'lg:h-16 bg-brand text-gray-100',
   centerY: true,
 };
 
 export const CompletlyCentered = template.bind({});
 CompletlyCentered.args = {
   children: 'Completely centered content',
-  className: 'lg:h-16 bg-brand text-white',
+  className: 'lg:h-16 bg-brand text-gray-100',
   centerY: true,
   centerX: true,
 };
@@ -142,7 +142,7 @@ CompletlyCentered.args = {
 export const ReversedRow = template.bind({});
 ReversedRow.args = {
   children: 'Completely centered content',
-  className: 'lg:h-16 bg-brand text-white',
+  className: 'lg:h-16 bg-brand text-gray-100',
   centerY: true,
   reverse: true,
 };

@@ -19,7 +19,6 @@ const UspDividerImageOverlay = styled.div`
 
 const UspDivider = ({ content, htmlSerializer, iconGenerator, ...rest }) => {
   const bgBrand = content.primary.bg_brand;
-  console.log('content', content);
   return (
     <div className='w-full usp-divider mt-32' {...rest}>
       <div
@@ -66,7 +65,7 @@ const UspDivider = ({ content, htmlSerializer, iconGenerator, ...rest }) => {
                         <Icon
                           className={cn(
                             'text-6xl',
-                            bgBrand ? 'text-brand' : 'text-white',
+                            bgBrand ? 'text-brand' : 'text-gray-100',
                           )}
                         />
                       </div>

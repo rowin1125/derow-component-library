@@ -12,7 +12,10 @@ const StickyDesktop = ({ content, htmlSerializer, bgBrand }) => {
     <div className='hidden lg:block'>
       <div className={cn('h-full', bgBrand ? 'bg-brand' : 'bg-white')}>
         <Container
-          className={cn('pt-20 pb-20', bgBrand ? 'text-white' : 'text-brand')}
+          className={cn(
+            'pt-20 pb-20',
+            bgBrand ? 'text-gray-100' : 'text-brand',
+          )}
         >
           {content.primary.sticky_title && (
             <h2 className='text-center'>{content.primary.sticky_title}</h2>

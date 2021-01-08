@@ -28,7 +28,7 @@ export const htmlSerializer = (type, element, content, children, index) => {
       return (
         <h1
           key={element.text}
-          className='text-baseNormal my-4'
+          className='text-brand my-4'
           id={makeHyphen(element.text)}
         >
           {children}
@@ -39,14 +39,14 @@ export const htmlSerializer = (type, element, content, children, index) => {
         <h2
           key={element.text}
           id={makeHyphen(element.text)}
-          className='text-baseNormal my-4 '
+          className='text-brand my-4 '
         >
           {children}
         </h2>
       );
     case Elements.heading3:
       return (
-        <h3 key={element.text} className='text-baseNormal text-xl my-4'>
+        <h3 key={element.text} className='text-brand text-xl my-4'>
           {children}
         </h3>
       );
@@ -54,7 +54,7 @@ export const htmlSerializer = (type, element, content, children, index) => {
       return (
         <h4
           key={element.text}
-          className='text-baseNormal text-lg font-semibold my-4'
+          className='text-brand text-lg font-semibold my-4'
         >
           {children}
         </h4>

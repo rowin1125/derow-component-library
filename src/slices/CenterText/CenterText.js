@@ -32,8 +32,9 @@ const CenterText = ({
               {content.primary?.center_title && (
                 <h2
                   className={cn(
-                    content.primary?.bg_brand && 'text-white',
-                    content.primary?.overflow === 'from_brand' && 'text-white',
+                    content.primary?.bg_brand && 'text-gray-100',
+                    content.primary?.overflow === 'from_brand' &&
+                      'text-gray-100',
                     'lg:text-center',
                   )}
                 >
@@ -42,7 +43,7 @@ const CenterText = ({
               )}
               <div
                 className={cn(
-                  content.primary?.bg_brand && 'text-white',
+                  content.primary?.bg_brand && 'text-gray-100',
                   'flex justify-center text-center flex-col',
                 )}
               >

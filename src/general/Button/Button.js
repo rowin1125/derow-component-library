@@ -35,8 +35,8 @@ const Button = React.forwardRef(
           className={classNames(
             generalClasses,
             transitionClasses,
-            { 'bg-brand text-white hover:bg-brand-hover': isPrimary },
-            { 'bg-secondary text-brand hover:bg-secondary': isSecondary },
+            { 'bg-brand text-gray-100 hover:bg-brand-hover': isPrimary },
+            { 'bg-secondary text-gray-100 hover:bg-secondary': isSecondary },
             { 'bg-gray-100 text-brand hover:bg-gray-200': isTertairy },
             variant,
             fixedWidth ? 'lg:w-64' : '',
@@ -56,7 +56,7 @@ const Button = React.forwardRef(
         className={classNames(
           generalClasses,
           transitionClasses,
-          { 'bg-brand text-white hover:bg-brand-hover': isPrimary },
+          { 'bg-brand text-gray-100 hover:bg-brand-hover': isPrimary },
           { 'bg-secondary text-gray-100 hover:bg-secondary': isSecondary },
           { 'bg-gray-100 text-brand hover:bg-gray-200': isTertairy },
           variant,

@@ -28,8 +28,8 @@ const HorizontalCard = ({
             <Col xs={12} centerX>
               <h2
                 className={cn(
-                  content.primary.bg_brand && 'text-white',
-                  content.primary.overflow && 'text-white',
+                  content.primary.bg_brand && 'text-gray-100',
+                  content.primary.overflow && 'text-gray-100',
                 )}
               >
                 {content.primary.title}

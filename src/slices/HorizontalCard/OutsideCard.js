@@ -45,7 +45,7 @@ const OutsideCard = ({ card, htmlSerializer, linkResolver, link, content }) => {
         xs={12}
         lg={card.round_image || card.text_large ? 4 : 6}
         className={cn(
-          'text-white mb-10 lg:mb-0',
+          'text-gray-100 mb-10 lg:mb-0',
           {
             'lg:mr-10': card.full_width && !card.img_first,
             'lg:ml-10': card.full_width && !card.img_first,
