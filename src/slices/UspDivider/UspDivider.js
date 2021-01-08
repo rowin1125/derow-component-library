@@ -19,6 +19,7 @@ const UspDividerImageOverlay = styled.div`
 
 const UspDivider = ({ content, htmlSerializer, iconGenerator, ...rest }) => {
   const bgBrand = content.primary.bg_brand;
+  const image = content.primary?.usp_devider_image?.url;
   return (
     <div className='w-full usp-divider mt-32 mb-20' {...rest}>
       <div
@@ -29,7 +30,7 @@ const UspDivider = ({ content, htmlSerializer, iconGenerator, ...rest }) => {
       >
         <UspDividerImageOverlay
           className='inset-0 w-full h-full absolute'
-          image={content.primary?.usp_devider_image?.url}
+          image={image}
         />
         <div
           className={cn(
@@ -46,7 +47,7 @@ const UspDivider = ({ content, htmlSerializer, iconGenerator, ...rest }) => {
                   className='items-start'
                   xs={12}
                   lg={4}
-                  key={usp.usp_content[0].text}
+                  key={`usp-${usp.usp_content[0].text}`}
                 >
                   <Card
                     content={content}
@@ -70,10 +71,14 @@ const UspDivider = ({ content, htmlSerializer, iconGenerator, ...rest }) => {
                         />
                       </div>
                     </div>
-                    <RichText
-                      htmlSerializer={htmlSerializer}
-                      render={usp.usp_content}
-                    />
+                    <div
+                      className={cn(bgBrand ? 'text-gray-100' : 'text-brand')}
+                    >
+                      <RichText
+                        htmlSerializer={htmlSerializer}
+                        render={usp.usp_content}
+                      />
+                    </div>
                   </Card>
                 </Col>
               );
