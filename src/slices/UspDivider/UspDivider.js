@@ -20,7 +20,7 @@ const UspDividerImageOverlay = styled.div`
 const UspDivider = ({ content, htmlSerializer, iconGenerator, ...rest }) => {
   const bgBrand = content.primary.bg_brand;
   return (
-    <div className='w-full usp-divider mt-32' {...rest}>
+    <div className='w-full usp-divider mt-32 mb-20' {...rest}>
       <div
         className={cn(
           'relative transform -skew-x-3 -rotate-3 py-14 shadow-3xl',
