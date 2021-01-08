@@ -118,8 +118,12 @@ p + p {
 
 .usp-divider h2,
 .usp-divider h3,
-.usp-divider h4 {
+.usp-divider h4,
+.usp-divider span,
+.usp-divider p,
+.usp-divider a {
   text-align: center !important;
+  @apply text-gray-100;
 }
 
 @tailwind components;
