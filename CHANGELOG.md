@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.30](https://github.com/rowin1125/derow-react-library/compare/v0.0.29...v0.0.30) (2021-01-08)
+
+
+### Features
+
+* horizontalcard - added default variant to the card ([7451979](https://github.com/rowin1125/derow-react-library/commit/7451979ef840b40a9e549b92976d8d2d2e44857c))
+* luxepricetable - show button props added ([f338f76](https://github.com/rowin1125/derow-react-library/commit/f338f76be4993a10cbf051f75ba4adf1f1eaa447))
+
+
+### Bug Fixes
+
+* general - never use text-white but use text-gray-100 ([8552113](https://github.com/rowin1125/derow-react-library/commit/8552113ac7efca3d1663f2f1d6c6c0392ecec302))
+* horizontalcard - img first card body padding left added ([caf4ffc](https://github.com/rowin1125/derow-react-library/commit/caf4ffccada9a5b09bfe260bb8a018024d45f782))
+* uspdivider - add margin bottom ([a271005](https://github.com/rowin1125/derow-react-library/commit/a271005a19daaf7937d1af712d5b33f73af8be54))
+
 ### [0.0.29](https://github.com/rowin1125/derow-react-library/compare/v0.0.28...v0.0.29) (2021-01-07)
 
 
