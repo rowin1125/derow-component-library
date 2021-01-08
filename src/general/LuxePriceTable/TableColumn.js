@@ -12,6 +12,7 @@ const TableColumn = ({
   isMiddle,
   multiple,
   linkResolver,
+  showButtons,
   showInfo,
   showPrice,
   table,
@@ -87,7 +88,7 @@ const TableColumn = ({
               </PricingTableCheckmark>
             ))}
           </ul>
-          {showInfo && table.button_text && (
+          {showButtons && table.button_text && (
             <div className={cn(isMiddle && 'lg:mb-10')}>
               <Button
                 variant='tertairy'
@@ -113,6 +114,7 @@ TableColumn.propTypes = {
   multiple: PropTypes.bool,
   noPrice: PropTypes.bool,
   showInfo: PropTypes.bool,
+  showButtons: PropTypes.bool,
   showPrice: PropTypes.bool,
   table: PropTypes.object.isRequired,
 };

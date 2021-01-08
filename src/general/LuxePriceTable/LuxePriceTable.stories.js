@@ -60,6 +60,13 @@ MultipleTables.args = {
   showPrice: true,
   showInfo: true,
 };
+export const WithButtons = template.bind({});
+WithButtons.args = {
+  content: [content, contentTwo, contentThree],
+  showPrice: true,
+  showInfo: true,
+  showButtons: true,
+};
 
 export const AmountOfSellingPointDifferent = template.bind({});
 AmountOfSellingPointDifferent.args = {

@@ -14,6 +14,7 @@ const LuxePriceTable = ({
   content,
   showPrice,
   showInfo,
+  showButtons,
   ...rest
 }) => {
   const multiple = content.length > 1;
@@ -38,6 +39,7 @@ const LuxePriceTable = ({
               linkResolver={linkResolver}
               iconGenerator={iconGenerator}
               showPrice={showPrice}
+              showButtons={showButtons}
               multiple={multiple}
               showInfo={showInfo}
               table={table}
@@ -53,8 +55,9 @@ const LuxePriceTable = ({
 LuxePriceTable.propTypes = {
   className: PropTypes.string,
   content: PropTypes.array.isRequired,
-  showPrice: PropTypes.bool,
+  showButtons: PropTypes.bool,
   showInfo: PropTypes.bool,
+  showPrice: PropTypes.bool,
   linkResolver: PropTypes.func.isRequired,
   htmlSerializer: PropTypes.func.isRequired,
   iconGenerator: PropTypes.func,
