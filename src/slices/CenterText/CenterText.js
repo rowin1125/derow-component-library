@@ -56,7 +56,7 @@ const CenterText = ({
           </Card>
         </Col>
       </Row>
-      {content.fields && (
+      {content.fields && content.fields[0]?.center_button_text && (
         <Row centerX className='my-10'>
           <Col
             centerX
