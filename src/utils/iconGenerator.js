@@ -18,6 +18,7 @@ import {
   FaGithub,
   FaPinterestP,
   FaRegLightbulb,
+  FaTools,
 } from 'react-icons/fa';
 import { IoIosStats, IoIosCube, IoIosApps } from 'react-icons/io';
 import { MdHearing, MdNetworkCheck, MdRateReview } from 'react-icons/md';
@@ -26,13 +27,19 @@ import { GoPerson, GoFlame, GoGraph } from 'react-icons/go';
 import { GiLaurelCrown } from 'react-icons/gi';
 
 import { BsFillChatSquareDotsFill } from 'react-icons/bs';
-import { AiOutlineFileSearch } from 'react-icons/ai';
+import { AiOutlineFileSearch, AiOutlineGoogle } from 'react-icons/ai';
 import { VscFileSubmodule } from 'react-icons/vsc';
 import { CgData } from 'react-icons/cg';
 
 export const iconGenerator = icon => {
   let newIcon;
   switch (icon) {
+    case 'onderhoud':
+      newIcon = FaTools;
+      break;
+    case 'google':
+      newIcon = AiOutlineGoogle;
+      break;
     case 'crown':
       newIcon = GiLaurelCrown;
       break;

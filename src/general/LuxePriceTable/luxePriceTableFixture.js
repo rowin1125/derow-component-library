@@ -68,7 +68,7 @@ export const content = {
 export const contentTwo = {
   title: 'Website op maat',
   subtext: '+ incl designs',
-  table_icon: 'crown',
+  table_icon: 'onderhoud',
   price: 'Prijs op aanvraag',
   description: [
     {
