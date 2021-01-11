@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.31](https://github.com/rowin1125/derow-react-library/compare/v0.0.30...v0.0.31) (2021-01-11)
+
+
+### Bug Fixes
+
+* uspdivider - fix unique key props and inherent color from parent ([946f132](https://github.com/rowin1125/derow-react-library/commit/946f132a52e69d6ae99131fa4aa4c23157bd6fba))
+* uspdivider - inherent correct color from api user ([7aa933b](https://github.com/rowin1125/derow-react-library/commit/7aa933b3f811d9fea0f32ea738255eebc8962371))
+* uspdivider - unique key added to column ([501cec5](https://github.com/rowin1125/derow-react-library/commit/501cec5eacf5d48a43127db4a962d66fbb4abbcc))
+
 ### [0.0.30](https://github.com/rowin1125/derow-react-library/compare/v0.0.29...v0.0.30) (2021-01-08)
 
 
