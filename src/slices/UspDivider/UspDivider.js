@@ -47,7 +47,7 @@ const UspDivider = ({ content, htmlSerializer, iconGenerator, ...rest }) => {
                   className='items-start'
                   xs={12}
                   lg={4}
-                  key={`usp-${usp.usp_content[0].text}`}
+                  key={`usp-${usp.usp_devider_icon}`}
                 >
                   <Card
                     content={content}
