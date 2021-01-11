@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.32](https://github.com/rowin1125/derow-react-library/compare/v0.0.31...v0.0.32) (2021-01-11)
+
+
+### Bug Fixes
+
+* centertext - validation for no button present ([89db3fc](https://github.com/rowin1125/derow-react-library/commit/89db3fc6369189f37fcc9a85e45547a10ee59184))
+
 ### [0.0.31](https://github.com/rowin1125/derow-react-library/compare/v0.0.30...v0.0.31) (2021-01-11)
 
 
