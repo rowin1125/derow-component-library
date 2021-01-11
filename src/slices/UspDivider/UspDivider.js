@@ -17,11 +17,17 @@ const UspDividerImageOverlay = styled.div`
   filter: blur(3px);
 `;
 
-const UspDivider = ({ content, htmlSerializer, iconGenerator, ...rest }) => {
+const UspDivider = ({
+  content,
+  htmlSerializer,
+  iconGenerator,
+  className,
+  ...rest
+}) => {
   const bgBrand = content.primary.bg_brand;
   const image = content.primary?.usp_devider_image?.url;
   return (
-    <div className='w-full usp-divider mt-32 mb-20' {...rest}>
+    <div className={cn('w-full usp-divider pt-32 pb-20', className)} {...rest}>
       <div
         className={cn(
           'relative transform -skew-x-3 -rotate-3 py-14 shadow-3xl',
@@ -91,6 +97,7 @@ const UspDivider = ({ content, htmlSerializer, iconGenerator, ...rest }) => {
 };
 
 UspDivider.propTypes = {
+  className: PropTypes.string,
   content: PropTypes.object.isRequired,
   htmlSerializer: PropTypes.func.isRequired,
   iconGenerator: PropTypes.func.isRequired,
