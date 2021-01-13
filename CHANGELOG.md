@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.34](https://github.com/rowin1125/derow-react-library/compare/v0.0.33...v0.0.34) (2021-01-13)
+
+
+### Features
+
+* uspdivider - all_bg_brand prop provided ([89d86da](https://github.com/rowin1125/derow-react-library/commit/89d86da825662f81a1e5714619d8d6b83ef42bfc))
+
 ### [0.0.33](https://github.com/rowin1125/derow-react-library/compare/v0.0.32...v0.0.33) (2021-01-13)
 
 
