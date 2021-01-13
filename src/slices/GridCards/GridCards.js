@@ -56,7 +56,7 @@ const GridCards = ({
         </Row>
         <Row>
           {content?.fields.map(card => {
-            const Icon = iconGenerator(card.grid_col_icon);
+            const Icon = iconGenerator(card?.grid_col_icon);
             const cardVariantSecondary =
               card.grid_col_card_variant === 'secondary';
             return (
@@ -74,14 +74,16 @@ const GridCards = ({
                   className='mx-5'
                   centerX
                 >
-                  <div className='flex justify-center'>
-                    <Icon
-                      className={cn(
-                        cardVariantSecondary ? 'text-gray-100' : 'text-brand',
-                        'text-7xl mb-6 ',
-                      )}
-                    />
-                  </div>
+                  {card?.grid_col_icon && (
+                    <div className='flex justify-center'>
+                      <Icon
+                        className={cn(
+                          cardVariantSecondary ? 'text-gray-100' : 'text-brand',
+                          'text-7xl mb-6 ',
+                        )}
+                      />
+                    </div>
+                  )}
                   <div className='mb-6'>
                     <RichText
                       render={card.grid_col_content}
