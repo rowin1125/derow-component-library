@@ -5,7 +5,8 @@ import {
   content,
   contentWithoutBg,
   contentWithExtraText,
-  contentWidthImageBg,
+  contentWithImageBg,
+  contentWithImageAndFullBg,
 } from './uspDividerFixture';
 
 import { htmlSerializer } from '../../utils/htmlSerializer';
@@ -52,5 +53,10 @@ WidthExtraContent.args = {
 
 export const WithImageBg = template.bind({});
 WithImageBg.args = {
-  content: contentWidthImageBg,
+  content: contentWithImageBg,
+};
+
+export const WithAllBgBrandAndImage = template.bind({});
+WithAllBgBrandAndImage.args = {
+  content: contentWithImageAndFullBg,
 };

@@ -27,7 +27,14 @@ const UspDivider = ({
   const bgBrand = content.primary.bg_brand;
   const image = content.primary?.usp_devider_image?.url;
   return (
-    <div className={cn('w-full usp-divider pt-32 pb-20', className)} {...rest}>
+    <div
+      className={cn(
+        'w-full usp-divider pt-32 pb-20',
+        content.primary.all_bg_brand && 'bg-brand',
+        className,
+      )}
+      {...rest}
+    >
       <div
         className={cn(
           'relative transform -skew-x-3 -rotate-3 py-14 shadow-3xl',

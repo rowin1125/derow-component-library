@@ -52,8 +52,15 @@ contentWithExtraText.fields[0].usp_content[1] = extraContent;
 contentWithExtraText.fields[1].usp_content[1] = extraContent;
 contentWithExtraText.fields[2].usp_content[1] = extraContent;
 
-export const contentWidthImageBg = JSON.parse(JSON.stringify(content));
-contentWidthImageBg.primary.usp_devider_image = {
+export const contentWithImageBg = JSON.parse(JSON.stringify(content));
+contentWithImageBg.primary.usp_devider_image = {
+  url:
+    'https://images.prismic.io/derow/659b68f7-39f6-4b57-bc88-7f2a403eaaa3_pexels-negative-space-169573.jpg?auto=compress,format',
+};
+
+export const contentWithImageAndFullBg = JSON.parse(JSON.stringify(content));
+contentWithImageAndFullBg.primary.all_bg_brand = true;
+contentWithImageAndFullBg.primary.usp_devider_image = {
   url:
     'https://images.prismic.io/derow/659b68f7-39f6-4b57-bc88-7f2a403eaaa3_pexels-negative-space-169573.jpg?auto=compress,format',
 };
