@@ -55,15 +55,32 @@ const GridCards = ({
           )}
         </Row>
         <Row>
-          {content?.fields.map(card => {
+          {content?.fields.map((card, i) => {
             const Icon = iconGenerator(card?.grid_col_icon);
             const cardVariantSecondary =
               card.grid_col_card_variant === 'secondary';
+            let marginClass;
+            switch (i) {
+              case 0:
+                marginClass = 'mr-5';
+                break;
+
+              case 1:
+                marginClass = 'mx-5';
+                break;
+
+              case 2:
+                marginClass = 'ml-5';
+                break;
+
+              default:
+                marginClass = 'mx-5';
+            }
             return (
               <Col
                 xs={12}
                 lg={4}
-                key={card.grid_col_icon}
+                key={card.grid_col_content[0].text}
                 className='my-10 lg:my-0'
               >
                 <Card
@@ -71,7 +88,7 @@ const GridCards = ({
                   image={card.grid_col_img.url}
                   variant={card.grid_col_card_variant}
                   title={card.grid_col_image_title ?? null}
-                  className='mx-5'
+                  className={marginClass}
                   centerX
                 >
                   <div className='h-full flex flex-col justify-between items-center'>
