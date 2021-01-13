@@ -4,17 +4,11 @@ export const content = {
     bg_brand: false,
     overflow: 'none',
     grid_header: 'Title here',
-    grid_description: [
-      {
-        type: 'paragraph',
-        text:
-          'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo aperiam porro asperiores fuga, quibusdam reprehenderit perspiciatis sint laudantium qui hic architecto repellat ipsum inventore sequi nam. Sed amet odit aut!',
-        spans: [],
-      },
-    ],
+    grid_description: null,
   },
   fields: [
     {
+      grid_col_image_title: 'Een nieuwe website',
       grid_col_img: {
         dimensions: {
           width: 630,
@@ -23,27 +17,30 @@ export const content = {
         alt: 'Derow',
         copyright: null,
         url:
-          'https://images.prismic.io/derow/2c59e00e-699c-4c18-aa25-0f5a491a603a_derow-contact.jpg?auto=compress,format&rect=0,86,600,229&w=630&h=240',
+          'https://images.prismic.io/derow/a9d218b4-2837-446c-8759-119b48ecb127_google+ads.jpg?auto=compress,format&rect=0,84,768,293&w=630&h=240',
       },
-      grid_col_icon: 'telefoon',
+      grid_col_icon: null,
       grid_col_card_variant: 'primary',
       grid_col_content: [
         {
           type: 'paragraph',
           text:
-            'Neem telefonisch contact op met Derow en krijg advies op maat van een van onze experts via 0642655790.',
+            'Een website moet gebruiksvriendelijk & technisch op orde zijn, maar natuurlijk ook passen bij jouw stijl. Derow werkt met gebruiksvriendelijke systemen en implementeer SEO, zodat je website wordt gevonden.',
           spans: [],
         },
       ],
-      grid_col_link_text: 'Neem contact op',
+      grid_col_link_text: 'Onze producten',
       grid_col_link_variant: 'primary',
       grid_col_link: {
-        _linkType: 'Link.web',
-        url: 'tel:+31642655790',
-        target: '_blank',
+        _linkType: 'Link.document',
+        _meta: {
+          uid: 'producten',
+          type: 'producten',
+        },
       },
     },
     {
+      grid_col_image_title: 'SEO: Hoger in Google',
       grid_col_img: {
         dimensions: {
           width: 630,
@@ -52,27 +49,30 @@ export const content = {
         alt: 'Derow',
         copyright: null,
         url:
-          'https://images.prismic.io/derow/4dc595d6-f237-49a4-a7f1-3fc79e19095a_derow-mail.jpg?auto=compress,format&rect=0,86,600,229&w=630&h=240',
+          'https://images.prismic.io/derow/547e16a7-dbc3-4a56-9627-9ab8e8802d8c_google-rank.jpg?auto=compress,format&rect=0,8,640,244&w=630&h=240',
       },
-      grid_col_icon: 'mail',
+      grid_col_icon: null,
       grid_col_card_variant: 'primary',
       grid_col_content: [
         {
           type: 'paragraph',
           text:
-            'Even makkelijk alles op de mail zetten mag ook, we hoeven natuurlijk niet te bellen (is wel echt leuk hoor)',
+            'Bovenaan in Google door SEO? Met duurzame zoekmachine-optimalisatie behaal je het beste resultaat. Derow kan jouw On-Page SEO en Off-Page SEO optimaliseren voor een beter vindbare website.',
           spans: [],
         },
       ],
-      grid_col_link_text: 'Mail met ons',
+      grid_col_link_text: 'Even overleggen?',
       grid_col_link_variant: 'primary',
       grid_col_link: {
-        _linkType: 'Link.web',
-        url: 'mailto:rowin@derow.nl',
-        target: '_blank',
+        _linkType: 'Link.document',
+        _meta: {
+          uid: 'contact',
+          type: 'landing_page',
+        },
       },
     },
     {
+      grid_col_image_title: 'Winstgevende websites!',
       grid_col_img: {
         dimensions: {
           width: 630,
@@ -81,24 +81,26 @@ export const content = {
         alt: 'Derow',
         copyright: null,
         url:
-          'https://images.prismic.io/derow/fa219a39-4cb4-43c9-a7ed-d16039cf4d62_derow-whatsapp.jpg?auto=compress,format&rect=0,86,600,229&w=630&h=240',
+          'https://images.prismic.io/derow/70dca172-66c2-4721-81a4-e68da016e211_design.jpg?auto=compress,format&rect=0,34,285,109&w=630&h=240',
       },
-      grid_col_icon: 'whatsapp',
+      grid_col_icon: null,
       grid_col_card_variant: 'primary',
       grid_col_content: [
         {
           type: 'paragraph',
           text:
-            'Stuur ons anders even gewoon simpel een appje... het natuurlijk wel 2020 ... dan mag dat wel hoor',
+            'Je website is je visite kaartje of de core business van je bedrijf. Dan wil je dat de website doet waarvoor hij gemaakt is: bezoekers omzetten in klanten. Derow helpt hierbij om samen naar de beste website voor jouw bedrijf te kijken.',
           spans: [],
         },
       ],
-      grid_col_link_text: 'App met ons',
+      grid_col_link_text: 'Websites',
       grid_col_link_variant: 'primary',
       grid_col_link: {
-        _linkType: 'Link.web',
-        url: 'https://api.whatsapp.com/send?phone=31642655790',
-        target: '_blank',
+        _linkType: 'Link.document',
+        _meta: {
+          uid: 'website-op-maat',
+          type: 'product',
+        },
       },
     },
   ],

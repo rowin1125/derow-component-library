@@ -64,44 +64,48 @@ const GridCards = ({
                 xs={12}
                 lg={4}
                 key={card.grid_col_icon}
-                className='flex flex-1 my-10 lg:my-0'
+                className='my-10 lg:my-0'
               >
                 <Card
                   size='small'
                   image={card.grid_col_img.url}
                   variant={card.grid_col_card_variant}
-                  cardBodyClass='flex flex-col justify-around'
+                  title={card.grid_col_image_title ?? null}
                   className='mx-5'
                   centerX
                 >
-                  {card?.grid_col_icon && (
-                    <div className='flex justify-center'>
-                      <Icon
-                        className={cn(
-                          cardVariantSecondary ? 'text-gray-100' : 'text-brand',
-                          'text-7xl mb-6 ',
-                        )}
-                      />
+                  <div className='h-full flex flex-col justify-between items-center'>
+                    <div className='flex flex-col items-center'>
+                      {card?.grid_col_icon && (
+                        <Icon
+                          className={cn(
+                            cardVariantSecondary
+                              ? 'text-gray-100'
+                              : 'text-brand',
+                            'text-6xl mb-6',
+                          )}
+                        />
+                      )}
+                      <div className='mb-6'>
+                        <RichText
+                          render={card.grid_col_content}
+                          htmlSerializer={htmlSerializer}
+                        />
+                      </div>
                     </div>
-                  )}
-                  <div className='mb-6'>
-                    <RichText
-                      render={card.grid_col_content}
-                      htmlSerializer={htmlSerializer}
-                    />
+                    {card.grid_col_link_text && (
+                      <Button
+                        as='a'
+                        link={link}
+                        target={card.grid_col_link?.target ?? null}
+                        href={linkResolver(card.grid_col_link)}
+                        className='w-full'
+                        variant={card.grid_col_link_variant}
+                      >
+                        {card.grid_col_link_text}
+                      </Button>
+                    )}
                   </div>
-                  {card.grid_col_link_text && (
-                    <Button
-                      as='a'
-                      link={link}
-                      target={card.grid_col_link?.target ?? null}
-                      href={linkResolver(card.grid_col_link)}
-                      className='w-full'
-                      variant={card.grid_col_link_variant}
-                    >
-                      {card.grid_col_link_text}
-                    </Button>
-                  )}
                 </Card>
               </Col>
             );

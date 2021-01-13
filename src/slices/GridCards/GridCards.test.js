@@ -31,13 +31,9 @@ describe('GridCards', () => {
 
   test('should have the content from prismic', async () => {
     const { findByText } = render(<GridCardsTestComponent content={content} />);
-    expect(await findByText('Title here')).toBeTruthy();
-    expect(await findByText('Neem contact op')).toBeTruthy();
-    expect(await findByText('App met ons')).toBeTruthy();
-    expect(
-      await findByText(
-        'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo aperiam porro asperiores fuga, quibusdam reprehenderit perspiciatis sint laudantium qui hic architecto repellat ipsum inventore sequi nam. Sed amet odit aut!',
-      ),
-    ).toBeTruthy();
+    expect(await findByText(content.fields[2].grid_col_link_text)).toBeTruthy();
+    expect(await findByText(content.fields[1].grid_col_link_text)).toBeTruthy();
+    expect(await findByText(content.fields[0].grid_col_link_text)).toBeTruthy();
+    expect(await findByText(content.primary.grid_header)).toBeTruthy();
   });
 });
