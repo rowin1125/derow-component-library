@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.36](https://github.com/rowin1125/derow-react-library/compare/v0.0.35...v0.0.36) (2021-01-13)
+
+
+### Features
+
+* gridcards - added title prop and adjusted fixed hight ([ce75eea](https://github.com/rowin1125/derow-react-library/commit/ce75eea592c16251fa39af7b33f79f5dd5cba4a5))
+
+
+### Bug Fixes
+
+* card - werid height value fix ([e253fb1](https://github.com/rowin1125/derow-react-library/commit/e253fb1c8ddb2ba1ab03c4c97374ed476d63da90))
+
 ### [0.0.35](https://github.com/rowin1125/derow-react-library/compare/v0.0.34...v0.0.35) (2021-01-13)
 
 ### [0.0.34](https://github.com/rowin1125/derow-react-library/compare/v0.0.33...v0.0.34) (2021-01-13)
