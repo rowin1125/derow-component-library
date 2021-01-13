@@ -70,7 +70,7 @@ const Card = React.forwardRef(
           <div
             style={{ backgroundImage: `url('${image}')` }}
             className={cn(
-              'w-full h-40 relative rounded-t-lg bg-cover bg-center',
+              'w-full h-64 relative rounded-t-lg bg-cover bg-center',
             )}
             {...imageWrapperProps}
           >
