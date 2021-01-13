@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.33](https://github.com/rowin1125/derow-react-library/compare/v0.0.32...v0.0.33) (2021-01-13)
+
+
+### Features
+
+* gridcards - added gridcards component ([bf277e8](https://github.com/rowin1125/derow-react-library/commit/bf277e8fcab876fa650468050ad68cb963326e84))
+
 ### [0.0.32](https://github.com/rowin1125/derow-react-library/compare/v0.0.31...v0.0.32) (2021-01-11)
 
 
