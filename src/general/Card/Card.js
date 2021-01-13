@@ -99,7 +99,7 @@ const Card = React.forwardRef(
         )}
         <div
           className={cn(
-            'w-full h-full flex flex-col',
+            'w-full h-auto flex flex-col flex-1',
             {
               'p-5 lg:p-10': !!image || !!title,
             },
