@@ -1,5 +1,7 @@
 /* eslint-disable max-len */
 import React from 'react';
+import Col from '../Col';
+import Row from '../Row';
 import Card from './Card';
 
 export default {
@@ -140,7 +142,13 @@ export default {
   },
 };
 
-const template = (args) => <Card {...args} />;
+const template = args => (
+  <Row centerX>
+    <Col centerX centerY xs={12} lg={4}>
+      <Card {...args} />
+    </Col>
+  </Row>
+);
 
 export const DefaultCard = template.bind({});
 DefaultCard.args = {

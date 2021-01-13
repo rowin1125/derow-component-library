@@ -70,7 +70,7 @@ const Card = React.forwardRef(
           <div
             style={{ backgroundImage: `url('${image}')` }}
             className={cn(
-              'w-full h-64 relative rounded-t-lg bg-cover bg-center',
+              'w-full h-44 relative rounded-t-lg bg-cover bg-center',
             )}
             {...imageWrapperProps}
           >
@@ -91,7 +91,7 @@ const Card = React.forwardRef(
                     src={author.picture.url}
                     alt={`Solid Only - ${author.name.split(' ')[0]}`}
                   />
-                  <h3 className='text-gray-100'>By: {author.name}</h3>
+                  <h3 className='text-gray-100 mt-4'>By: {author.name}</h3>
                 </div>
               </div>
             )}
