@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.37](https://github.com/rowin1125/derow-react-library/compare/v0.0.36...v0.0.37) (2021-01-14)
+
+
+### Features
+
+* testimonials - update incoming api data ([e6ae3e9](https://github.com/rowin1125/derow-react-library/commit/e6ae3e981e89db35c46dbfe0141ab20dc40bd391))
+
 ### [0.0.36](https://github.com/rowin1125/derow-react-library/compare/v0.0.35...v0.0.36) (2021-01-13)
 
 
