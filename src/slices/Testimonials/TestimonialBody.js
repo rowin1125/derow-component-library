@@ -12,17 +12,19 @@ const TestimonialBody = ({ content, currentIndex, htmlSerializer }) => {
       >
         <img
           className='absolute inset-0 w-full h-full object-cover object-center'
-          src={content.fields[currentIndex].image.url}
-          alt={content.fields[currentIndex].image.alt || 'Derow'}
+          src={content.fields[currentIndex].testimonial.test_image.url}
+          alt={
+            content.fields[currentIndex].testimonial.test_image.alt || 'Derow'
+          }
         />
       </div>
       <div className='w-full md:w-3/5 h-full flex items-center bg-gray-100 rounded-lg'>
         <div className='p-8 md:pr-16 md:pl-16 md:py-12'>
           <h3 className='text-brand'>
-            {content.fields[currentIndex].person_title}
+            {content.fields[currentIndex].testimonial.test_title}
           </h3>
           <RichText
-            render={content.fields[currentIndex].person_content}
+            render={content.fields[currentIndex].testimonial.test_person}
             htmlSerializer={htmlSerializer}
           />
         </div>
