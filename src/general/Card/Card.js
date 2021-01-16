@@ -57,7 +57,7 @@ const Card = React.forwardRef(
           { [opacityClass]: opacity },
           VARIANT_MAP[variant],
           'flex flex-col w-full',
-          hover && 'transform hover:scale-105 ease-in-out duration-200',
+          hover && 'transform lg:hover:scale-105 ease-in-out duration-200',
           isTransparent &&
             `bg-transparent ${bgBrand ? 'text-gray-100' : 'text-brand'}`,
           { 'rounded-t-lg': !!image },
