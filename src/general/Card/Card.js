@@ -76,7 +76,7 @@ const Card = React.forwardRef(
           >
             {title && (
               <div className='h-full relative' {...cardTitleWrapperProps}>
-                <div className='bg-black opacity-25 absolute w-full h-full z-0' />
+                <div className='rounded-t-lg bg-black opacity-25 absolute w-full h-full z-0' />
                 <div className='flex justify-center items-center h-full z50 relative'>
                   <h3 className='text-gray-100 text-2xl'>{title}</h3>
                 </div>
