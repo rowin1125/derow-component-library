@@ -26,6 +26,7 @@ const Card = React.forwardRef(
       image,
       imageWrapperProps,
       noGutter,
+      noMarginBottom,
       opacity,
       textCenter,
       title,
@@ -47,11 +48,12 @@ const Card = React.forwardRef(
       <Element
         ref={ref}
         className={cn(
-          'Card',
+          'Card ',
+          !noMarginBottom && 'mb-5 lg:mb-10',
           !hasImage && !isTransparent && 'p-5 lg:p-10',
 
           {
-            'shadow-2xl lg:shadow-3xl mb-5 lg:mb-10 bg-white text-brand': isPrimary,
+            'shadow-2xl lg:shadow-3xl bg-white text-brand': isPrimary,
           },
           { 'bg-brand text-gray-100 shadow-xl lg:shadow-3xl': isSecondary },
           { [opacityClass]: opacity },
@@ -135,7 +137,8 @@ Card.propTypes = {
   image: PropTypes.any,
   imageWrapperProps: PropTypes.object,
   noGutter: PropTypes.bool,
-  opacity: PropTypes.oneOf([25, 50, 75]),
+  noMarginBottom: PropTypes.bool,
+  opacity: PropTypes.number,
   textCenter: PropTypes.bool,
   title: PropTypes.string,
   variant: PropTypes.oneOf(['primary', 'secondary', 'transparent']),
