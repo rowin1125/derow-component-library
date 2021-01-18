@@ -27,6 +27,7 @@ const ContentComponent = () => (
 
 const template = args => (
   <Hero
+    offset={false}
     image='https://images.prismic.io/derow/659b68f7-39f6-4b57-bc88-7f2a403eaaa3_pexels-negative-space-169573.jpg?auto=compress,format'
     {...args}
   >

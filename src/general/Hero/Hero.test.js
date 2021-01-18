@@ -21,14 +21,6 @@ describe('Hero', () => {
     expect(getByTestId('test-Hero').classList.contains('Hero')).toBe(true);
   });
 
-  test('should change html element when using "as" prop', () => {
-    const { container } = render(
-      <HeroTestComponent as='a'>{content}</HeroTestComponent>,
-    );
-    const element = container.querySelector('a');
-    expect(element).toBeTruthy();
-  });
-
   test('should have the correct children content', async () => {
     const { findByText } = render(
       <HeroTestComponent>
