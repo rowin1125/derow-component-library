@@ -10,3 +10,4 @@ export { default as Col } from './Col';
 export { default as BgOverflow } from './BgOverflow';
 export { default as Breaker } from './Breaker';
 export { default as LuxePriceTable } from './LuxePriceTable';
+export { default as Hero } from './Hero';
