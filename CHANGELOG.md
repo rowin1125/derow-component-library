@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.38](https://github.com/rowin1125/derow-react-library/compare/v0.0.37...v0.0.38) (2021-01-18)
+
+
+### Features
+
+* card - add prop for no margin button ([3c3249b](https://github.com/rowin1125/derow-react-library/commit/3c3249b8e41f9be95dd46fadf3119675a83d2ff2))
+* hero - added hero component ([e57d356](https://github.com/rowin1125/derow-react-library/commit/e57d356302005ee1ed08537565ee21259ed1472c))
+
 ### [0.0.37](https://github.com/rowin1125/derow-react-library/compare/v0.0.36...v0.0.37) (2021-01-14)
 
 
