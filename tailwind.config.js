@@ -56,6 +56,7 @@ module.exports = {
         'screen-1/2': '50vh',
         'screen-3/4': '75vh',
         105: '105%',
+        120: '30rem',
       },
       width: {
         '1/8': '12.5%',
