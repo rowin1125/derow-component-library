@@ -11,7 +11,10 @@ import Card from '../../general/Card';
 import styled from 'styled-components';
 
 const UspDividerImageOverlay = styled.div`
-  ${props => (props.image ? `background-image: url('${props.image}')` : '')};
+  ${props =>
+    props.image && !props.ImageComponent
+      ? `background-image: url('${props.image}')`
+      : ''};
   background-position: center;
   background-size: cover;
   filter: blur(3px);
@@ -22,6 +25,7 @@ const UspDivider = ({
   htmlSerializer,
   iconGenerator,
   className,
+  imageComponent: ImageComponent,
   ...rest
 }) => {
   const bgBrand = content.primary.bg_brand;
@@ -42,9 +46,19 @@ const UspDivider = ({
         )}
       >
         <UspDividerImageOverlay
+          imageComponent={ImageComponent}
           className='inset-0 w-full h-full absolute'
           image={image}
-        />
+        >
+          {ImageComponent && (
+            <ImageComponent
+              src={image}
+              layout='fill'
+              objectFit='cover'
+              objectPosition='center'
+            />
+          )}
+        </UspDividerImageOverlay>
         <div
           className={cn(
             'opacity-20 z-10 absolute inset-0 w-full h-full',
@@ -109,6 +123,7 @@ UspDivider.propTypes = {
   content: PropTypes.object.isRequired,
   htmlSerializer: PropTypes.func.isRequired,
   iconGenerator: PropTypes.func.isRequired,
+  imageComponent: PropTypes.any,
 };
 
 export default UspDivider;
