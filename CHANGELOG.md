@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.43](https://github.com/rowin1125/derow-react-library/compare/v0.0.42...v0.0.43) (2021-01-20)
+
+
+### Bug Fixes
+
+* horizontalcard - spacing when image first ([0986056](https://github.com/rowin1125/derow-react-library/commit/098605683ece46d069742f917592127bfbefd9f8))
+
 ### [0.0.42](https://github.com/rowin1125/derow-react-library/compare/v0.0.41...v0.0.42) (2021-01-20)
 
 
