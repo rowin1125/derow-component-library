@@ -30,9 +30,10 @@ const GridCards = ({
       {...rest}
     >
       <Container className='py-8 lg:py-16'>
-        <Row centerX className={cn('my-10')}>
-          {(content.primary.grid_header ||
-            content.primary.grid_description) && (
+        {(content.primary.grid_header ||
+          (content.primary?.grid_description &&
+            content.primary.grid_description[0].text)) && (
+          <Row centerX className={cn('my-10')}>
             <Col xs={12} lg={12} centerX>
               <Card
                 noMarginBottom
@@ -53,8 +54,8 @@ const GridCards = ({
                 )}
               </Card>
             </Col>
-          )}
-        </Row>
+          </Row>
+        )}
         <Row>
           {content?.fields.map((card, i) => {
             const Icon = iconGenerator(card?.grid_col_icon);
