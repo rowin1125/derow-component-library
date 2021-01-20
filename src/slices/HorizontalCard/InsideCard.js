@@ -40,8 +40,8 @@ const InsideCard = ({ card, htmlSerializer, linkResolver, link, content }) => {
           centerY
           className={cn({
             'order-first mb-0 lg:mb-0': card.img_first,
-            'lg:mr-10': card.full_width && !card.img_first,
-            'lg:ml-10': card.full_width && !card.img_first,
+            'lg:mr-10 lg:ml-10': card.full_width && !card.img_first,
+            'mt-10 lg:mt-0': card.variant !== 'transparent' && !card.img_first,
           })}
         >
           <img
