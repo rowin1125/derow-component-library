@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.41](https://github.com/rowin1125/derow-react-library/compare/v0.0.40...v0.0.41) (2021-01-20)
+
+
+### Bug Fixes
+
+* gridcards - add margin-top if image if last inside card ([1981f00](https://github.com/rowin1125/derow-react-library/commit/1981f006f48c31d874081a30945243896d2d39e2))
+* gridcards - conditionally render content ([69f304b](https://github.com/rowin1125/derow-react-library/commit/69f304bbbdf9c82ab71bb1f7ef7a7984d068c4b6))
+* testimonals - to little spacing for buttons to show properly ([6e0e7d1](https://github.com/rowin1125/derow-react-library/commit/6e0e7d18074768f9ad547d86d4fea2eb9a2fec46))
+
 ### [0.0.40](https://github.com/rowin1125/derow-react-library/compare/v0.0.39...v0.0.40) (2021-01-20)
 
 
