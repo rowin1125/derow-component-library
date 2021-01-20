@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.40](https://github.com/rowin1125/derow-react-library/compare/v0.0.39...v0.0.40) (2021-01-20)
+
+
+### Features
+
+* general - update all spacing classes to fit correct amount ([853497d](https://github.com/rowin1125/derow-react-library/commit/853497d77baa80781fe07bbf12c1bac5f944dd39))
+
 ### [0.0.39](https://github.com/rowin1125/derow-react-library/compare/v0.0.38...v0.0.39) (2021-01-18)
 
 ### [0.0.38](https://github.com/rowin1125/derow-react-library/compare/v0.0.37...v0.0.38) (2021-01-18)
