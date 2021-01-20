@@ -19,7 +19,10 @@ const LuxePriceTable = ({
 }) => {
   const multiple = content.length > 1;
   return (
-    <div className={cn('py-8 lg:py-16', className)} {...rest}>
+    <div
+      className={cn(multiple ? 'py-8 lg:py-16' : 'pt-8 lg:pt-16', className)}
+      {...rest}
+    >
       <Row
         className={cn(multiple && 'lg:mb-10', 'z-0 lg:mt-16  text-gray-100')}
       >
