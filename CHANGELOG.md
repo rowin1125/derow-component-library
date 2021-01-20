@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.42](https://github.com/rowin1125/derow-react-library/compare/v0.0.41...v0.0.42) (2021-01-20)
+
+
+### Features
+
+* hero - added custom image component to hero ([5aaac5e](https://github.com/rowin1125/derow-react-library/commit/5aaac5edf6d0d390a5ecbd7e48cc9251290ca2fd))
+* horizontalcard - added custom image component ([bf4127d](https://github.com/rowin1125/derow-react-library/commit/bf4127dfb2471939d1ca9b84bc02175e05a7767b))
+* uspdivider - added custom image component ([8853a6b](https://github.com/rowin1125/derow-react-library/commit/8853a6bb51afe70564359f6238dc3f91e2b48e70))
+
+
+### Bug Fixes
+
+* hero - remove slim prop ([9fb9290](https://github.com/rowin1125/derow-react-library/commit/9fb9290b6cf83a5783c7187d5eef4cd54d4f0d4f))
+
 ### [0.0.41](https://github.com/rowin1125/derow-react-library/compare/v0.0.40...v0.0.41) (2021-01-20)
 
 
