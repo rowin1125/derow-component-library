@@ -40,16 +40,4 @@ describe('Hero', () => {
     const element = container.querySelector('svg');
     expect(element).toBeTruthy();
   });
-
-  test('should render a slim Card when "slim" is true', () => {
-    const { container } = render(
-      <HeroTestComponent slim>
-        <h1>{content}</h1>
-      </HeroTestComponent>,
-    );
-
-    expect(
-      container.querySelector('.container').classList.contains('lg:px-64'),
-    ).toEqual(true);
-  });
 });

@@ -19,7 +19,6 @@ const Hero = ({
   image,
   offset = true,
   showWave,
-  slim,
   cardprops,
   containerProps,
   heroWrapperProps,
@@ -41,7 +40,7 @@ const Hero = ({
       {...heroWrapperProps}
     ></HeroWrapepr>
     {showWave && <HeroWaves />}
-    <Container className={cn(slim && 'lg:px-64')} {...containerProps}>
+    <Container {...containerProps}>
       <Card
         variant='primary'
         opacity={80}
@@ -65,7 +64,6 @@ Hero.propTypes = {
   image: PropTypes.string.isRequired,
   offset: PropTypes.bool,
   showWave: PropTypes.bool,
-  slim: PropTypes.bool,
 };
 
 export default Hero;

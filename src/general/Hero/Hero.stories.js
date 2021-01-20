@@ -39,26 +39,16 @@ export const RegularExamle = template.bind({});
 RegularExamle.args = {
   blur: false,
   showWave: false,
-  slim: false,
 };
 
 export const WithBlur = template.bind({});
 WithBlur.args = {
   blur: true,
   showWave: false,
-  slim: false,
 };
 
 export const WithSvgWaves = template.bind({});
 WithSvgWaves.args = {
   blur: true,
   showWave: true,
-  slim: false,
-};
-
-export const WithSlim = template.bind({});
-WithSlim.args = {
-  blur: true,
-  showWave: true,
-  slim: true,
 };
