@@ -34,7 +34,7 @@ const UspCard = ({
     <BgOverflow
       className={cn(
         { 'bg-brand': content.primary?.bg_brand },
-        'py-10 lg:py-20 usp-card w-full',
+        'py-8 lg:py-16 usp-card w-full',
         className,
       )}
       type={content.primary?.overflow}
@@ -62,7 +62,7 @@ const UspCard = ({
                   href={
                     shouldBeALink ? linkResolver(usp.link._meta) : undefined
                   }
-                  className='mx-4 w-full h-full relative'
+                  className='mx-5 my-0 w-full h-full relative'
                   {...linkProps}
                 >
                   <Card
@@ -72,6 +72,7 @@ const UspCard = ({
                     className='w-full h-full'
                     hover={shouldBeALink ? true : false}
                     {...cardProps}
+                    noMarginBottom
                   >
                     {shouldBeALink && (
                       <UserCustomerLinkSvg

@@ -27,7 +27,7 @@ const template = args => (
 );
 
 const templateWithBg = args => (
-  <div className='bg-brand w-full py-20'>
+  <div className='bg-brand w-full py-16'>
     <UspDivider
       htmlSerializer={htmlSerializer}
       iconGenerator={iconGenerator}

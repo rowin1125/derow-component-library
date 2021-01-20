@@ -11,6 +11,7 @@ import Row from '../../general/Row';
 import Col from '../../general/Col';
 
 const CenterText = ({
+  className,
   content,
   htmlSerializer,
   linkResolver,
@@ -20,14 +21,14 @@ const CenterText = ({
   ...rest
 }) => (
   <BgOverflow
-    className={cn({ 'bg-brand': content.primary?.bg_brand })}
+    className={cn({ 'bg-brand': content.primary?.bg_brand }, className)}
     type={content.primary?.overflow}
     {...rest}
   >
-    <Container className='py-10 lg:py-20' {...containerProps}>
+    <Container className='py-8 lg:py-16' {...containerProps}>
       <Row centerX>
         <Col xs={12} lg={content.primary.center_text_small ? 10 : 12}>
-          <Card variant='transparent' {...cardProps}>
+          <Card variant='transparent' {...cardProps} noMarginBottom>
             <div className=''>
               {content.primary?.center_title && (
                 <h2
@@ -85,6 +86,7 @@ const CenterText = ({
 );
 
 CenterText.propTypes = {
+  className: PropTypes.string,
   content: PropTypes.object.isRequired,
   htmlSerializer: PropTypes.func.isRequired,
   linkResolver: PropTypes.func.isRequired,

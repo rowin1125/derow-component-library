@@ -19,8 +19,8 @@ const LuxePriceTable = ({
 }) => {
   const multiple = content.length > 1;
   return (
-    <div className={cn('py-20', className)} {...rest}>
-      <Row className={cn('z-0 mt-20 mb-10 text-gray-100')}>
+    <div className={cn('py-8 lg:py-16', className)} {...rest}>
+      <Row className={cn('z-0 mt-16 mb-10 text-gray-100')}>
         {content.map((table, index) => {
           const isMiddle = multiple && index === 1;
           return (
@@ -31,7 +31,7 @@ const LuxePriceTable = ({
               className={cn(
                 'my-5 lg:my-0',
                 isMiddle
-                  ? 'order-first lg:order-none lg:-mt-20 lg:-ml-2 lg:-mr-2 z-10'
+                  ? 'order-first lg:order-none lg:-mt-24 lg:-ml-2 lg:-mr-2 z-10'
                   : 'lg:-mt-10',
               )}
             >

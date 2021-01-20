@@ -29,7 +29,7 @@ const UspDivider = ({
   return (
     <div
       className={cn(
-        'w-full usp-divider pt-32 pb-20',
+        'w-full usp-divider pt-32 pb-16',
         content.primary.all_bg_brand && 'bg-brand',
         className,
       )}
@@ -51,7 +51,7 @@ const UspDivider = ({
             bgBrand ? 'bg-brand' : 'bg-white',
           )}
         ></div>
-        <Container className='w-full h-full text-gray-100 py-6 rotate-3 skew-x-3 transform relative z-max mt-4'>
+        <Container className='w-full h-full text-gray-100 py-6 rotate-3 skew-x-3 transform relative z-max'>
           <Row centerX>
             {content.fields.map(usp => {
               const Icon = iconGenerator(usp.usp_devider_icon);
@@ -68,6 +68,7 @@ const UspDivider = ({
                     cardBodyClass='px-10 text-center'
                     centerX
                     centerY
+                    noMarginBottom
                   >
                     <div className='flex justify-center items-center'>
                       <div

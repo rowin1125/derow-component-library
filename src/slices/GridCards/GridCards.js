@@ -29,12 +29,13 @@ const GridCards = ({
       type={content.primary?.overflow}
       {...rest}
     >
-      <Container className='py-20'>
+      <Container className='py-8 lg:py-16'>
         <Row centerX className={cn('my-10')}>
           {(content.primary.grid_header ||
             content.primary.grid_description) && (
             <Col xs={12} lg={12} centerX>
               <Card
+                noMarginBottom
                 content={content}
                 variant='transparent'
                 cardBodyClass='flex flex-col items-center'
@@ -62,26 +63,26 @@ const GridCards = ({
             let marginClass;
             switch (i) {
               case 0:
-                marginClass = 'mr-5';
+                marginClass = 'lg:mr-5';
                 break;
 
               case 1:
-                marginClass = 'mx-5';
+                marginClass = 'lg:mx-5';
                 break;
 
               case 2:
-                marginClass = 'ml-5';
+                marginClass = 'lg:ml-5';
                 break;
 
               default:
-                marginClass = 'mx-5';
+                marginClass = 'lg:mx-5';
             }
             return (
               <Col
                 xs={12}
                 lg={4}
                 key={card.grid_col_content[0].text}
-                className='my-10 lg:my-0'
+                className='mb-10 lg:my-0'
               >
                 <Card
                   size='small'
@@ -90,6 +91,7 @@ const GridCards = ({
                   title={card.grid_col_image_title ?? null}
                   className={marginClass}
                   centerX
+                  noMarginBottom
                 >
                   <div className='h-full flex flex-col justify-between items-center'>
                     <div className='flex flex-col items-center'>

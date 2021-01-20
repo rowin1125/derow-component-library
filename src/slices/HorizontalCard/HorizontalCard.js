@@ -21,7 +21,7 @@ const HorizontalCard = ({
     className={cn({ 'bg-brand': content.primary.bg_brand })}
     type={content.primary.overflow}
   >
-    <div className={cn('py-10 lg:py-20 ', className)} {...rest}>
+    <div className={cn('py-8 lg:py-16 ', className)} {...rest}>
       {content.primary.title && (
         <Container className='mb-10'>
           <Row>

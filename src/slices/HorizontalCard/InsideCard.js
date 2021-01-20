@@ -10,7 +10,7 @@ import Button from '../../general/Button';
 
 const InsideCard = ({ card, htmlSerializer, linkResolver, link, content }) => {
   return (
-    <Card variant={card.variant} content={content}>
+    <Card variant={card.variant} content={content} noMarginBottom>
       <Row>
         <Col
           column

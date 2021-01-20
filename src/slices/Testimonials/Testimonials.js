@@ -37,7 +37,7 @@ const Testimonials = ({ className, content, htmlSerializer, ...rest }) => {
     <BgOverflow
       className={cn(
         { 'bg-brand': content.primary?.bg_brand },
-        'py-10 lg:py-20 w-full testimonial',
+        'py-8 lg:py-16 w-full testimonial',
         className,
       )}
       type={content.primary?.overflow}
@@ -62,7 +62,7 @@ const Testimonials = ({ className, content, htmlSerializer, ...rest }) => {
                   </Col>
                 </Row>
               )}
-              <div className={cn('mx-auto px-8 mb-20')}>
+              <div className={cn('mx-auto')}>
                 <div className='relative'>
                   <div className='overflow-hidden shadow-3xl bg-gray-100'>
                     <motion.div
