@@ -7,7 +7,7 @@ import Card from '../Card';
 import HeroWaves from './HeroWaves';
 
 const HeroWrapepr = styled.div`
-  background-image: ${p => `url(${p.image})`};
+  ${p => !p.imageComponent && `background-image: url(${p.image})`};
   ${p => (p.blur ? 'filter: blur(2px)' : '')};
   ${p => p.showWave && 'height: calc(100% - 4px);'}
 `;
@@ -16,6 +16,7 @@ const Hero = ({
   blur,
   children,
   className,
+  imageComponent: ImageComponent,
   image,
   offset = true,
   showWave,
@@ -23,36 +24,49 @@ const Hero = ({
   containerProps,
   heroWrapperProps,
   ...rest
-}) => (
-  <div
-    className={cn(
-      'Hero relative w-full h-120 flex items-center',
-      offset && 'mt-20',
-      className,
-    )}
-    {...rest}
-  >
-    <HeroWrapepr
-      blur={blur}
-      image={image}
-      showWave={showWave}
-      className='inset-0 absolute flex bg-cover bg-center'
-      {...heroWrapperProps}
-    ></HeroWrapepr>
-    {showWave && <HeroWaves />}
-    <Container {...containerProps}>
-      <Card
-        variant='primary'
-        opacity={80}
-        noMarginBottom
-        cardBodyClass='text-center'
-        {...cardprops}
+}) => {
+  return (
+    <div
+      className={cn(
+        'Hero relative w-full h-120 flex items-center',
+        offset && 'mt-20',
+        className,
+      )}
+      {...rest}
+    >
+      <HeroWrapepr
+        blur={blur}
+        image={image}
+        showWave={showWave}
+        className='inset-0 absolute flex bg-cover bg-center'
+        imageComponent={ImageComponent}
+        {...heroWrapperProps}
       >
-        {children}
-      </Card>
-    </Container>
-  </div>
-);
+        {ImageComponent && (
+          <ImageComponent
+            src={image}
+            layout='fill'
+            objectFit='cover'
+            objectPosition='center'
+          />
+        )}
+        {showWave && <HeroWaves />}
+      </HeroWrapepr>
+
+      <Container {...containerProps}>
+        <Card
+          variant='primary'
+          opacity={80}
+          noMarginBottom
+          cardBodyClass='text-center'
+          {...cardprops}
+        >
+          {children}
+        </Card>
+      </Container>
+    </div>
+  );
+};
 
 Hero.propTypes = {
   blur: PropTypes.bool,
@@ -62,6 +76,7 @@ Hero.propTypes = {
   containerProps: PropTypes.object,
   heroWrapperProps: PropTypes.object,
   image: PropTypes.string.isRequired,
+  imageComponent: PropTypes.any,
   offset: PropTypes.bool,
   showWave: PropTypes.bool,
 };
