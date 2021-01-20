@@ -8,7 +8,17 @@ import Col from '../../general/Col';
 import Card from '../../general/Card';
 import Button from '../../general/Button';
 
-const InsideCard = ({ card, htmlSerializer, linkResolver, link, content }) => {
+const InsideCard = ({
+  card,
+  content,
+  htmlSerializer,
+  imageComponent: ImageComponent,
+  imageProps,
+  link,
+  linkResolver,
+}) => {
+  const Image = ImageComponent ? ImageComponent : 'img';
+
   return (
     <Card variant={card.variant} content={content} noMarginBottom>
       <Row>
@@ -44,12 +54,13 @@ const InsideCard = ({ card, htmlSerializer, linkResolver, link, content }) => {
             'mt-10 lg:mt-0': card.variant !== 'transparent' && !card.img_first,
           })}
         >
-          <img
+          <Image
             className={cn('object-cover h-64 w-64', {
               'rounded-full': card.round_image,
             })}
             src={card.img.url}
             alt={card.img.alt || 'Derow'}
+            {...imageProps}
           />
         </Col>
       </Row>
@@ -61,6 +72,8 @@ InsideCard.propTypes = {
   card: PropTypes.object.isRequired,
   content: PropTypes.object,
   htmlSerializer: PropTypes.func.isRequired,
+  imageComponent: PropTypes.any,
+  imageProps: PropTypes.object,
   link: PropTypes.any,
   linkResolver: PropTypes.func.isRequired,
 };

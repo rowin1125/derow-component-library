@@ -8,7 +8,16 @@ import Col from '../../general/Col';
 import Card from '../../general/Card';
 import Button from '../../general/Button';
 
-const OutsideCard = ({ card, htmlSerializer, linkResolver, link, content }) => {
+const OutsideCard = ({
+  card,
+  content,
+  htmlSerializer,
+  imageComponent: ImageComponent,
+  imageProps,
+  link,
+  linkResolver,
+}) => {
+  const Image = ImageComponent ? ImageComponent : 'img';
   return (
     <Row>
       <Col
@@ -56,7 +65,7 @@ const OutsideCard = ({ card, htmlSerializer, linkResolver, link, content }) => {
         centerX
         centerY
       >
-        <img
+        <Image
           src={card.img.url}
           alt={card.img.alt || 'Derow'}
           className={cn(
@@ -65,6 +74,7 @@ const OutsideCard = ({ card, htmlSerializer, linkResolver, link, content }) => {
               : 'object-cover',
             { 'rounded-full w-64 h-64': card.round_image },
           )}
+          {...imageProps}
         />
       </Col>
     </Row>
@@ -75,6 +85,8 @@ OutsideCard.propTypes = {
   card: PropTypes.object.isRequired,
   content: PropTypes.object,
   htmlSerializer: PropTypes.func.isRequired,
+  imageComponent: PropTypes.any,
+  imageProps: PropTypes.object,
   link: PropTypes.any,
   linkResolver: PropTypes.func.isRequired,
 };

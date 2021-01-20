@@ -10,11 +10,13 @@ import OutsideCard from './OutsideCard';
 import InsideCard from './InsideCard';
 
 const HorizontalCard = ({
+  className,
   content,
   htmlSerializer,
-  linkResolver,
+  imageComponent,
+  imageProps,
   link,
-  className,
+  linkResolver,
   ...rest
 }) => (
   <BgOverflow
@@ -49,6 +51,8 @@ const HorizontalCard = ({
                 linkResolver={linkResolver}
                 link={link}
                 card={card}
+                imageComponent={imageComponent}
+                imageProps={imageProps}
               />
             ) : (
               <InsideCard
@@ -57,6 +61,8 @@ const HorizontalCard = ({
                 linkResolver={linkResolver}
                 link={link}
                 card={card}
+                imageComponent={imageComponent}
+                imageProps={imageProps}
               />
             )}
           </Element>
@@ -68,10 +74,12 @@ const HorizontalCard = ({
 
 HorizontalCard.propTypes = {
   className: PropTypes.string,
-  htmlSerializer: PropTypes.func.isRequired,
-  linkResolver: PropTypes.func.isRequired,
   content: PropTypes.object.isRequired,
+  htmlSerializer: PropTypes.func.isRequired,
+  imageComponent: PropTypes.any,
+  imageProps: PropTypes.object,
   link: PropTypes.any,
+  linkResolver: PropTypes.func.isRequired,
 };
 
 export default HorizontalCard;
