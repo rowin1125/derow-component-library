@@ -45,6 +45,7 @@ const Hero = ({
         {ImageComponent && (
           <ImageComponent
             src={image}
+            loading='priority'
             layout='fill'
             objectFit='cover'
             objectPosition='center'
