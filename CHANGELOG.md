@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.49](https://github.com/rowin1125/derow-react-library/compare/v0.0.48...v0.0.49) (2021-01-21)
+
+
+### Features
+
+* hero - add loading priority to custom image ([15a2328](https://github.com/rowin1125/derow-react-library/commit/15a232833ef4cbc5e1a6ca218d9323792c55e0e2))
+
 ### [0.0.48](https://github.com/rowin1125/derow-react-library/compare/v0.0.47...v0.0.48) (2021-01-21)
 
 ### [0.0.47](https://github.com/rowin1125/derow-react-library/compare/v0.0.46...v0.0.47) (2021-01-21)
