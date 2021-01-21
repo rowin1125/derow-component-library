@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.45](https://github.com/rowin1125/derow-react-library/compare/v0.0.44...v0.0.45) (2021-01-21)
+
+
+### Bug Fixes
+
+* horizontalcard - flex images and always object cover ([eda0611](https://github.com/rowin1125/derow-react-library/commit/eda061185c8b44c13d869410d96ae624759c583f))
+
 ### [0.0.44](https://github.com/rowin1125/derow-react-library/compare/v0.0.43...v0.0.44) (2021-01-21)
 
 
