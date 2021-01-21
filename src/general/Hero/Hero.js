@@ -58,6 +58,7 @@ const Hero = ({
           variant='primary'
           opacity={80}
           noMarginBottom
+          className='relative'
           cardBodyClass='text-center'
           {...cardprops}
         >
