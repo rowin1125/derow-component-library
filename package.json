@@ -5,7 +5,7 @@
   "module": "es/index.js",
   "scripts": {
     "dev": "yarn storybook",
-    "test": "jest",
+    "test": "jest --onlyChanged",
     "tdd": "jest --watchAll",
     "lint": "eslint --ext=js --ext=jsx src/ --fix",
     "generate": "node --experimental-modules node_modules/.bin/plop --plopfile scripts/templates/index.js",
