@@ -62,7 +62,7 @@ const Testimonials = ({ className, content, htmlSerializer, ...rest }) => {
                   </Col>
                 </Row>
               )}
-              <div className={cn('mx-auto px-4')}>
+              <div className={cn('mx-auto px-10 lg:px-0')}>
                 <div className='relative'>
                   <div className='overflow-hidden shadow-3xl bg-gray-100'>
                     <motion.div
