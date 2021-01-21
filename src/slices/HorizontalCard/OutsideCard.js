@@ -74,7 +74,8 @@ const OutsideCard = ({
         >
           <Image
             className={cn('object-cover', {
-              'rounded-full w-64 h-64': card.round_image && !ImageComponent,
+              'rounded-full': card.round_image,
+              'w-64 h-64': card.round_image && !ImageComponent,
               'w-full h-full lg:w-500 lg:h-650':
                 card.image_large && !ImageComponent,
             })}
