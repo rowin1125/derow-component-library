@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.44](https://github.com/rowin1125/derow-react-library/compare/v0.0.43...v0.0.44) (2021-01-21)
+
+
+### Bug Fixes
+
+* testimonials - extra padding for mobile ([0c50b41](https://github.com/rowin1125/derow-react-library/commit/0c50b41000d961c820067713ab2fb9a26554c977))
+
 ### [0.0.43](https://github.com/rowin1125/derow-react-library/compare/v0.0.42...v0.0.43) (2021-01-20)
 
 
