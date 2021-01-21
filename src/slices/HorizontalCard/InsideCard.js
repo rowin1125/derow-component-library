@@ -60,6 +60,14 @@ const InsideCard = ({
             })}
           >
             <Image
+              className={cn({
+                'h-64 w-64 rounded-full object-cover':
+                  card.round_image && !ImageComponent,
+                'order-first mb-0 lg:mb-0 lg:mr-5':
+                  card.img_first && !ImageComponent,
+                'lg:mr-10 lg:ml-10':
+                  card.full_width && !card.img_first && !ImageComponent,
+              })}
               src={card.img.url}
               alt={card.img.alt || 'Derow'}
               {...imageProps}
