@@ -54,14 +54,17 @@ const InsideCard = ({
             'mt-10 lg:mt-0': card.variant !== 'transparent' && !card.img_first,
           })}
         >
-          <Image
-            className={cn('object-cover h-64 w-64', {
+          <div
+            className={cn('relative h-64 w-64', {
               'rounded-full': card.round_image,
             })}
-            src={card.img.url}
-            alt={card.img.alt || 'Derow'}
-            {...imageProps}
-          />
+          >
+            <Image
+              src={card.img.url}
+              alt={card.img.alt || 'Derow'}
+              {...imageProps}
+            />
+          </div>
         </Col>
       </Row>
     </Card>

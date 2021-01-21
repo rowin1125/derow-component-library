@@ -65,17 +65,18 @@ const OutsideCard = ({
         centerX
         centerY
       >
-        <Image
-          src={card.img.url}
-          alt={card.img.alt || 'Derow'}
-          className={cn(
-            card.image_large
-              ? 'w-full h-full lg:w-500 lg:h-650 object-contain'
-              : 'object-cover',
-            { 'rounded-full w-64 h-64': card.round_image },
-          )}
-          {...imageProps}
-        />
+        <div
+          className={cn('relative', {
+            'rounded-full w-64 h-64': card.round_image,
+            'w-full h-full lg:w-500 lg:h-650': card.image_large,
+          })}
+        >
+          <Image
+            src={card.img.url}
+            alt={card.img.alt || 'Derow'}
+            {...imageProps}
+          />
+        </div>
       </Col>
     </Row>
   );
