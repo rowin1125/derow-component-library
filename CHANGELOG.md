@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.47](https://github.com/rowin1125/derow-react-library/compare/v0.0.46...v0.0.47) (2021-01-21)
+
+
+### Bug Fixes
+
+* horizontalcard - no full w and h when custom ([27dbdbc](https://github.com/rowin1125/derow-react-library/commit/27dbdbc3550c3c442c18ea015a36bdce65a3193b))
+
 ### [0.0.46](https://github.com/rowin1125/derow-react-library/compare/v0.0.45...v0.0.46) (2021-01-21)
 
 
