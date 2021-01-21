@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.46](https://github.com/rowin1125/derow-react-library/compare/v0.0.45...v0.0.46) (2021-01-21)
+
+
+### Bug Fixes
+
+* horizontalcard - image round applied no matter if custom ([113aa11](https://github.com/rowin1125/derow-react-library/commit/113aa11d67fd9a4f702fc6c0eac28216f89d22be))
+
 ### [0.0.45](https://github.com/rowin1125/derow-react-library/compare/v0.0.44...v0.0.45) (2021-01-21)
 
 
