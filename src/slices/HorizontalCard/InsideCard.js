@@ -55,14 +55,13 @@ const InsideCard = ({
           })}
         >
           <div
-            className={cn('relative h-64 w-64', {
+            className={cn('relative h-64 w-64 flex items-center', {
               'rounded-full': card.round_image,
             })}
           >
             <Image
-              className={cn({
-                'h-64 w-64 rounded-full object-cover':
-                  card.round_image && !ImageComponent,
+              className={cn('object-cover', {
+                'h-64 w-64 rounded-full': card.round_image && !ImageComponent,
                 'order-first mb-0 lg:mb-0 lg:mr-5':
                   card.img_first && !ImageComponent,
                 'lg:mr-10 lg:ml-10':
