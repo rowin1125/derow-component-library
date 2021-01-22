@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.50](https://github.com/rowin1125/derow-react-library/compare/v0.0.49...v0.0.50) (2021-01-22)
+
+
+### Bug Fixes
+
+* hero - fix breaking loading issue on image ([b68fd2c](https://github.com/rowin1125/derow-react-library/commit/b68fd2cdfc3548eb91c3150fd6e76bd9a573d252))
+
 ### [0.0.49](https://github.com/rowin1125/derow-react-library/compare/v0.0.48...v0.0.49) (2021-01-21)
 
 
