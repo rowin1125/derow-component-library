@@ -79,7 +79,7 @@ const UspDivider = ({
                   <Card
                     content={content}
                     variant='transparent'
-                    cardBodyClass='px-10 text-center'
+                    cardBodyClass='text-center'
                     centerX
                     centerY
                     noMarginBottom

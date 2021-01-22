@@ -30,7 +30,7 @@ const OutsideCard = ({
           noMarginBottom
           variant={card.variant || 'transparent'}
           content={content}
-          className={cn(card.img_first && 'pl-4')}
+          className={cn(card.img_first && 'lg:pl-4')}
         >
           <h2 className={cn({ 'text-center': card.title_center })}>
             {card.title}

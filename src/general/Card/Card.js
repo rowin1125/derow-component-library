@@ -109,7 +109,7 @@ const Card = React.forwardRef(
             centerX && 'items-center',
             centerY && 'justify-center',
             cardBodyClass,
-            VARIANT_MAP[variant] === 'transparent' && !noGutter && 'px-5',
+            VARIANT_MAP[variant] === 'transparent' && !noGutter && 'lg:px-5',
           )}
           {...cardBodyWrapperProps}
         >

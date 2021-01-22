@@ -62,7 +62,7 @@ const UspCard = ({
                   href={
                     shouldBeALink ? linkResolver(usp.link._meta) : undefined
                   }
-                  className='mx-5 my-0 w-full h-full relative'
+                  className='lg:mx-5 my-0 w-full h-full relative'
                   {...linkProps}
                 >
                   <Card
