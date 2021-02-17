@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.52](https://github.com/rowin1125/derow-react-library/compare/v0.0.51...v0.0.52) (2021-02-17)
+
+
+### Features
+
+* button - provide square option ([561b447](https://github.com/rowin1125/derow-react-library/commit/561b4474455e82daeefd4a853a70b4c427d56304))
+* buttonlink - provide bold font ([a42fe02](https://github.com/rowin1125/derow-react-library/commit/a42fe02a7cc8d5678173fb3a932ae480b8b51eab))
+* horizontalcard - accept buttonprops  deligation ([3fc7a5f](https://github.com/rowin1125/derow-react-library/commit/3fc7a5f1c30078b3ada67436d9a990fbc15b92fb))
+* horizontalcard - add square and layout options ([5ca2a69](https://github.com/rowin1125/derow-react-library/commit/5ca2a6971b93597ffec5ea0af319aef0186b24c7))
+
 ### [0.0.51](https://github.com/rowin1125/derow-react-library/compare/v0.0.50...v0.0.51) (2021-01-22)
 
 ### [0.0.50](https://github.com/rowin1125/derow-react-library/compare/v0.0.49...v0.0.50) (2021-01-22)
