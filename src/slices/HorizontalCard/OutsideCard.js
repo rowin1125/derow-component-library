@@ -8,6 +8,8 @@ import Col from '../../general/Col';
 import Card from '../../general/Card';
 import Button from '../../general/Button';
 
+import { calculateWidth } from './helpers';
+
 const OutsideCard = ({
   buttonProps,
   card,
@@ -23,7 +25,7 @@ const OutsideCard = ({
     <Row>
       <Col
         xs={12}
-        lg={card.round_image || card.text_large ? 8 : 6}
+        lg={calculateWidth(true, card.layout)}
         centerY
         className={cn('text-current mb-10 lg:mb-0')}
       >
@@ -37,7 +39,9 @@ const OutsideCard = ({
             {card.title}
           </h2>
           <div className={cn({ 'text-center': card.text_center })}>
-            <RichText render={card.body1} htmlSerializer={htmlSerializer} />
+            {card.body1 && (
+              <RichText render={card.body1} htmlSerializer={htmlSerializer} />
+            )}
             {card.action_button_text && (
               <Button
                 link={link}
@@ -55,7 +59,7 @@ const OutsideCard = ({
       </Col>
       <Col
         xs={12}
-        lg={card.round_image || card.text_large ? 4 : 6}
+        lg={calculateWidth(false, card.layout)}
         className={cn(
           'text-gray-100 mb-10 lg:mb-0',
           {
@@ -68,22 +72,51 @@ const OutsideCard = ({
         centerY
       >
         <div
-          className={cn('relative flex items-center', {
-            'w-full h-full': !card.round_image,
-            'rounded-full w-64 h-64': card.round_image,
-            'w-full h-full lg:h-650': card.image_large,
-          })}
+          className={cn(
+            'relative flex items-center',
+            {
+              'w-full h-full': !card.round_image,
+              'rounded-full w-64 h-64': card.round_image,
+              'w-full h-full lg:h-650': card.img_first,
+            },
+            card.imageSquareBackground && !card.img_first && 'justify-end',
+          )}
         >
-          <Image
-            className={cn('object-cover', {
-              'rounded-full': card.round_image,
-              'w-64 h-64': card.round_image && !ImageComponent,
-              'w-full h-full lg:h-650': card.image_large && !ImageComponent,
-            })}
-            src={card.img.url}
-            alt={card.img.alt || 'Derow'}
-            {...imageProps}
-          />
+          {card.imageSquareBackground ? (
+            <>
+              <Image
+                className={cn(
+                  'object-cover w-full lg:w-80 h-full z-10 relative lg:mb-44',
+                  card.img_first ? 'lg:ml-24' : 'lg:mr-24',
+                  {
+                    'rounded-full': card.round_image,
+                    'h-full lg:h-650': card.image_large && !ImageComponent,
+                  },
+                )}
+                src={card.img.url}
+                alt={card.img.alt || 'Derow'}
+                {...imageProps}
+              />
+              <div
+                className={cn(
+                  'hidden lg:block absolute bg-secondary w-11/12 h-4/5 my-10 top-0',
+                  card.img_first ? 'left-0' : 'right-0',
+                )}
+              ></div>
+            </>
+          ) : (
+            <Image
+              className={cn('object-cover', {
+                'rounded-full': card.round_image,
+                'w-64 h-64': card.round_image && !ImageComponent,
+                'w-full h-full lg:h-650': card.image_large && !ImageComponent,
+                'w-full': card.layout === 'large_image',
+              })}
+              src={card.img.url}
+              alt={card.img.alt || 'Derow'}
+              {...imageProps}
+            />
+          )}
         </div>
       </Col>
     </Row>

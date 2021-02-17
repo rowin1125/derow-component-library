@@ -31,7 +31,9 @@ const InsideCard = ({
           className='mt-10 lg:mt-0 text-current'
         >
           <h2>{card.title}</h2>
-          <RichText render={card.body1} htmlSerializer={htmlSerializer} />
+          {card.body1 && (
+            <RichText render={card.body1} htmlSerializer={htmlSerializer} />
+          )}
           {card.action_button_text && (
             <Button
               link={link}

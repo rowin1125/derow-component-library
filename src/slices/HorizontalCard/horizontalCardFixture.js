@@ -19,6 +19,7 @@ export const content = {
       variant: 'transparent',
       image_large: false,
       text_large: false,
+      layout: null,
       round_image: false,
       img_first: false,
       title: 'Website laten maken, hoe werkt dat?',
@@ -81,3 +82,25 @@ contentTransparentVariant.primary.bg_brand = true;
 contentTransparentVariant.fields[0].variant = 'transparent';
 contentTransparentVariant.fields[0].round_image = true;
 contentTransparentVariant.fields[0].button_variant = 'tertairy';
+
+export const contentWithLargeImage = JSON.parse(JSON.stringify(content));
+contentWithLargeImage.primary.bg_brand = true;
+contentWithLargeImage.fields[0].variant = 'transparent';
+contentWithLargeImage.fields[0].button_variant = 'tertairy';
+contentWithLargeImage.fields[0].layout = 'large_image';
+
+export const contentWithSquareBg = JSON.parse(JSON.stringify(content));
+contentWithSquareBg.primary.bg_brand = true;
+contentWithSquareBg.fields[0].variant = 'transparent';
+contentWithSquareBg.fields[0].img_first = true;
+contentWithSquareBg.fields[0].button_variant = 'tertairy';
+contentWithSquareBg.fields[0].layout = 'large_image';
+contentWithSquareBg.fields[0].imageSquareBackground = true;
+contentWithSquareBg.fields[0].body1 = [
+  {
+    type: 'paragraph',
+    text:
+      'Hoe wij dit doen? Dit doen we uiteraard door onze unieke kwaliteiten zoals hierboven beschreven terug te laten komen in de website. Is dat alles...? Nee, wij gaat een stapje verder door naar alle details te kijken en proberen samen met jou het maximale te bereiken.',
+    spans: [],
+  },
+];

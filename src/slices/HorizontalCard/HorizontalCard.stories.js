@@ -9,6 +9,8 @@ import {
   contentWithOverflow,
   contentTransparentVariant,
   contentWitLargeText,
+  contentWithLargeImage,
+  contentWithSquareBg,
 } from './horizontalCardFixture';
 
 import { linkResolver } from '../../utils/linkResolver';
@@ -107,4 +109,16 @@ WithSquareButtons.args = {
   content: contentTransparentVariant,
   className: 'text-brand',
   buttonProps: { round: false },
+};
+
+export const withLargeImage = template.bind({});
+withLargeImage.args = {
+  content: contentWithLargeImage,
+  className: 'text-brand',
+};
+
+export const withSquareBg = template.bind({});
+withSquareBg.args = {
+  content: contentWithSquareBg,
+  className: 'text-brand',
 };
