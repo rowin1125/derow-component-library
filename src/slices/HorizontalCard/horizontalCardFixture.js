@@ -95,7 +95,7 @@ contentWithSquareBg.fields[0].variant = 'transparent';
 contentWithSquareBg.fields[0].img_first = true;
 contentWithSquareBg.fields[0].button_variant = 'tertairy';
 contentWithSquareBg.fields[0].layout = 'large_image';
-contentWithSquareBg.fields[0].imageSquareBackground = true;
+contentWithSquareBg.fields[0].square_bg = true;
 contentWithSquareBg.fields[0].body1 = [
   {
     type: 'paragraph',

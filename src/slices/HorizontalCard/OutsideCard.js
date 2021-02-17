@@ -79,10 +79,10 @@ const OutsideCard = ({
               'rounded-full w-64 h-64': card.round_image,
               'w-full h-full lg:h-650': card.img_first,
             },
-            card.imageSquareBackground && !card.img_first && 'justify-end',
+            card.square_bg && !card.img_first && 'justify-end',
           )}
         >
-          {card.imageSquareBackground ? (
+          {card.square_bg ? (
             <>
               <Image
                 className={cn(
