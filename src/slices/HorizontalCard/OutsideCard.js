@@ -9,6 +9,7 @@ import Card from '../../general/Card';
 import Button from '../../general/Button';
 
 const OutsideCard = ({
+  buttonProps,
   card,
   content,
   htmlSerializer,
@@ -44,6 +45,7 @@ const OutsideCard = ({
                 variant={card.button_variant}
                 href={linkResolver(card.call_to_action_link._meta)}
                 fixedWidth
+                {...buttonProps}
               >
                 {card.action_button_text}
               </Button>
@@ -89,6 +91,7 @@ const OutsideCard = ({
 };
 
 OutsideCard.propTypes = {
+  buttonProps: PropTypes.object,
   card: PropTypes.object.isRequired,
   content: PropTypes.object,
   htmlSerializer: PropTypes.func.isRequired,

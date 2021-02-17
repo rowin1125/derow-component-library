@@ -17,6 +17,7 @@ const HorizontalCard = ({
   imageProps,
   link,
   linkResolver,
+  buttonProps,
   ...rest
 }) => (
   <BgOverflow
@@ -53,6 +54,7 @@ const HorizontalCard = ({
                 card={card}
                 imageComponent={imageComponent}
                 imageProps={imageProps}
+                buttonProps={buttonProps}
               />
             ) : (
               <InsideCard
@@ -63,6 +65,7 @@ const HorizontalCard = ({
                 card={card}
                 imageComponent={imageComponent}
                 imageProps={imageProps}
+                buttonProps={buttonProps}
               />
             )}
           </Element>
@@ -73,6 +76,7 @@ const HorizontalCard = ({
 );
 
 HorizontalCard.propTypes = {
+  buttonProps: PropTypes.object,
   className: PropTypes.string,
   content: PropTypes.object.isRequired,
   htmlSerializer: PropTypes.func.isRequired,

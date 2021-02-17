@@ -101,3 +101,10 @@ TransparentWithBg.args = {
   content: contentTransparentVariant,
   className: 'text-brand',
 };
+
+export const WithSquareButtons = template.bind({});
+WithSquareButtons.args = {
+  content: contentTransparentVariant,
+  className: 'text-brand',
+  buttonProps: { round: false },
+};
