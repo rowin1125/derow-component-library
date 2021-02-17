@@ -12,7 +12,7 @@ const ShowNextImage = ({
     <>
       <div
         className={cn(
-          'w-full lg:w-80 h-full z-10 relative lg:mb-44',
+          'w-full lg:w-80 h-full z-10 relative transform lg:h-96 lg:-translate-y-20 lg:-translate-x-16',
           card.img_first ? 'lg:ml-24' : 'lg:mr-24',
           { 'h-full lg:h-650': card.image_large },
         )}
