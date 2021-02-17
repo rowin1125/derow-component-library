@@ -43,8 +43,8 @@ export default {
   },
 };
 
-const template = (args) => <ButtonLink {...args} />;
-const tertairyTemplate = (args) => (
+const template = args => <ButtonLink {...args} />;
+const tertairyTemplate = args => (
   <div className='bg-brand p-10 flex flex-col items-center'>
     <p className='pb-10'>
       This big bluie square is just to show the white variant
@@ -69,4 +69,11 @@ export const ButtonLinkTertairy = tertairyTemplate.bind({});
 ButtonLinkTertairy.args = {
   children: 'Hover me',
   variant: 'tertairy',
+};
+
+export const ButtonLinkNotBold = template.bind({});
+ButtonLinkNotBold.args = {
+  children: 'Hover me',
+  variant: 'primary',
+  bold: false,
 };

@@ -5,10 +5,18 @@ import classNames from 'classnames';
 
 const ButtonLink = React.forwardRef(
   (
-    { children, variant = 'primary', className, href, link: Link, ...props },
+    {
+      bold = true,
+      children,
+      variant = 'primary',
+      className,
+      href,
+      link: Link,
+      ...props
+    },
     ref,
   ) => {
-    const generalClasses = 'relative font-semibold';
+    const generalClasses = 'relative';
     const isPrimary = variant === 'primary';
     const isSecondary = variant === 'secondary';
     const isTertairy = variant === 'tertairy';
@@ -20,6 +28,7 @@ const ButtonLink = React.forwardRef(
           className={classNames(
             'button-link',
             generalClasses,
+            { 'font-semibold': bold },
             { 'text-brand': isPrimary },
             { 'text-secondary  ': isSecondary },
             { 'text-white': isTertairy },
@@ -38,6 +47,7 @@ const ButtonLink = React.forwardRef(
         className={classNames(
           'button-link',
           generalClasses,
+          { 'font-semibold': bold },
           { 'text-brand': isPrimary },
           { 'text-secondary  ': isSecondary },
           { 'text-white': isTertairy },
@@ -106,6 +116,7 @@ export const ButtonLinkElement = styled.a`
 `;
 
 ButtonLink.propTypes = {
+  bold: PropTypes.bool,
   children: PropTypes.node.isRequired,
   className: PropTypes.string,
   href: PropTypes.string,
