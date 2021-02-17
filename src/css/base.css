@@ -126,5 +126,15 @@ p + p {
   @apply text-current;
 }
 
+.button-link.primary:after {
+  @apply bg-brand;
+}
+.button-link.secondary:after {
+  @apply bg-secondary;
+}
+.button-link.tertiary:after {
+  @apply bg-gray-200;
+}
+
 @tailwind components;
 @tailwind utilities;

@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import tw from 'twin.macro';
 import classNames from 'classnames';
 
 const ButtonLink = React.forwardRef(
@@ -19,6 +18,7 @@ const ButtonLink = React.forwardRef(
         <ButtonLinkElement
           ref={ref}
           className={classNames(
+            'button-link',
             generalClasses,
             { 'text-brand': isPrimary },
             { 'text-secondary  ': isSecondary },
@@ -36,6 +36,7 @@ const ButtonLink = React.forwardRef(
         ref={ref}
         href={href}
         className={classNames(
+          'button-link',
           generalClasses,
           { 'text-brand': isPrimary },
           { 'text-secondary  ': isSecondary },
@@ -54,13 +55,11 @@ const ButtonLink = React.forwardRef(
 export const ButtonLinkElement = styled.a`
   &.primary {
     &:after {
-      ${tw`bg-brand`}
-      width: ${(props) => (props.noHover ? '100%' : '0%')};
-      left: ${(props) => (props.noHover ? '0' : '')};
+      width: ${props => (props.noHover ? '100%' : '0%')};
+      left: ${props => (props.noHover ? '0' : '')};
     }
     &:hover {
       &:after {
-        ${tw`bg-brand`}
         width: 100%;
         left: 0;
       }
@@ -69,13 +68,11 @@ export const ButtonLinkElement = styled.a`
 
   &.secondary {
     &:after {
-      ${tw`bg-secondary`}
-      width: ${(props) => (props.noHover ? '100%' : '0%')};
-      left: ${(props) => (props.noHover ? '0' : '')};
+      width: ${props => (props.noHover ? '100%' : '0%')};
+      left: ${props => (props.noHover ? '0' : '')};
     }
     &:hover {
       &:after {
-        ${tw`bg-secondary`}
         width: 100%;
         left: 0;
       }
@@ -83,13 +80,11 @@ export const ButtonLinkElement = styled.a`
   }
   &.tertairy {
     &:after {
-      ${tw`bg-gray-200`}
-      width: ${(props) => (props.noHover ? '100%' : '0%')};
-      left: ${(props) => (props.noHover ? '0' : '')};
+      width: ${props => (props.noHover ? '100%' : '0%')};
+      left: ${props => (props.noHover ? '0' : '')};
     }
     &:hover {
       &:after {
-        ${tw`bg-gray-200`}
         width: 100%;
         left: 0;
       }
