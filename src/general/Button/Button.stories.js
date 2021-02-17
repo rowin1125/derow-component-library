@@ -51,7 +51,7 @@ export default {
   },
 };
 
-const template = (args) => <Button {...args} />;
+const template = args => <Button {...args} />;
 
 export const ButtonPrimary = template.bind({});
 ButtonPrimary.args = {
@@ -69,4 +69,11 @@ export const ButtonTertairy = template.bind({});
 ButtonTertairy.args = {
   children: 'Byeeeee',
   variant: 'tertairy',
+};
+
+export const squareButton = template.bind({});
+squareButton.args = {
+  children: 'Byeeeee',
+  variant: 'primary',
+  round: false,
 };

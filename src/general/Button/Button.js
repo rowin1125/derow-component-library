@@ -10,6 +10,7 @@ const Button = React.forwardRef(
       variant = 'primary',
       fixedWidth,
       as: Element = 'button',
+      round = true,
       href,
       link: Link,
       ...rest
@@ -17,7 +18,7 @@ const Button = React.forwardRef(
     ref,
   ) => {
     const generalClasses = `w-full h-12 shadow-xl inline-flex justify-center items-center
-    rounded-full font-bold text-xl tracking-wider px-4 py-2 cursor-pointer lg:mr-2`;
+     font-bold text-xl tracking-wider px-4 py-2 cursor-pointer lg:mr-2`;
     const transitionClasses =
       'transform ease-in duration-100 transition-all hover:-translate-y-1 hover:shadow-2xl';
     const isPrimary = variant === 'primary';
@@ -35,6 +36,7 @@ const Button = React.forwardRef(
           className={classNames(
             generalClasses,
             transitionClasses,
+            { 'rounded-full': round },
             { 'bg-brand text-gray-100 hover:bg-brand-hover': isPrimary },
             { 'bg-secondary text-gray-100 hover:bg-secondary': isSecondary },
             { 'bg-gray-100 text-brand hover:bg-gray-200': isTertairy },
@@ -56,6 +58,7 @@ const Button = React.forwardRef(
         className={classNames(
           generalClasses,
           transitionClasses,
+          { 'rounded-full': round },
           { 'bg-brand text-gray-100 hover:bg-brand-hover': isPrimary },
           { 'bg-secondary text-gray-100 hover:bg-secondary': isSecondary },
           { 'bg-gray-100 text-brand hover:bg-gray-200': isTertairy },
@@ -80,6 +83,7 @@ Button.propTypes = {
   fixedWidth: PropTypes.bool,
   href: PropTypes.string,
   link: PropTypes.any,
+  round: PropTypes.bool,
   variant: PropTypes.oneOf(['primary', 'secondary', 'tertairy']),
 };
 
