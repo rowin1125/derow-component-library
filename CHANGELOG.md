@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.54](https://github.com/rowin1125/derow-react-library/compare/v0.0.53...v0.0.54) (2021-02-17)
+
+
+### Features
+
+* horizontalcard - display next image with correct height ([8ae1506](https://github.com/rowin1125/derow-react-library/commit/8ae1506c9fd02d1d66397b29556cb4781cbd56cc))
+
 ### [0.0.53](https://github.com/rowin1125/derow-react-library/compare/v0.0.52...v0.0.53) (2021-02-17)
 
 
