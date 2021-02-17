@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.55](https://github.com/rowin1125/derow-react-library/compare/v0.0.54...v0.0.55) (2021-02-17)
+
+
+### Bug Fixes
+
+* horizontalcard - make sure h-100 is default for not large ([0dbd0c8](https://github.com/rowin1125/derow-react-library/commit/0dbd0c8894285b31f9cff4c2e6eb150ba6fb517a))
+* horizontalcard - no height on mobile ([893a3ca](https://github.com/rowin1125/derow-react-library/commit/893a3ca9641b44ddf23a28b2d4a90e1e161cba89))
+
 ### [0.0.54](https://github.com/rowin1125/derow-react-library/compare/v0.0.53...v0.0.54) (2021-02-17)
 
 
