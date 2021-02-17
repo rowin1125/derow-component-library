@@ -12,8 +12,7 @@ const ShowNextImage = ({
     <>
       <div
         className={cn(
-          'w-full lg:w-80 h-full z-10 relative transform lg:h-96 lg:-translate-y-20 lg:-translate-x-16',
-          card.img_first ? 'lg:ml-24' : 'lg:mr-24',
+          'w-full lg:w-80 h-full z-10 relative transform lg:h-96 lg:-translate-y-20 ',
           { 'h-full lg:h-650': card.image_large },
         )}
       >
@@ -29,8 +28,8 @@ const ShowNextImage = ({
       </div>
       <div
         className={cn(
-          'hidden lg:block absolute bg-secondary w-11/12 h-4/5 my-10 top-0',
-          card.img_first ? 'left-0' : 'right-0',
+          'hidden lg:block absolute bg-secondary w-11/12 h-4/5 my-10 top-0 transform',
+          card.img_first ? 'left-0 -translate-x-16' : 'right-0 translate-x-16',
         )}
       ></div>
     </>

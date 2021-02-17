@@ -90,7 +90,6 @@ contentWithLargeImage.fields[0].button_variant = 'tertairy';
 contentWithLargeImage.fields[0].layout = 'large_image';
 
 export const contentWithSquareBg = JSON.parse(JSON.stringify(content));
-contentWithSquareBg.primary.bg_brand = true;
 contentWithSquareBg.fields[0].variant = 'transparent';
 contentWithSquareBg.fields[0].img_first = true;
 contentWithSquareBg.fields[0].button_variant = 'tertairy';
