@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.53](https://github.com/rowin1125/derow-react-library/compare/v0.0.52...v0.0.53) (2021-02-17)
+
+
+### Bug Fixes
+
+* rename prop received by prismic ([3b7b37e](https://github.com/rowin1125/derow-react-library/commit/3b7b37e92bbcf25df0545b3c1f95a64aa812c0f9))
+
 ### [0.0.52](https://github.com/rowin1125/derow-react-library/compare/v0.0.51...v0.0.52) (2021-02-17)
 
 
