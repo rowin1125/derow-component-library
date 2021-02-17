@@ -9,6 +9,8 @@ import Card from '../../general/Card';
 import Button from '../../general/Button';
 
 import { calculateWidth } from './helpers';
+import ShowNextImage from './showImages/ShowNextImage';
+import ShowRegularImage from './showImages/ShowRegularImage';
 
 const OutsideCard = ({
   buttonProps,
@@ -79,30 +81,26 @@ const OutsideCard = ({
               'rounded-full w-64 h-64': card.round_image,
               'w-full h-full lg:h-650': card.img_first,
             },
-            card.square_bg && !card.img_first && 'justify-end',
+            card.bg_square && !card.img_first && 'justify-end',
           )}
         >
-          {card.square_bg ? (
+          {card.bg_square ? (
             <>
-              <Image
-                className={cn(
-                  'object-cover w-full lg:w-80 h-full z-10 relative lg:mb-44',
-                  card.img_first ? 'lg:ml-24' : 'lg:mr-24',
-                  {
-                    'rounded-full': card.round_image,
-                    'h-full lg:h-650': card.image_large && !ImageComponent,
-                  },
-                )}
-                src={card.img.url}
-                alt={card.img.alt || 'Derow'}
-                {...imageProps}
-              />
-              <div
-                className={cn(
-                  'hidden lg:block absolute bg-secondary w-11/12 h-4/5 my-10 top-0',
-                  card.img_first ? 'left-0' : 'right-0',
-                )}
-              ></div>
+              {ImageComponent ? (
+                <ShowNextImage
+                  card={card}
+                  image={Image}
+                  imageComponent={ImageComponent}
+                  {...imageProps}
+                />
+              ) : (
+                <ShowRegularImage
+                  card={card}
+                  image={Image}
+                  imageComponent={ImageComponent}
+                  {...imageProps}
+                />
+              )}
             </>
           ) : (
             <Image
@@ -135,3 +133,25 @@ OutsideCard.propTypes = {
 };
 
 export default OutsideCard;
+
+{
+  /* <Image
+  className={cn(
+    'object-cover w-full lg:w-80 h-full z-10 relative lg:mb-44',
+    card.img_first ? 'lg:ml-24' : 'lg:mr-24',
+    {
+      'rounded-full': card.round_image,
+      'h-full lg:h-650': card.image_large && !ImageComponent,
+    },
+  )}
+  src={card.img.url}
+  alt={card.img.alt || 'Derow'}
+  {...imageProps}
+/>
+<div
+  className={cn(
+    'hidden lg:block absolute bg-secondary w-11/12 h-4/5 my-10 top-0',
+    card.img_first ? 'left-0' : 'right-0',
+  )}
+></div> */
+}
