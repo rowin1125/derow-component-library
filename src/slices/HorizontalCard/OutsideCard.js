@@ -69,15 +69,14 @@ const OutsideCard = ({
           className={cn('relative flex items-center', {
             'w-full h-full': !card.round_image,
             'rounded-full w-64 h-64': card.round_image,
-            'w-full h-full lg:w-500 lg:h-650': card.image_large,
+            'w-full h-full lg:h-650': card.image_large,
           })}
         >
           <Image
             className={cn('object-cover', {
               'rounded-full': card.round_image,
               'w-64 h-64': card.round_image && !ImageComponent,
-              'w-full h-full lg:w-500 lg:h-650':
-                card.image_large && !ImageComponent,
+              'w-full h-full lg:h-650': card.image_large && !ImageComponent,
             })}
             src={card.img.url}
             alt={card.img.alt || 'Derow'}
