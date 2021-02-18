@@ -34,7 +34,7 @@ const GridProductCards = ({
       type={content.primary?.overflow}
       {...rest}
     >
-      <Container className='py-8 lg:py-16 w-full'>
+      <Container className='py-8 lg:py-16 w-full relative'>
         {content.primary.product_grid_title && (
           <Row centerX className={cn('my-10')} wrap>
             <Col xs={12} lg={12}>
@@ -81,11 +81,13 @@ const GridProductCards = ({
                   link={Link}
                   href={linkResolver(card.product_link._meta)}
                 >
-                  <Image
-                    className='object-cover w-full h-full'
-                    src={card.product_image.url}
-                    {...imageProps}
-                  />
+                  <div className='relative h-full w-full'>
+                    <Image
+                      className='object-cover w-full h-full'
+                      src={card.product_image.url}
+                      {...imageProps}
+                    />
+                  </div>
                   <div className='flex w-full justify-center mt-4'>
                     <h3>{card.product_title}</h3>
                   </div>
