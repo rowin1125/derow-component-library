@@ -83,6 +83,7 @@ const GridProductCards = ({
                     <Image
                       className='object-cover w-full h-full'
                       src={card.product_image.url}
+                      alt={card.product_title || 'Derow'}
                       {...imageProps}
                     />
                   </div>
