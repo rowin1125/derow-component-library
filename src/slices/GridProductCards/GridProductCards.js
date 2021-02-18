@@ -25,6 +25,8 @@ const GridProductCards = ({
     if (content.fields.length > 4 || content.fields.length < 2)
       alert('Please provide at least 2 and max 4 cards');
   });
+  const needsGrayBg = ['left', 'right'].includes(content.primary.show_gray_box);
+  const bgLeft = content.primary.show_gray_box === 'left';
 
   return (
     <BgOverflow
@@ -37,6 +39,7 @@ const GridProductCards = ({
           <Row centerX className={cn('my-10')} wrap>
             <Col xs={12} lg={12}>
               <Card
+                className='z-10'
                 noMarginBottom
                 content={content}
                 variant='transparent'
@@ -44,10 +47,10 @@ const GridProductCards = ({
               >
                 {content.primary.product_grid_title && (
                   <h2
-                    className={cn(
-                      content.primary.product_grid_title_center &&
-                        'text-center',
-                    )}
+                    className={cn({
+                      'mb-10': needsGrayBg,
+                      'text-center': content.primary.product_grid_title_center,
+                    })}
                   >
                     {content.primary.product_grid_title}
                   </h2>
@@ -55,6 +58,14 @@ const GridProductCards = ({
               </Card>
             </Col>
           </Row>
+        )}
+        {needsGrayBg && (
+          <div
+            className={cn(
+              'hidden lg:block absolute bg-secondary w-6/12 h-64 my-10 top-0 transform translate-y-36',
+              bgLeft ? 'left-0 -translate-x-16' : 'right-0 translate-x-16',
+            )}
+          ></div>
         )}
         <Row>
           {content?.fields.map((card, i) => {

@@ -3,7 +3,7 @@ export const content = {
   primary: {
     product_grid_title: 'Custom designs',
     product_grid_title_center: false,
-    show_gray_box: 'Left',
+    show_gray_box: 'left',
   },
   fields: [
     {
