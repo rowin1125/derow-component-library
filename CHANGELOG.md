@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.62](https://github.com/rowin1125/derow-react-library/compare/v0.0.61...v0.0.62) (2021-02-18)
+
+
+### Bug Fixes
+
+* horizontalcard - show h-100 on mobile ([48e6dd6](https://github.com/rowin1125/derow-react-library/commit/48e6dd6bad419a2a5bfa517323c50baf95c2dfe2))
+
 ### [0.0.61](https://github.com/rowin1125/derow-react-library/compare/v0.0.60...v0.0.61) (2021-02-18)
 
 ### [0.0.60](https://github.com/rowin1125/derow-react-library/compare/v0.0.59...v0.0.60) (2021-02-18)
