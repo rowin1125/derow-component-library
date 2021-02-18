@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.60](https://github.com/rowin1125/derow-react-library/compare/v0.0.59...v0.0.60) (2021-02-18)
+
+
+### Bug Fixes
+
+* gridproductcards - image should be relative above text ([6916a7a](https://github.com/rowin1125/derow-react-library/commit/6916a7ae0101562314079f89500fb72328d3bdac))
+
 ### [0.0.59](https://github.com/rowin1125/derow-react-library/compare/v0.0.58...v0.0.59) (2021-02-18)
 
 
