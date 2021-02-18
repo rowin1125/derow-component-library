@@ -12,6 +12,7 @@ const ShowRegularImage = ({
     <>
       <Image
         className={cn(
+          'showRegular',
           'object-cover w-full lg:w-80 h-full z-10 relative transform lg:h-96 lg:-translate-y-20',
 
           {

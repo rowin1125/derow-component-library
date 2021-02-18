@@ -12,6 +12,7 @@ const ShowNextImage = ({
     <>
       <div
         className={cn(
+          'showNext',
           'w-full lg:w-80 h-100 z-10 relative transform lg:-translate-y-20 ',
           { 'lg:h-650': card.image_large },
         )}
@@ -19,7 +20,7 @@ const ShowNextImage = ({
         <Image
           className={cn('object-cover', {
             'rounded-full': card.round_image,
-            'h-full lg:h-650': card.image_large && !ImageComponent,
+            'h-100 lg:h-650': card.image_large && !ImageComponent,
           })}
           src={card.img.url}
           alt={card.img.alt || 'Derow'}

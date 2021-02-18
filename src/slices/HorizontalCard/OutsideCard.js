@@ -76,9 +76,9 @@ const OutsideCard = ({
         <div
           className={cn(
             'relative flex items-center',
-            card.round_image ? 'rounded-full w-64 h-64' : 'w-full h-full',
+            card.round_image ? 'rounded-full w-64 h-64' : 'w-full',
             card.bg_square && !card.img_first && 'justify-end',
-            card.image_large ? 'h-full lg:h-650' : 'h-full lg:h-100',
+            card.image_large ? 'h-100 lg:h-650' : 'h-full lg:h-100',
           )}
         >
           {card.bg_square ? (
@@ -102,9 +102,8 @@ const OutsideCard = ({
           ) : (
             <Image
               className={cn('object-cover', {
-                'rounded-full': card.round_image,
-                'w-64 h-64': card.round_image && !ImageComponent,
-                'w-full h-full lg:h-650': card.image_large && !ImageComponent,
+                'rounded-full w-64 h-64': card.round_image,
+                'w-full h-100 lg:h-650': card.image_large,
                 'w-full': card.layout === 'large_image',
               })}
               src={card.img.url}
