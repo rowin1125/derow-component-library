@@ -34,7 +34,7 @@ const GridProductCards = ({
     >
       <Container className='py-8 lg:py-16 w-full relative'>
         {content.primary.product_grid_title && (
-          <Row centerX className={cn('my-10')} wrap>
+          <Row centerX wrap>
             <Col xs={12} lg={12}>
               <Card
                 className='z-10'
@@ -46,7 +46,7 @@ const GridProductCards = ({
                 {content.primary.product_grid_title && (
                   <h2
                     className={cn({
-                      'mb-10': needsGrayBg,
+                      'mb-20': needsGrayBg,
                       'text-center': content.primary.product_grid_title_center,
                     })}
                   >
@@ -60,7 +60,7 @@ const GridProductCards = ({
         {needsGrayBg && (
           <div
             className={cn(
-              'hidden lg:block absolute bg-secondary w-6/12 h-64 my-10 top-0 transform translate-y-36',
+              'hidden lg:block absolute bg-secondary w-6/12 h-64 my-10 top-0 transform translate-y-24',
               bgLeft ? 'left-0 -translate-x-16' : 'right-0 translate-x-16',
             )}
           ></div>
@@ -86,9 +86,11 @@ const GridProductCards = ({
                       {...imageProps}
                     />
                   </div>
-                  <div className='flex w-full justify-center mt-4'>
-                    <h3>{card.product_title}</h3>
-                  </div>
+                  {card.product_title && (
+                    <div className='flex w-full justify-center mt-4'>
+                      <h3>{card.product_title}</h3>
+                    </div>
+                  )}
                 </LinkHandler>
               </Col>
             );
