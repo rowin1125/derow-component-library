@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.58](https://github.com/rowin1125/derow-react-library/compare/v0.0.56...v0.0.58) (2021-02-18)
+
+
+### Features
+
+* gridcards - dynamic coll calculations ([cd68f24](https://github.com/rowin1125/derow-react-library/commit/cd68f2434b17d1332221cdb241b2544555fd02e1))
+* gridproductcard - added new component ([63ec2eb](https://github.com/rowin1125/derow-react-library/commit/63ec2eb59dd26725f7e2b30407c3dc65e27de2c1))
+* gridproductcards - allow gray bg ([0a60e47](https://github.com/rowin1125/derow-react-library/commit/0a60e478700ea1a38a4ca23cdca9fed5e5f20582))
+
 ### [0.0.57](https://github.com/rowin1125/derow-react-library/compare/v0.0.56...v0.0.57) (2021-02-18)
 
 
