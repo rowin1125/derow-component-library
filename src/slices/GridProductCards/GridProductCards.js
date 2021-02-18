@@ -46,7 +46,7 @@ const GridProductCards = ({
                 {content.primary.product_grid_title && (
                   <h2
                     className={cn({
-                      'mb-20': needsGrayBg,
+                      'lg:mb-20': needsGrayBg,
                       'text-center': content.primary.product_grid_title_center,
                     })}
                   >
@@ -72,7 +72,7 @@ const GridProductCards = ({
                 xs={12}
                 lg={calculateCols(content?.fields)}
                 key={card.product_title}
-                className='mb-10 lg:my-0'
+                className='lg:my-0'
               >
                 <LinkHandler
                   className='relative my-6 lg:my-0 w-full h-full rounded-t-lg transform ease-in-out duration-300 lg:mx-5 lg:hover:scale-105'
