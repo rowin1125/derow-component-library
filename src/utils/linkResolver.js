@@ -15,6 +15,8 @@ export const linkResolver = doc => {
         return `/blog/${doc.uid}`;
       case 'homepage':
         return '/';
+      case 'home_pagina':
+        return '/';
 
       default:
         return `/${doc.uid}`;
