@@ -14,8 +14,6 @@ import LinkHandler from '../UspCard/LinkHandler';
 const GridProductCards = ({
   content,
   link: Link = 'a',
-  htmlSerializer,
-  iconGenerator,
   linkResolver,
   imageComponent: Image = 'img',
   imageProps,
@@ -103,8 +101,6 @@ const GridProductCards = ({
 
 GridProductCards.propTypes = {
   content: PropTypes.object.isRequired,
-  htmlSerializer: PropTypes.func.isRequired,
-  iconGenerator: PropTypes.func.isRequired,
   imageComponent: PropTypes.any,
   imageProps: PropTypes.object,
   link: PropTypes.any,
