@@ -1,6 +1,6 @@
 {
   "name": "derow-react-library",
-  "version": "0.0.62",
+  "version": "0.0.63",
   "description": "A component library for Derow",
   "module": "es/index.js",
   "scripts": {
