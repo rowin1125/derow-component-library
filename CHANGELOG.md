@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.59](https://github.com/rowin1125/derow-react-library/compare/v0.0.58...v0.0.59) (2021-02-18)
+
+
+### Bug Fixes
+
+* gridproductcards - add to export list ([3db777f](https://github.com/rowin1125/derow-react-library/commit/3db777f74abc641a08efede51b17564f8c8baf0a))
+
 ### [0.0.58](https://github.com/rowin1125/derow-react-library/compare/v0.0.56...v0.0.58) (2021-02-18)
 
 
