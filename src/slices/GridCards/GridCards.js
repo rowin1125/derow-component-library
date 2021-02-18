@@ -10,6 +10,7 @@ import Col from '../../general/Col';
 import Card from '../../general/Card';
 import Button from '../../general/Button';
 import BgOverflow from '../../general/BgOverflow';
+import { calculateCols, calculateMarginClasses } from './helpers';
 
 const GridCards = ({
   content,
@@ -20,7 +21,8 @@ const GridCards = ({
   ...rest
 }) => {
   useEffect(() => {
-    if (content.fields.length > 3) alert('Niet meer dan 3 cards please :)');
+    if (content.fields.length > 4 || content.fields.length < 2)
+      alert('Please provide at least 2 and max 4 cards');
   });
 
   return (
@@ -33,7 +35,7 @@ const GridCards = ({
         {(content.primary.grid_header ||
           (content.primary?.grid_description &&
             content.primary.grid_description[0].text)) && (
-          <Row centerX className={cn('my-10')}>
+          <Row centerX className={cn('my-10')} wrap>
             <Col xs={12} lg={12} centerX>
               <Card
                 noMarginBottom
@@ -61,27 +63,12 @@ const GridCards = ({
             const Icon = iconGenerator(card?.grid_col_icon);
             const cardVariantSecondary =
               card.grid_col_card_variant === 'secondary';
-            let marginClass;
-            switch (i) {
-              case 0:
-                marginClass = 'lg:mr-5';
-                break;
+            const marginClass = calculateMarginClasses(i, content.fields);
 
-              case 1:
-                marginClass = 'lg:mx-5';
-                break;
-
-              case 2:
-                marginClass = 'lg:ml-5';
-                break;
-
-              default:
-                marginClass = 'lg:mx-5';
-            }
             return (
               <Col
                 xs={12}
-                lg={4}
+                lg={calculateCols(content?.fields)}
                 key={card.grid_col_content[0].text}
                 className='mb-10 lg:my-0'
               >
