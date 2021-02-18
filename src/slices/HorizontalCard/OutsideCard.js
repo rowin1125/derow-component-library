@@ -63,7 +63,7 @@ const OutsideCard = ({
         xs={12}
         lg={calculateWidth(false, card.layout)}
         className={cn(
-          'text-gray-100 mb-10 lg:mb-0',
+          'text-gray-100',
           {
             'lg:mr-10': card.full_width && !card.img_first,
             'lg:ml-10': card.full_width && !card.img_first,

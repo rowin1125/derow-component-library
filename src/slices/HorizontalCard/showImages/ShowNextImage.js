@@ -12,8 +12,8 @@ const ShowNextImage = ({
     <>
       <div
         className={cn(
-          'w-full lg:w-80 h-full z-10 relative transform lg:h-96 lg:-translate-y-20 ',
-          { 'h-full lg:h-650': card.image_large },
+          'w-full lg:w-80 h-100 z-10 relative transform lg:-translate-y-20 ',
+          { 'lg:h-650': card.image_large },
         )}
       >
         <Image
