@@ -75,11 +75,11 @@ const GridProductCards = ({
                 className='mb-10 lg:my-0'
               >
                 <LinkHandler
-                  className='relative my-6 lg:my-0 w-full h-100 rounded-t-lg transform ease-in-out duration-300 lg:mx-5 lg:hover:scale-105'
+                  className='relative my-6 lg:my-0 w-full h-full rounded-t-lg transform ease-in-out duration-300 lg:mx-5 lg:hover:scale-105'
                   link={Link}
                   href={linkResolver(card.product_link._meta)}
                 >
-                  <div className='relative h-full w-full'>
+                  <div className='relative h-100 w-full'>
                     <Image
                       className='object-cover w-full h-full'
                       src={card.product_image.url}
