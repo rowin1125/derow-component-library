@@ -90,7 +90,7 @@ const Accordion = ({
 Accordion.propTypes = {
   children: PropTypes.node,
   contentWrapperProps: PropTypes.object,
-  expanded: PropTypes.number,
+  expanded: PropTypes.any,
   headerElement: PropTypes.any,
   headerProps: PropTypes.object,
   headingType: PropTypes.any,
