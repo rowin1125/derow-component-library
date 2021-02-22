@@ -156,20 +156,30 @@ const MultipleTemplate = args => {
     {
       title: 'Lorem ipsum dolor',
       icon: QuestionMark,
-      content:
-        'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio maiores odio magni quod exercitationem dolor quas nostrum reprehenderit? Maxime reprehenderit aspernatur consequuntur laboriosam provident amet minus ea temporibus, suscipit dolores?',
     },
     {
       title: 'Lorem ipsum dolor',
       icon: QuestionMark,
-      content:
-        'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio maiores odio magni quod exercitationem dolor quas nostrum reprehenderit? Maxime reprehenderit aspernatur consequuntur laboriosam provident amet minus ea temporibus, suscipit dolores?',
+      content: (
+        <div className='px-4'>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio
+          maiores odio magni quod exercitationem dolor quas nostrum
+          reprehenderit? Maxime reprehenderit aspernatur consequuntur laboriosam
+          provident amet minus ea temporibus, suscipit dolores?
+        </div>
+      ),
     },
     {
       title: 'Lorem ipsum dolor',
       icon: QuestionMark,
-      content:
-        'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio maiores odio magni quod exercitationem dolor quas nostrum reprehenderit? Maxime reprehenderit aspernatur consequuntur laboriosam provident amet minus ea temporibus, suscipit dolores?',
+      content: (
+        <div className='px-4'>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio
+          maiores odio magni quod exercitationem dolor quas nostrum
+          reprehenderit? Maxime reprehenderit aspernatur consequuntur laboriosam
+          provident amet minus ea temporibus, suscipit dolores?
+        </div>
+      ),
     },
   ];
   return (

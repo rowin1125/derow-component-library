@@ -9,7 +9,8 @@ const Accordion = ({
   children,
   contentWrapperProps,
   expanded,
-  HeaderElement = 'div',
+  headerElement: HeaderElement = 'div',
+  headingType: HeadingType = 'h3',
   headerProps,
   headerWrapperProps,
   i,
@@ -19,41 +20,46 @@ const Accordion = ({
   title,
   ...rest
 }) => {
-  console.log('rest', rest);
   const isOpen = i === expanded;
+  const headerIsDiv = HeaderElement === 'div';
 
   return (
-    <div
-      className={cn(
-        i !== 0 ? 'border-t border-gray-100 my-4' : 'mb-4',
-        'w-full accordion',
-      )}
-      {...rest}
-    >
+    <div className={cn('w-full accordion')} {...rest}>
       <motion.div
         initial={false}
-        animate={{ backgroundColor: isOpen ? '#f7f4f4' : '#f7f4f400' }}
+        whileHover={{
+          backgroundColor: 'rgba(247, 244, 244, 1)',
+        }}
+        animate={{
+          backgroundColor:
+            isOpen && headerIsDiv
+              ? 'rgba(247, 244, 244, 1)'
+              : 'rgba(247, 244, 244, 0)',
+        }}
         onClick={() => setExpanded(isOpen ? false : i)}
         className={cn(
-          'bg-white cursor-pointer w-full',
+          'cursor-pointer w-full hover:bg-gray-200',
           children && 'cursor-pointer',
+          i !== 0 && 'border-t border-gray-100 ',
         )}
         {...headerWrapperProps}
       >
         <HeaderElement
-          className='w-full flex justify-center items-center py-4 relative'
+          className='w-full flex justify-between items-center p-6  relative'
           {...headerProps}
         >
           {Icon && <Icon className='h-4 w-4 mr-2' {...iconProps} />}
-          <h3 className='mb-0'>{title}</h3>
-          {children && (
+          <HeadingType className='mb-0'>{title}</HeadingType>
+          {children ? (
             <Chevron
               className={cn(
-                'h-4 w-4 absolute right-4 transform ease-in-out duration-300',
+                'h-4 w-4 transform ease-in-out duration-300',
                 isOpen && 'rotate-180',
               )}
               {...iconProps}
             />
+          ) : (
+            <i></i>
           )}
         </HeaderElement>
       </motion.div>
@@ -72,7 +78,7 @@ const Accordion = ({
               transition={{ duration: 0.3, ease: [0.04, 0.62, 0.23, 0.98] }}
               {...contentWrapperProps}
             >
-              <div className='p-4'>{children}</div>
+              <div className='py-4'>{children}</div>
             </motion.section>
           )}
         </AnimatePresence>
@@ -85,8 +91,9 @@ Accordion.propTypes = {
   children: PropTypes.node,
   contentWrapperProps: PropTypes.object,
   expanded: PropTypes.number,
-  HeaderElement: PropTypes.any,
+  headerElement: PropTypes.any,
   headerProps: PropTypes.object,
+  headingType: PropTypes.any,
   headerWrapperProps: PropTypes.object,
   i: PropTypes.number,
   icon: PropTypes.any,
