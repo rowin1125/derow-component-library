@@ -78,7 +78,7 @@ const Accordion = ({
               transition={{ duration: 0.3, ease: [0.04, 0.62, 0.23, 0.98] }}
               {...contentWrapperProps}
             >
-              <div className='py-4'>{children}</div>
+              <div>{children}</div>
             </motion.section>
           )}
         </AnimatePresence>

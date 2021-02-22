@@ -161,7 +161,7 @@ const MultipleTemplate = args => {
       title: 'Lorem ipsum dolor',
       icon: QuestionMark,
       content: (
-        <div className='px-4'>
+        <div className='p-4'>
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio
           maiores odio magni quod exercitationem dolor quas nostrum
           reprehenderit? Maxime reprehenderit aspernatur consequuntur laboriosam
@@ -173,7 +173,7 @@ const MultipleTemplate = args => {
       title: 'Lorem ipsum dolor',
       icon: QuestionMark,
       content: (
-        <div className='px-4'>
+        <div className='p-4'>
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio
           maiores odio magni quod exercitationem dolor quas nostrum
           reprehenderit? Maxime reprehenderit aspernatur consequuntur laboriosam
