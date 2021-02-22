@@ -1,7 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Col from '../Col';
+import cn from 'classnames';
 
+import Col from '../Col';
 import { calculateCols } from '../../slices/GridProductCards/helpers';
 import LinkHandler from '../../slices/UspCard/LinkHandler';
 
@@ -15,13 +16,14 @@ const ProductShow = ({
   linkResolver,
   title,
   price,
+  className,
   ...rest
 }) => (
   <Col
     xs={6}
     lg={calculateCols(contentLength)}
     key={title}
-    className='lg:mb-10 ProductShow'
+    className={cn('lg:mb-10 ProductShow', className)}
     {...rest}
   >
     <LinkHandler
@@ -46,6 +48,7 @@ const ProductShow = ({
 );
 
 ProductShow.propTypes = {
+  className: PropTypes.string,
   contentLength: PropTypes.number,
   image: PropTypes.any,
   imageComponent: PropTypes.any,
