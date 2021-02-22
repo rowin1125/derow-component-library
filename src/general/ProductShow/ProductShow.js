@@ -18,7 +18,7 @@ const ProductShow = ({
   ...rest
 }) => (
   <Col
-    xs={12}
+    xs={6}
     lg={calculateCols(contentLength)}
     key={title}
     className='lg:mb-10 ProductShow'
