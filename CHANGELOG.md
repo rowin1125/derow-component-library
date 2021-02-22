@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.64](https://github.com/rowin1125/derow-react-library/compare/v0.0.63...v0.0.64) (2021-02-22)
+
+
+### Features
+
+* accordion - rewrote accordion component ([7061175](https://github.com/rowin1125/derow-react-library/commit/7061175436460dd542f562d0b49d96cb09662233))
+
 ### [0.0.63](https://github.com/rowin1125/derow-react-library/compare/v0.0.62...v0.0.63) (2021-02-18)
 
 
