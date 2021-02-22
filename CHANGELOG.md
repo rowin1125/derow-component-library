@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.67](https://github.com/rowin1125/derow-react-library/compare/v0.0.66...v0.0.67) (2021-02-22)
+
+
+### Features
+
+* productshow - added new component ([94a5c71](https://github.com/rowin1125/derow-react-library/commit/94a5c71c0c28d395d61c1606a884c2a452c3ff90))
+
 ### [0.0.66](https://github.com/rowin1125/derow-react-library/compare/v0.0.65...v0.0.66) (2021-02-22)
 
 
