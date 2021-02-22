@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.66](https://github.com/rowin1125/derow-react-library/compare/v0.0.65...v0.0.66) (2021-02-22)
+
+
+### Features
+
+* accordion - remove y padding ([74dbc6f](https://github.com/rowin1125/derow-react-library/commit/74dbc6ff8131d8926fce967bfd59cc985a672070))
+
 ### [0.0.65](https://github.com/rowin1125/derow-react-library/compare/v0.0.64...v0.0.65) (2021-02-22)
 
 
