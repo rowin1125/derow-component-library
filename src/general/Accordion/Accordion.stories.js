@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Accordion from './Accordion';
 import QuestionMark from '../../backup/QuestionMark';
 
@@ -118,19 +118,79 @@ export default {
   },
 };
 
-const template = args => <Accordion {...args} />;
-
-export const RegularExample = template.bind({});
-RegularExample.args = {
-  heading: 'lalala',
-  content:
-    'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio maiores odio magni quod exercitationem dolor quas nostrum reprehenderit? Maxime reprehenderit aspernatur consequuntur laboriosam provident amet minus ea temporibus, suscipit dolores?',
+const Template = args => {
+  const [expanded, setExpanded] = useState(0);
+  const data = [
+    {
+      title: 'Lorem ipsum dolor',
+      icon: QuestionMark,
+      content:
+        'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio maiores odio magni quod exercitationem dolor quas nostrum reprehenderit? Maxime reprehenderit aspernatur consequuntur laboriosam provident amet minus ea temporibus, suscipit dolores?',
+    },
+  ];
+  return (
+    <div className='block w-full'>
+      {data.map((content, i) => (
+        <Accordion
+          icon={content.icon}
+          title={content.title}
+          key={i}
+          i={i}
+          expanded={expanded}
+          setExpanded={setExpanded}
+          {...args}
+        >
+          {content.content}
+        </Accordion>
+      ))}
+    </div>
+  );
 };
 
-export const WithCustomIcon = template.bind({});
-WithCustomIcon.args = {
-  heading: 'lalala',
-  accordionCounter: QuestionMark,
-  content:
-    'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio maiores odio magni quod exercitationem dolor quas nostrum reprehenderit? Maxime reprehenderit aspernatur consequuntur laboriosam provident amet minus ea temporibus, suscipit dolores?',
+export const RegularExample = Template.bind({});
+RegularExample.args = {};
+
+const MultipleTemplate = args => {
+  const [expanded, setExpanded] = useState(0);
+  const data = [
+    {
+      title: 'Lorem ipsum dolor',
+      icon: QuestionMark,
+      content:
+        'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio maiores odio magni quod exercitationem dolor quas nostrum reprehenderit? Maxime reprehenderit aspernatur consequuntur laboriosam provident amet minus ea temporibus, suscipit dolores?',
+    },
+    {
+      title: 'Lorem ipsum dolor',
+      icon: QuestionMark,
+      content:
+        'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio maiores odio magni quod exercitationem dolor quas nostrum reprehenderit? Maxime reprehenderit aspernatur consequuntur laboriosam provident amet minus ea temporibus, suscipit dolores?',
+    },
+    {
+      title: 'Lorem ipsum dolor',
+      icon: QuestionMark,
+      content:
+        'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio maiores odio magni quod exercitationem dolor quas nostrum reprehenderit? Maxime reprehenderit aspernatur consequuntur laboriosam provident amet minus ea temporibus, suscipit dolores?',
+    },
+  ];
+  return (
+    <div className='block w-full shadow-md'>
+      {data.map((content, i) => (
+        <Accordion
+          data-testid='test-Accordion'
+          icon={content.icon}
+          title={content.title}
+          key={i}
+          i={i}
+          expanded={expanded}
+          setExpanded={setExpanded}
+          {...args}
+        >
+          {content.content}
+        </Accordion>
+      ))}
+    </div>
+  );
 };
+
+export const Multiple = MultipleTemplate.bind({});
+Multiple.args = {};

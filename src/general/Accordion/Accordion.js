@@ -1,117 +1,98 @@
-import React, { useRef, useState } from 'react';
+import React from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+
 import PropTypes from 'prop-types';
 import cn from 'classnames';
-import QuestionMark from '../../backup/QuestionMark';
-import styled from 'styled-components';
+import Chevron from '../../backup/Chevron';
 
-const SyledAccordion = styled.div`
-  .accordion__body {
-    max-height: 0;
-    overflow: hidden;
-  }
-`;
+const Accordion = ({
+  children,
+  contentWrapperProps,
+  expanded,
+  HeaderElement = 'div',
+  headerProps,
+  headerWrapperProps,
+  i,
+  icon: Icon,
+  iconProps,
+  setExpanded,
+  title,
+  ...rest
+}) => {
+  console.log('rest', rest);
+  const isOpen = i === expanded;
 
-const Accordion = React.forwardRef(
-  (
-    {
-      index = 1,
-      heading,
-      content,
-      accordionCounter,
-      accordionButtonProps,
-      accordionTextContainerProps,
-      accordionCounterProps,
-      accordionCounterIconProps,
-      accordionHeaderProps,
-      accordionIconProps,
-      accordionContentContainerProps,
-      accordionContentTextProps,
-      ...rest
-    },
-    ref,
-  ) => {
-    const [open, toggle] = useState(false);
-    const [height, setHeight] = useState('0px');
-    const contentRef = useRef(null);
-
-    const playAccordion = () => {
-      toggle(!open);
-      setHeight(open ? '0px' : `${contentRef.current.scrollHeight}px`);
-    };
-    const Icon = accordionCounter;
-
-    return (
-      <SyledAccordion
-        ref={ref}
-        open={open}
-        id={index}
-        className='accordion w-full border-1 border-gray-300 p-2'
-        {...rest}
+  return (
+    <div
+      className={cn(
+        i !== 0 ? 'border-t border-gray-100 my-4' : 'mb-4',
+        'w-full accordion',
+      )}
+      {...rest}
+    >
+      <motion.div
+        initial={false}
+        animate={{ backgroundColor: isOpen ? '#f7f4f4' : '#f7f4f400' }}
+        onClick={() => setExpanded(isOpen ? false : i)}
+        className={cn(
+          'bg-white cursor-pointer w-full',
+          children && 'cursor-pointer',
+        )}
+        {...headerWrapperProps}
       >
-        <button
-          className='focus:outline-none w-full flex items-center justify-between'
-          type='button'
-          onClick={playAccordion}
-          {...accordionButtonProps}
+        <HeaderElement
+          className='w-full flex justify-center items-center py-4 relative'
+          {...headerProps}
         >
-          <div
-            className='accordion__header flex items-center relative z-10 w-full'
-            {...accordionTextContainerProps}
-          >
-            <span
-              className='bg-brand p-2 rounded-full text-gray-100 w-6 h-6 lg:w-10 lg:h-10 flex justify-center items-center text-sm lg:text-xl'
-              {...accordionCounterProps}
-            >
-              {Icon ? <Icon {...accordionCounterIconProps} /> : index}
-            </span>
-            <h4
-              className='my-0 ml-6 font-semibold text-lg text-brand text-left w-full'
-              {...accordionHeaderProps}
-            >
-              {heading}
-            </h4>
-          </div>
-          <QuestionMark
-            className={cn(
-              'text-3xl lg:mr-10 transform transition-all duration-300 ease-in-out text-brand w-8 h-8',
-              open ? 'rotate-180' : 'rotate-0',
-            )}
-            {...accordionIconProps}
-          />
-        </button>
-        <div
-          ref={contentRef}
-          className={cn(
-            'accordion__body w-full flex justify-center transform transition-all duration-300 ease-in-out pt-2',
+          {Icon && <Icon className='h-4 w-4 mr-2' {...iconProps} />}
+          <h3 className='mb-0'>{title}</h3>
+          {children && (
+            <Chevron
+              className={cn(
+                'h-4 w-4 absolute right-4 transform ease-in-out duration-300',
+                isOpen && 'rotate-180',
+              )}
+              {...iconProps}
+            />
           )}
-          style={{ maxHeight: height }}
-          {...accordionContentContainerProps}
-        >
-          <div
-            className='py-12 lg:py-8 flex justify-center items-center w-full text-center'
-            {...accordionContentTextProps}
-          >
-            <p>{content}</p>
-          </div>
-        </div>
-      </SyledAccordion>
-    );
-  },
-);
+        </HeaderElement>
+      </motion.div>
+      {children && (
+        <AnimatePresence initial={false}>
+          {isOpen && (
+            <motion.section
+              key='content'
+              initial='collapsed'
+              animate='open'
+              exit='collapsed'
+              variants={{
+                open: { opacity: 1, height: 'auto' },
+                collapsed: { opacity: 0, height: 0 },
+              }}
+              transition={{ duration: 0.3, ease: [0.04, 0.62, 0.23, 0.98] }}
+              {...contentWrapperProps}
+            >
+              <div className='p-4'>{children}</div>
+            </motion.section>
+          )}
+        </AnimatePresence>
+      )}
+    </div>
+  );
+};
 
 Accordion.propTypes = {
-  index: PropTypes.number,
-  accordionCounter: PropTypes.any,
-  accordionButtonProps: PropTypes.object,
-  accordionTextContainerProps: PropTypes.object,
-  accordionCounterIconProps: PropTypes.object,
-  accordionCounterProps: PropTypes.object,
-  accordionHeaderProps: PropTypes.object,
-  accordionIconProps: PropTypes.object,
-  accordionContentContainerProps: PropTypes.object,
-  accordionContentTextProps: PropTypes.object,
-  heading: PropTypes.any.isRequired,
-  content: PropTypes.any.isRequired,
+  children: PropTypes.node,
+  contentWrapperProps: PropTypes.object,
+  expanded: PropTypes.number,
+  HeaderElement: PropTypes.any,
+  headerProps: PropTypes.object,
+  headerWrapperProps: PropTypes.object,
+  i: PropTypes.number,
+  icon: PropTypes.any,
+  iconProps: PropTypes.object,
+  setExpanded: PropTypes.func,
+  title: PropTypes.any,
 };
 
 export default Accordion;
