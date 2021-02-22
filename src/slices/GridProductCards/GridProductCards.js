@@ -8,8 +8,7 @@ import Container from '../../general/Container';
 import Col from '../../general/Col';
 import Card from '../../general/Card';
 import BgOverflow from '../../general/BgOverflow';
-import { calculateCols } from './helpers';
-import LinkHandler from '../UspCard/LinkHandler';
+import ProductShow from '../../general/ProductShow/ProductShow';
 
 const GridProductCards = ({
   content,
@@ -66,34 +65,19 @@ const GridProductCards = ({
           ></div>
         )}
         <Row>
-          {content?.fields.map((card, i) => {
+          {content?.fields.map(card => {
             return (
-              <Col
-                xs={12}
-                lg={calculateCols(content?.fields)}
+              <ProductShow
                 key={card.product_title}
-                className='lg:my-0'
-              >
-                <LinkHandler
-                  className='relative my-6 lg:my-0 w-full h-full rounded-t-lg transform ease-in-out duration-300 lg:mx-5 lg:hover:scale-105'
-                  link={Link}
-                  href={linkResolver(card.product_link._meta)}
-                >
-                  <div className='relative h-100 w-full'>
-                    <Image
-                      className='object-cover w-full h-full'
-                      src={card.product_image.url}
-                      alt={card.product_title || 'Derow'}
-                      {...imageProps}
-                    />
-                  </div>
-                  {card.product_title && (
-                    <div className='flex w-full justify-center mt-4'>
-                      <h3>{card.product_title}</h3>
-                    </div>
-                  )}
-                </LinkHandler>
-              </Col>
+                title={card.product_title}
+                contentLength={content.fields.length}
+                link={card.product_link._meta}
+                image={card.product_image}
+                linkResolver={linkResolver}
+                imageComponent={Image}
+                imageProps={imageProps}
+                linkComponent={Link}
+              />
             );
           })}
         </Row>
