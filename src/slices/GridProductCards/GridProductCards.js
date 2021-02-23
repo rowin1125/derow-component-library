@@ -1,5 +1,5 @@
 /* eslint-disable no-alert */
-import React, { useEffect } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import cn from 'classnames';
 
@@ -18,10 +18,6 @@ const GridProductCards = ({
   imageProps,
   ...rest
 }) => {
-  useEffect(() => {
-    if (content.fields.length > 4 || content.fields.length < 2)
-      alert('Please provide at least 2 and max 4 cards');
-  });
   const needsGrayBg = ['left', 'right'].includes(content.primary.show_gray_box);
   const bgLeft = content.primary.show_gray_box === 'left';
 
@@ -64,12 +60,13 @@ const GridProductCards = ({
             )}
           ></div>
         )}
-        <Row>
-          {content?.fields.map(card => {
+        <div className='Row flex flex-row flex-wrap lg:flex-row relative w-full'>
+          {content?.fields.map((card, i) => {
             return (
               <ProductShow
                 key={card.product_title}
                 title={card.product_title}
+                index={i}
                 contentLength={content.fields.length}
                 link={card.product_link._meta}
                 image={card.product_image}
@@ -80,7 +77,7 @@ const GridProductCards = ({
               />
             );
           })}
-        </Row>
+        </div>
       </Container>
     </BgOverflow>
   );
