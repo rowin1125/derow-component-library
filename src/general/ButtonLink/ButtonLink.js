@@ -12,6 +12,7 @@ const ButtonLink = React.forwardRef(
       className,
       href,
       link: Link,
+      linkProps,
       ...props
     },
     ref,
@@ -22,7 +23,7 @@ const ButtonLink = React.forwardRef(
     const isTertairy = variant === 'tertairy';
 
     return Link ? (
-      <Link href={href} passHref>
+      <Link href={href} passHref {...linkProps}>
         <ButtonLinkElement
           ref={ref}
           className={classNames(
@@ -121,6 +122,7 @@ ButtonLink.propTypes = {
   className: PropTypes.string,
   href: PropTypes.string,
   link: PropTypes.any,
+  linkProps: PropTypes.object,
   noHover: PropTypes.bool,
   type: PropTypes.string,
   variant: PropTypes.oneOf(['primary', 'secondary', 'tertairy']),
