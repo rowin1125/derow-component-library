@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.70](https://github.com/rowin1125/derow-react-library/compare/v0.0.69...v0.0.70) (2021-02-28)
+
+
+### Bug Fixes
+
+* buttonlink - allow linkprops to flow through ([e2255d1](https://github.com/rowin1125/derow-react-library/commit/e2255d17d4884c209108f0536a7948e104d14507))
+
 ### [0.0.69](https://github.com/rowin1125/derow-react-library/compare/v0.0.68...v0.0.69) (2021-02-23)
 
 ### [0.0.68](https://github.com/rowin1125/derow-react-library/compare/v0.0.67...v0.0.68) (2021-02-22)
