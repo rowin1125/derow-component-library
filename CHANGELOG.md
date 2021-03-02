@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.72](https://github.com/rowin1125/derow-react-library/compare/v0.0.71...v0.0.72) (2021-03-02)
+
+
+### Features
+
+* productShow - provide fixedUrlProp ([4f1686a](https://github.com/rowin1125/derow-react-library/commit/4f1686a06bbd4be06f55a8d7858df8e926294a7a))
+
 ### [0.0.71](https://github.com/rowin1125/derow-react-library/compare/v0.0.70...v0.0.71) (2021-03-02)
 
 
