@@ -38,7 +38,7 @@ const ProductShow = ({
         link={linkComponent}
         href={linkResolver(link)}
       >
-        <div className='relative h-100 w-full'>
+        <div className='relative h-52 lg:h-100 w-full'>
           <Image
             className='object-cover w-full h-full'
             src={image.url}
