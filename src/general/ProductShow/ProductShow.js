@@ -14,6 +14,7 @@ const ProductShow = ({
   imageProps,
   index,
   link,
+  fixedUrl,
   linkComponent = 'a',
   linkResolver,
   price,
@@ -36,7 +37,7 @@ const ProductShow = ({
       <LinkHandler
         className='relative my-6 lg:my-0 w-full h-full rounded-t-lg transform ease-in-out duration-300 lg:mx-5 lg:hover:scale-105'
         link={linkComponent}
-        href={linkResolver(link)}
+        href={fixedUrl || linkResolver(link)}
       >
         <div className='relative h-52 lg:h-100 w-full'>
           <Image
@@ -58,6 +59,7 @@ const ProductShow = ({
 ProductShow.propTypes = {
   className: PropTypes.string,
   contentLength: PropTypes.number,
+  fixedUrl: PropTypes.string,
   image: PropTypes.any,
   imageComponent: PropTypes.any,
   imageProps: PropTypes.object,
