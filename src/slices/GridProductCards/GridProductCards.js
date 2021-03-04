@@ -62,14 +62,16 @@ const GridProductCards = ({
         )}
         <div className='Row flex flex-row flex-wrap lg:flex-row relative w-full'>
           {content?.fields.map((card, i) => {
+            const dynamicUrl = card.product_link?._meta;
             return (
               <ProductShow
                 key={card.product_title}
                 title={card.product_title}
                 index={i}
                 contentLength={content.fields.length}
-                link={card.product_link._meta}
+                link={dynamicUrl ? card.product_link?._meta : null}
                 image={card.product_image}
+                fixedUrl={dynamicUrl ? null : card.product_link}
                 linkResolver={linkResolver}
                 imageComponent={Image}
                 imageProps={imageProps}
