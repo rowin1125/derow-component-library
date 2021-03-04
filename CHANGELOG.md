@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.73](https://github.com/rowin1125/derow-react-library/compare/v0.0.72...v0.0.73) (2021-03-04)
+
+
+### Features
+
+* gridproductcards - allow fixed url for items ([d0ba76f](https://github.com/rowin1125/derow-react-library/commit/d0ba76f25de2f5b1b1839d2b004b47bb8cc87f92))
+
 ### [0.0.72](https://github.com/rowin1125/derow-react-library/compare/v0.0.71...v0.0.72) (2021-03-02)
 
 
