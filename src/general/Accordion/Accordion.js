@@ -48,8 +48,10 @@ const Accordion = ({
           className='w-full flex justify-between items-center p-6  relative'
           {...headerProps}
         >
-          {Icon && <Icon className='h-4 w-4 mr-2' {...iconProps} />}
-          <HeadingType className='mb-0'>{title}</HeadingType>
+          <div className='flex items-center'>
+            {Icon && <Icon className='h-4 w-4 mr-6' {...iconProps} />}
+            <HeadingType className='mb-0'>{title}</HeadingType>
+          </div>
           {children ? (
             <Chevron
               className={cn(
