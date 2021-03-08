@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.76](https://github.com/rowin1125/derow-react-library/compare/v0.0.75...v0.0.76) (2021-03-08)
+
+
+### Features
+
+* general - remove text-brand to text-color-base ([d609ca0](https://github.com/rowin1125/derow-react-library/commit/d609ca09dec47f8522e329baa2a6c7287b7d2f8e))
+
 ### [0.0.75](https://github.com/rowin1125/derow-react-library/compare/v0.0.74...v0.0.75) (2021-03-08)
 
 
