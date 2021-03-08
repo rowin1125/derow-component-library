@@ -37,14 +37,14 @@ const TableColumn = ({
         {isMiddle && (
           <div className='absolute inset-x-0 top-0'>
             <div className='flex justify-center transform -translate-y-1/2'>
-              <span className='inline-flex rounded-full bg-gold px-6 py-1 text-sm leading-8 font-semibold tracking-wider uppercase text-gray-100'>
+              <span className='inline-flex rounded-full bg-gold px-6 py-1 text-sm leading-8 font-semibold tracking-wider uppercase text-color-light'>
                 Best verkocht
               </span>
             </div>
           </div>
         )}
         <div className='flex flex-col justify-center items-center p-6'>
-          <h2 className='mt-2 text-center text-3xl leading-9 font-semibold text-gray-100'>
+          <h2 className='mt-2 text-center text-3xl leading-9 font-semibold text-color-light'>
             {table.title}
           </h2>
           <div className='flex justify-center items-center'>
@@ -61,7 +61,7 @@ const TableColumn = ({
               !showPrice && 'hidden',
             )}
           >
-            <span className='px-3 flex items-center text-6xl leading-none tracking-tight font-medium text-gray-100'>
+            <span className='px-3 flex items-center text-6xl leading-none tracking-tight font-medium text-color-light'>
               <span
                 className={cn('text-3xl text-center', !showPrice && 'hidden')}
               >
@@ -71,7 +71,7 @@ const TableColumn = ({
           </div>
           {table.description && showInfo && (
             <div className={cn('mt-4 flex items-center justify-center')}>
-              <span className='text-gray-100 text-center'>
+              <span className='text-color-light text-center'>
                 <RichText
                   render={table.description}
                   htmlSerializer={htmlSerializer}

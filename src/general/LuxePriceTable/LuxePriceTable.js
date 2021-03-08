@@ -24,7 +24,7 @@ const LuxePriceTable = ({
       {...rest}
     >
       <Row
-        className={cn(multiple && 'lg:mb-10', 'z-0 lg:mt-16  text-gray-100')}
+        className={cn(multiple && 'lg:mb-10', 'z-0 lg:mt-16  text-color-light')}
       >
         {content.map((table, index) => {
           const isMiddle = multiple && index === 1;

@@ -53,8 +53,8 @@ const Testimonials = ({ className, content, htmlSerializer, ...rest }) => {
                     <h2
                       className={cn(
                         containsAOverflowFromBrand || containsABg
-                          ? 'text-gray-100'
-                          : 'text-brand',
+                          ? 'text-color-light'
+                          : 'text-color-base',
                       )}
                     >
                       {content.primary.title}

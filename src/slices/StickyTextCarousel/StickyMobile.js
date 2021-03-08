@@ -11,7 +11,7 @@ const StickyMobile = ({ content, htmlSerializer, bgBrand }) => {
     <div
       className={cn(
         'flex flex-col lg:hidden py-10',
-        bgBrand ? 'bg-brand text-gray-100' : 'bg-white text-brand',
+        bgBrand ? 'bg-brand text-color-light' : 'bg-white text-brand',
       )}
     >
       <Container>

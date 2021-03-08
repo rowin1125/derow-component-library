@@ -65,7 +65,7 @@ const UspDivider = ({
             bgBrand ? 'bg-brand' : 'bg-white',
           )}
         ></div>
-        <Container className='w-full h-full text-gray-100 py-6 rotate-3 skew-x-3 transform relative z-max'>
+        <Container className='w-full h-full text-color-light py-6 rotate-3 skew-x-3 transform relative z-max'>
           <Row centerX>
             {content.fields.map(usp => {
               const Icon = iconGenerator(usp.usp_devider_icon);
@@ -94,13 +94,15 @@ const UspDivider = ({
                         <Icon
                           className={cn(
                             'text-6xl',
-                            bgBrand ? 'text-brand' : 'text-gray-100',
+                            bgBrand ? 'text-color-base' : 'text-color-light',
                           )}
                         />
                       </div>
                     </div>
                     <div
-                      className={cn(bgBrand ? 'text-gray-100' : 'text-brand')}
+                      className={cn(
+                        bgBrand ? 'text-color-light' : 'text-color-base',
+                      )}
                     >
                       <RichText
                         htmlSerializer={htmlSerializer}

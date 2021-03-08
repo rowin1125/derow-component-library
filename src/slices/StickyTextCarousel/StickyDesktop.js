@@ -14,7 +14,7 @@ const StickyDesktop = ({ content, htmlSerializer, bgBrand }) => {
         <Container
           className={cn(
             'pt-20 pb-20',
-            bgBrand ? 'text-gray-100' : 'text-brand',
+            bgBrand ? 'text-color-light' : 'text-brand',
           )}
         >
           {content.primary.sticky_title && (

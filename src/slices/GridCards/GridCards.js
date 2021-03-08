@@ -87,8 +87,8 @@ const GridCards = ({
                         <Icon
                           className={cn(
                             cardVariantSecondary
-                              ? 'text-gray-100'
-                              : 'text-brand',
+                              ? 'text-color-light'
+                              : 'text-color-base',
                             'text-6xl mb-6',
                           )}
                         />

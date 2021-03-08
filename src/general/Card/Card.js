@@ -55,13 +55,13 @@ const Card = React.forwardRef(
           {
             'shadow-2xl lg:shadow-3xl bg-white text-brand': isPrimary,
           },
-          { 'bg-brand text-gray-100 shadow-xl lg:shadow-3xl': isSecondary },
+          { 'bg-brand text-color-light shadow-xl lg:shadow-3xl': isSecondary },
           { [opacityClass]: opacity },
           VARIANT_MAP[variant],
           'flex flex-col w-full',
           hover && 'transform lg:hover:scale-105 ease-in-out duration-200',
           isTransparent &&
-            `bg-transparent ${bgBrand ? 'text-gray-100' : 'text-brand'}`,
+            `bg-transparent ${bgBrand ? 'text-color-light' : 'text-brand'}`,
           { 'rounded-t-lg': !!image },
           className,
         )}
@@ -80,7 +80,7 @@ const Card = React.forwardRef(
               <div className='h-full relative' {...cardTitleWrapperProps}>
                 <div className='rounded-t-lg bg-black opacity-25 absolute w-full h-full z-0' />
                 <div className='flex justify-center items-center h-full z50 relative'>
-                  <h3 className='text-gray-100 text-2xl'>{title}</h3>
+                  <h3 className='text-color-light text-2xl'>{title}</h3>
                 </div>
               </div>
             )}
@@ -93,7 +93,7 @@ const Card = React.forwardRef(
                     src={author.picture.url}
                     alt={`Solid Only - ${author.name.split(' ')[0]}`}
                   />
-                  <h3 className='text-gray-100 mt-4'>By: {author.name}</h3>
+                  <h3 className='text-color-light mt-4'>By: {author.name}</h3>
                 </div>
               </div>
             )}

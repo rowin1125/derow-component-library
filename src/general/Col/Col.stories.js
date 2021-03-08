@@ -4,7 +4,7 @@ import Col, { WidthProperties } from './Col';
 const colWidth = Object.keys(WidthProperties);
 
 const template = args => (
-  <Col className='bg-brand text-gray-100 h-16' xs={12} {...args} />
+  <Col className='bg-brand text-color-light h-16' xs={12} {...args} />
 );
 
 export const FullWidth = template.bind({});
