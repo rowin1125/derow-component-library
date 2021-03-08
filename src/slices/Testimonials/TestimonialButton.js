@@ -10,7 +10,7 @@ const TestimonialButton = ({ paginate, direction, setPage, page }) => {
       type='button'
       className={cn(
         `absolute z-10 top-0 mt-32 bg-white rounded-full shadow-md h-12 w-12 text-2xl
-        text-brand transform ease-in-out duration-300 translate-y-0 hover:-translate-y-1
+        text-color-base transform ease-in-out duration-300 translate-y-0 hover:-translate-y-1
          focus:outline-none focus:shadow-outline`,
         isRight ? 'right-0 -mr-6' : 'left-0 -ml-6',
       )}

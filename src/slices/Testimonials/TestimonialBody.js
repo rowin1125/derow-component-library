@@ -20,7 +20,7 @@ const TestimonialBody = ({ content, currentIndex, htmlSerializer }) => {
       </div>
       <div className='w-full md:w-3/5 h-full flex items-center bg-gray-100 rounded-lg'>
         <div className='p-8 md:pr-16 md:pl-16 md:py-12'>
-          <h3 className='text-brand'>
+          <h3 className='text-color-base'>
             {content.fields[currentIndex].testimonial.test_title}
           </h3>
           <RichText

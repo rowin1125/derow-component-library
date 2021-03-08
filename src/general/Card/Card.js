@@ -53,7 +53,7 @@ const Card = React.forwardRef(
           !hasImage && !isTransparent && 'p-5 lg:p-10',
 
           {
-            'shadow-2xl lg:shadow-3xl bg-white text-brand': isPrimary,
+            'shadow-2xl lg:shadow-3xl bg-white text-color-base': isPrimary,
           },
           { 'bg-brand text-color-light shadow-xl lg:shadow-3xl': isSecondary },
           { [opacityClass]: opacity },
@@ -61,7 +61,9 @@ const Card = React.forwardRef(
           'flex flex-col w-full',
           hover && 'transform lg:hover:scale-105 ease-in-out duration-200',
           isTransparent &&
-            `bg-transparent ${bgBrand ? 'text-color-light' : 'text-brand'}`,
+            `bg-transparent ${
+              bgBrand ? 'text-color-light' : 'text-color-base'
+            }`,
           { 'rounded-t-lg': !!image },
           className,
         )}
