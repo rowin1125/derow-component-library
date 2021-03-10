@@ -20,6 +20,7 @@ const Hero = ({
   image,
   offset = true,
   showWave,
+  small,
   cardprops,
   containerProps,
   heroWrapperProps,
@@ -28,8 +29,9 @@ const Hero = ({
   return (
     <div
       className={cn(
-        'Hero relative w-full h-120 flex items-center',
+        'Hero relative w-full flex items-center',
         offset && 'mt-20',
+        small ? 'h-64 lg:h-80' : 'h-120',
         className,
       )}
       {...rest}
@@ -81,6 +83,7 @@ Hero.propTypes = {
   imageComponent: PropTypes.any,
   offset: PropTypes.bool,
   showWave: PropTypes.bool,
+  small: PropTypes.bool,
 };
 
 export default Hero;
