@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.78](https://github.com/rowin1125/derow-react-library/compare/v0.0.77...v0.0.78) (2021-03-10)
+
+
+### Features
+
+* hero - small property provided ([e6ba726](https://github.com/rowin1125/derow-react-library/commit/e6ba72698218136e6eeca76c25334a95f7504b9c))
+
 ### [0.0.77](https://github.com/rowin1125/derow-react-library/compare/v0.0.75...v0.0.77) (2021-03-10)
 
 
