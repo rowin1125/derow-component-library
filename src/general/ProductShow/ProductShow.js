@@ -19,6 +19,7 @@ const ProductShow = ({
   linkResolver,
   price,
   title,
+  favoriteIcon: FavoriteIcon,
   ...rest
 }) => {
   const isLeft = index % 2 === 0;
@@ -40,6 +41,7 @@ const ProductShow = ({
         href={fixedUrl || linkResolver(link)}
       >
         <div className='relative h-52 lg:h-100 w-full'>
+          {FavoriteIcon && <FavoriteIcon />}
           <Image
             className='object-cover w-full h-full'
             src={image.url}
@@ -59,6 +61,7 @@ const ProductShow = ({
 ProductShow.propTypes = {
   className: PropTypes.string,
   contentLength: PropTypes.number,
+  favoriteIcon: PropTypes.any,
   fixedUrl: PropTypes.string,
   image: PropTypes.any,
   imageComponent: PropTypes.any,

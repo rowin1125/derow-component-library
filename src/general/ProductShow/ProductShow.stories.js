@@ -1,11 +1,12 @@
 import React from 'react';
-import ProductShow from './ProductShow';
 
+import ProductShow from './ProductShow';
 import { content } from './ProductShowFixture';
 
-import { linkResolver } from '../../utils/linkResolver';
 import Row from '../Row';
 import Container from '../Container';
+import QuestionMark from '../../backup/QuestionMark';
+import { linkResolver } from '../../utils/linkResolver';
 
 export default {
   title: 'webshop/ProductShow',
@@ -14,6 +15,18 @@ export default {
 };
 
 const products = content;
+
+const FavoriteIcon = () => (
+  <div className='absolute top-2 right-2'>
+    <QuestionMark
+      className='w-8 h-8 text-white'
+      onClick={e => {
+        e.preventDefault();
+        alert('wooerks');
+      }}
+    />
+  </div>
+);
 
 const template = args => (
   <Container>
@@ -29,6 +42,7 @@ const template = args => (
             link={product._meta}
             linkResolver={linkResolver}
             title={product.product_title}
+            favoriteIcon={() => <FavoriteIcon />}
             {...args}
           />
         );
