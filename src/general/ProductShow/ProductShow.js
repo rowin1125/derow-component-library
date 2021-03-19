@@ -26,6 +26,7 @@ const ProductShow = ({
   return (
     <Col
       xs={6}
+      md={4}
       lg={calculateCols(contentLength)}
       key={title}
       className={cn(
