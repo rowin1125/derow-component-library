@@ -55,8 +55,8 @@ const GridProductCards = ({
         {needsGrayBg && (
           <div
             className={cn(
-              'hidden lg:block absolute bg-secondary w-6/12 h-64 my-10 top-0 transform translate-y-24',
-              bgLeft ? 'left-0 -translate-x-16' : 'right-0 translate-x-16',
+              'hidden lg:block absolute bg-secondary w-7/12 h-96 my-10 top-0 transform translate-y-24',
+              bgLeft ? 'left-10' : 'right-10',
             )}
           ></div>
         )}
