@@ -41,7 +41,7 @@ const ProductShow = ({
         link={linkComponent}
         href={fixedUrl || linkResolver(link)}
       >
-        <div className='relative h-52 lg:h-100 w-full'>
+        <div className='relative h-52 lg:h-60 w-full'>
           {FavoriteIcon && <FavoriteIcon />}
           <Image
             className='object-cover w-full h-full'
