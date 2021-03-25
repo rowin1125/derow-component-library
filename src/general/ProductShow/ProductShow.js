@@ -22,22 +22,17 @@ const ProductShow = ({
   favoriteIcon: FavoriteIcon,
   ...rest
 }) => {
-  const isLeft = index % 2 === 0;
   return (
     <Col
       xs={6}
       md={4}
       lg={calculateCols(contentLength)}
       key={title}
-      className={cn(
-        'lg:mb-10 ProductShow ',
-        isLeft ? 'pr-2 lg:pr-0' : 'pl-2 lg:pl-0',
-        className,
-      )}
+      className={cn('lg:mb-10 ProductShow px-2 lg:px-4', className)}
       {...rest}
     >
       <LinkHandler
-        className='relative my-6 lg:my-0 w-full h-full rounded-t-lg transform ease-in-out duration-300 lg:mx-5 lg:hover:scale-105'
+        className='relative my-6 lg:my-0 w-full h-full rounded-t-lg transform ease-in-out duration-300 lg:hover:scale-105'
         link={linkComponent}
         href={fixedUrl || linkResolver(link)}
       >
@@ -51,7 +46,7 @@ const ProductShow = ({
           />
         </div>
         <div className='w-full mt-4'>
-          {title && <h3>{title}</h3>}
+          {title && <h4>{title}</h4>}
           {price && <h4>{price}</h4>}
         </div>
       </LinkHandler>
