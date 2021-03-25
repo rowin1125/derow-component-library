@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.81](https://github.com/rowin1125/derow-react-library/compare/v0.0.80...v0.0.81) (2021-03-25)
+
+
+### Bug Fixes
+
+* productshow - padding instead of marginx ([a19d7b1](https://github.com/rowin1125/derow-react-library/commit/a19d7b15987311859efd3ff6e4b6cf60c282b7d3))
+
 ### [0.0.80](https://github.com/rowin1125/derow-react-library/compare/v0.0.79...v0.0.80) (2021-03-21)
 
 ### [0.0.79](https://github.com/rowin1125/derow-react-library/compare/v0.0.78...v0.0.79) (2021-03-19)
