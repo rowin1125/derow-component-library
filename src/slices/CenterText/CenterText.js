@@ -71,8 +71,8 @@ const CenterText = ({
                 as='a'
                 link={link}
                 fixedWidth
-                key={button.center_button_link._meta.uid}
-                href={linkResolver(button.center_button_link._meta)}
+                key={button.center_button_text}
+                href={linkResolver(button.center_button_link)}
                 variant={button.center_button_variant}
               >
                 {button.center_button_text}
