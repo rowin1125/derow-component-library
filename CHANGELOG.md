@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.82](https://github.com/rowin1125/derow-react-library/compare/v0.0.81...v0.0.82) (2021-03-26)
+
+
+### Bug Fixes
+
+* centertext - allow web urls as links to buttons ([79076dc](https://github.com/rowin1125/derow-react-library/commit/79076dc2bd243c51d113e19d7f3ff7a4d132d317))
+
 ### [0.0.81](https://github.com/rowin1125/derow-react-library/compare/v0.0.80...v0.0.81) (2021-03-25)
 
 
