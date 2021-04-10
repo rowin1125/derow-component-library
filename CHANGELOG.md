@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.83](https://github.com/rowin1125/derow-react-library/compare/v0.0.82...v0.0.83) (2021-04-10)
+
+
+### Bug Fixes
+
+* horizontalcard - missing height for mobile images ([d027ded](https://github.com/rowin1125/derow-react-library/commit/d027dede2d0f3f264e87a1cf62d23f2ec4556566))
+
 ### [0.0.82](https://github.com/rowin1125/derow-react-library/compare/v0.0.81...v0.0.82) (2021-03-26)
 
 
