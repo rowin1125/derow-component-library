@@ -78,7 +78,7 @@ const OutsideCard = ({
             'relative flex items-center',
             card.round_image ? 'rounded-full w-64 h-64' : 'w-full',
             card.bg_square && !card.img_first && 'justify-end',
-            card.image_large ? 'h-100 lg:h-650' : 'h-full lg:h-100',
+            card.image_large ? 'h-100 lg:h-650' : 'h-64 lg:h-100',
           )}
         >
           {card.bg_square ? (
