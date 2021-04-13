@@ -29,7 +29,10 @@ const OutsideCard = ({
         xs={12}
         lg={calculateWidth(true, card.layout)}
         centerY
-        className={cn('text-current mb-10 lg:mb-0')}
+        className={cn(
+          'text-current mb-10 lg:mb-0',
+          card.img_first && 'text-is-last',
+        )}
       >
         <Card
           noMarginBottom
