@@ -59,7 +59,7 @@ export const contentSecondaryVariant = JSON.parse(JSON.stringify(content));
 contentSecondaryVariant.fields[0].variant = 'secondary';
 contentSecondaryVariant.fields[0].round_image = true;
 contentSecondaryVariant.fields[0].img_first = true;
-contentSecondaryVariant.fields[0].button_variant = 'tertairy';
+contentSecondaryVariant.fields[0].button_variant = 'secondary';
 
 export const contentWitLargeText = JSON.parse(JSON.stringify(content));
 contentWitLargeText.fields[0].text_large = true;

@@ -39,7 +39,9 @@ const Button = React.forwardRef(
             { 'rounded-full': round },
             { 'bg-brand text-color-light hover:bg-brand-hover': isPrimary },
             { 'bg-secondary text-color-light hover:bg-secondary': isSecondary },
-            { 'bg-gray-100 text-color-base hover:bg-gray-200': isTertairy },
+            {
+              'bg-transparent text-color-base border-1 border-color-base': isTertairy,
+            },
             variant,
             fixedWidth ? 'lg:w-64' : '',
             'lg:mx-0 Button',
@@ -61,7 +63,9 @@ const Button = React.forwardRef(
           { 'rounded-full': round },
           { 'bg-brand text-color-light hover:bg-brand-hover': isPrimary },
           { 'bg-secondary text-color-light hover:bg-secondary': isSecondary },
-          { 'bg-gray-100 text-color-base hover:bg-gray-200': isTertairy },
+          {
+            'bg-transparent text-color-base border-1 border-color-base': isTertairy,
+          },
           variant,
           fixedWidth ? 'lg:w-64' : '',
           'lg:mx-0',
