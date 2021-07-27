@@ -36,7 +36,7 @@ const CenterText = ({
                     content.primary?.bg_brand && 'text-color-light',
                     content.primary?.overflow === 'from_brand' &&
                       'text-color-light',
-                    'lg:text-center',
+                    'text-center',
                   )}
                 >
                   {content.primary?.center_title}
